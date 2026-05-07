@@ -64,7 +64,7 @@ const OpusCodeTemplate = () => {
             </span>
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-slate-400 mx-auto">
-            Jsem broke
+            Holding group: Atom
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <button className="bg-white text-slate-900 px-8 py-3 rounded-xl font-bold hover:bg-slate-200 transition-colors">
