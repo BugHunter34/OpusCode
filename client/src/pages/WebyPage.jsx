@@ -29,7 +29,7 @@ function WebyPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Weby"
+        eyebrow="Web Solutions 24/7"
         title="Kolik stojí web"
         text="Vyberte si plán podle toho, jak velký web potřebujete. Kdykoli vám poradíme, co je pro vás nejlepší."
       />

@@ -29,7 +29,7 @@ function WebAplikacePage() {
   return (
     <>
       <PageHeader
-        eyebrow="Webové aplikace"
+        eyebrow="Webové aplikace Solutions 24/7"
         title="Když potřebujete víc než klasický web"
         text="Vytvoříme jednoduchý online systém, který ušetří čas vám i lidem v týmu."
       />

@@ -8,6 +8,7 @@ const navItems = [
   { to: '/web-aplikace', label: 'Webové aplikace' },
   { to: '/kurzy', label: 'Kurzy' },
   { to: '/jine', label: 'Jiné' },
+  { to: '/test', label: 'Test' },
 ]
 
 function Topbar() {
@@ -17,7 +18,7 @@ function Topbar() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         <Link to="/" className="text-sm font-bold uppercase tracking-[0.26em] text-cyan-300">
-          Solutions 24/7
+          OpusCode.dev
         </Link>
 
         <nav className="hidden items-center gap-2 md:flex">

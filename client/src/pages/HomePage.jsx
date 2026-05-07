@@ -121,6 +121,7 @@ function HomePage() {
             <Link className="text-cyan-200 underline" to="/web-aplikace">Webové aplikace</Link>,{' '}
             <Link className="text-cyan-200 underline" to="/kurzy">Kurzy</Link>,{' '}
             <Link className="text-cyan-200 underline" to="/jine">Jiné</Link>.
+            <Link className="text-cyan-200 underline" to="/test">Test</Link>.
           </p>
         </div>
       </section>

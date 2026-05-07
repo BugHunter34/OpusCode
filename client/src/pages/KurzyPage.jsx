@@ -29,7 +29,7 @@ function KurzyPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Kurzy"
+        eyebrow="Kurzy Solutions 24/7"
         title="Kurzy a školení"
         text="Naučíme vás i váš tým pracovat s webem rychle, srozumitelně a bez zbytečné teorie."
       />

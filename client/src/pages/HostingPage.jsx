@@ -29,7 +29,7 @@ function HostingPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Hosting"
+        eyebrow="Hosting Solutions 24/7"
         title="Hosting, který se vám vyplatí"
         text="Přesně víte, co dostanete za cenu. Žádná technická omáčka, jen jasné limity a podpora."
       />
