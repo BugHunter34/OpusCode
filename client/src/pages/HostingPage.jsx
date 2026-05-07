@@ -33,7 +33,7 @@ function HostingPage() {
         title="Hosting, který se vám vyplatí"
         text="Přesně víte, co dostanete za cenu. Žádná technická omáčka, jen jasné limity a podpora."
       />
-      <PlanGrid plans={plans} />
+      <PlanGrid plans={plans} category="Hosting" />
     </>
   )
 }

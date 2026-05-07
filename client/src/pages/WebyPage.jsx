@@ -33,7 +33,7 @@ function WebyPage() {
         title="Kolik stojí web"
         text="Vyberte si plán podle toho, jak velký web potřebujete. Kdykoli vám poradíme, co je pro vás nejlepší."
       />
-      <PlanGrid plans={plans} />
+      <PlanGrid plans={plans} category="Weby" />
     </>
   )
 }

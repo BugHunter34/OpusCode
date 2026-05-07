@@ -33,7 +33,7 @@ function JinePage() {
         title="Další služby"
         text="Pokud potřebujete něco navíc, připravíme jednoduchý plán na míru i s jasnou cenou."
       />
-      <PlanGrid plans={plans} />
+      <PlanGrid plans={plans} category="Jiné" />
     </>
   )
 }

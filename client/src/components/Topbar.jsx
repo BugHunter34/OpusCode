@@ -8,6 +8,7 @@ const navItems = [
   { to: '/web-aplikace', label: 'Webové aplikace' },
   { to: '/kurzy', label: 'Kurzy' },
   { to: '/jine', label: 'Jiné' },
+  { to: '/kontakt', label: 'Kontakt' },
   { to: '/test', label: 'Test' },
 ]
 
@@ -17,7 +18,7 @@ function Topbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        <Link to="/" className="text-sm font-bold uppercase tracking-[0.26em] text-cyan-300">
+        <Link to="/" className="text-sm font-bold uppercase tracking-[0.26em] text-accent">
           OpusCode.dev
         </Link>
 
@@ -26,11 +27,17 @@ function Topbar() {
             <NavLink
               key={item.to}
               to={item.to}
+              style={({ isActive }) =>
+                isActive
+                  ? {
+                      backgroundColor: 'var(--accent)',
+                      color: '#0f172a',
+                    }
+                  : undefined
+              }
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm transition ${
-                  isActive
-                    ? 'bg-cyan-300 text-slate-900'
-                    : 'text-slate-200 hover:bg-white/10 hover:text-white'
+                  isActive ? '' : 'text-slate-200 hover:bg-white/10 hover:text-white'
                 }`
               }
             >
@@ -57,10 +64,16 @@ function Topbar() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setIsOpen(false)}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        backgroundColor: 'var(--accent)',
+                        color: '#0f172a',
+                      }
+                    : undefined
+                }
                 className={({ isActive }) =>
-                  `rounded-lg px-4 py-3 text-sm transition ${
-                    isActive ? 'bg-cyan-300 text-slate-900' : 'text-slate-200 hover:bg-white/10'
-                  }`
+                  `rounded-lg px-4 py-3 text-sm transition ${isActive ? '' : 'text-slate-200 hover:bg-white/10'}`
                 }
               >
                 {item.label}

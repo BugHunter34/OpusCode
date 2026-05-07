@@ -33,7 +33,7 @@ function WebAplikacePage() {
         title="Když potřebujete víc než klasický web"
         text="Vytvoříme jednoduchý online systém, který ušetří čas vám i lidem v týmu."
       />
-      <PlanGrid plans={plans} />
+      <PlanGrid plans={plans} category="Webové aplikace" />
     </>
   )
 }

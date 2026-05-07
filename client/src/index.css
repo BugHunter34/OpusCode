@@ -10,12 +10,29 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 12% 10%, rgba(56, 189, 248, 0.25), transparent 36%),
-    radial-gradient(circle at 85% 75%, rgba(163, 230, 53, 0.15), transparent 30%),
-    var(--bg);
+  background: var(--bg);
 }
 
 .font-mono {
   font-family: 'Space Mono', monospace;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-accent-soft {
+  color: rgb(var(--accent-rgb) / 0.85);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-soft {
+  background-color: rgb(var(--accent-rgb) / 0.12);
+}
+
+.border-accent-soft {
+  border-color: rgb(var(--accent-rgb) / 0.35);
 }

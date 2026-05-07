@@ -33,7 +33,7 @@ function KurzyPage() {
         title="Kurzy a školení"
         text="Naučíme vás i váš tým pracovat s webem rychle, srozumitelně a bez zbytečné teorie."
       />
-      <PlanGrid plans={plans} />
+      <PlanGrid plans={plans} category="Kurzy" />
     </>
   )
 }

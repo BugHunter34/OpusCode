@@ -8,6 +8,7 @@ import JinePage from './pages/JinePage'
 import KurzyPage from './pages/KurzyPage'
 import NotFoundPage from './pages/NotFoundPage'
 import TestApi from './pages/TestApi';
+import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="web-aplikace" element={<WebAplikacePage />} />
           <Route path="kurzy" element={<KurzyPage />} />
           <Route path="jine" element={<JinePage />} />
+          <Route path="kontakt" element={<ContactPage />} />
           <Route path="home" element={<Navigate to="/" replace />} />
           <Route path="test" element={<TestApi />} />
           <Route path="*" element={<NotFoundPage />} />
