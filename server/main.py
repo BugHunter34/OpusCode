@@ -7,6 +7,7 @@ from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from email_templates import get_customer_email, get_owner_email
 from models import TextPayload, OrderPayload
+from rediscord import send_to_discord
 
 dotenv.load_dotenv()
 
@@ -42,6 +43,8 @@ def _send_order_emails(payload: OrderPayload) -> None:
     sender_email = os.getenv("RESEND_FROM", "nameerror@andhyy.com").strip()
     owner_email = os.getenv("OWNER_EMAIL", "resend@andhyy.com").strip()
     
+    # --- Discord ---
+    send_to_discord(payload, time_string)
     # --- email to owner ---
     owner_email_data = get_owner_email(payload, time_string)
     resend.Emails.send({
