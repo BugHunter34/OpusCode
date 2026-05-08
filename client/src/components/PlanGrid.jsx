@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000'
+const API_BASE_URL = "https://api.opuscode.dev"
 
 const getInitialForm = () => ({
   fullName: '',
@@ -66,6 +66,8 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
       })
 
       const responseData = await response.json()
+
+      // if 400-500
       if (!response.ok) {
         throw new Error(responseData.detail || 'Nepodařilo se odeslat objednávku. Zkuste to prosím znovu.')
       }
@@ -74,7 +76,9 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
         type: 'success',
         message: responseData.message || 'Objednávka byla úspěšně odeslána. Potvrzení jsme poslali na váš e-mail.',
       })
+      // clear form
       setFormData(getInitialForm())
+      
     } catch (error) {
       setStatus({
         type: 'error',
@@ -217,6 +221,7 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
 
               <button
                 type="submit"
+                onClick={handleSubmit}
                 disabled={isSubmitting || !canSubmit}
                 className="w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                 style={{ backgroundColor: 'var(--accent)' }}
@@ -232,3 +237,4 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
 }
 
 export default PlanGrid
+

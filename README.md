@@ -12,7 +12,7 @@ npm run dev
 
 From project root (`24-7-solutions/`) this starts:
 - client on `http://localhost:5173` (or next free port)
-- server on `http://localhost:5000`
+- server on `http://localhost:3000`
 
 ## API
 
