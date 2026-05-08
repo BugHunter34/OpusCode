@@ -14,6 +14,7 @@ origins = [
     "http://127.0.0.1:5173",
     "https://opuscode.dev",
     "https://www.opuscode.dev",
+    "https://api.opuscode.dev"
 ]
 
 app.add_middleware(

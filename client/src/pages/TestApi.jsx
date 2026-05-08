@@ -7,7 +7,7 @@ export default function TestPage() {
   const [postResponse, setPostResponse] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8080/') 
+    fetch('https://api.opuscode.dev/') 
       .then((res) => res.json())
       .then((data) => setRootMessage(data.message))
       .catch((err) => console.error("Error fetching root:", err));
@@ -16,7 +16,7 @@ export default function TestPage() {
   // 2. Handle the POST request
   const handlePostRequest = async () => {
     try {
-      const response = await fetch('http://localhost:8080/test', {
+      const response = await fetch('https://api.opuscode.dev/test', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
