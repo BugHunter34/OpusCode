@@ -2,10 +2,9 @@ from models import OrderPayload
 
 def get_customer_email(payload, time_string: str) -> dict:
     """Vrátí předmět a tělo e-mailu pro zákazníka podle jeho jazyka."""
-    # Získáme jazyk z payloadu (defaultně 'cs', pokud by chyběl)
-    lang = getattr(payload, 'lang', 'cs').lower()
+    lang = getattr(payload, 'lang', 'cs').lower() 
 
-    if lang == 'en':
+    if lang == 'en': # Will get language preference later -> Deafult Czech
         return {
             "subject": "Order Confirmation - OpusCode",
             "text": "\n".join([
@@ -23,7 +22,7 @@ def get_customer_email(payload, time_string: str) -> dict:
             ])
         }
     
-    # Výchozí čeština (fallback)
+    # Default
     return {
         "subject": "Potvrzení objednávky - OpusCode",
         "text": "\n".join([
@@ -43,7 +42,7 @@ def get_customer_email(payload, time_string: str) -> dict:
 
 def get_owner_email(payload, time_string: str) -> dict:
     """Vrátí předmět a tělo e-mailu pro majitele webu."""
-    # E-mail pro tebe může být vždy česky, jen přidáme informaci o jazyku zákazníka
+    # E-mail to owner always in czech
     lang = getattr(payload, 'lang', 'cs').upper()
     
     return {

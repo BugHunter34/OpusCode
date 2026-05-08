@@ -40,7 +40,7 @@ def _send_order_emails(payload: OrderPayload) -> None:
     time_string = now.strftime("%d. %m. %H:%M") 
 
     resend.api_key = _require_env("RESEND_API_KEY", "ERROR")
-    sender_email = os.getenv("RESEND_FROM", "nameerror@andhyy.com").strip()
+    sender_email = os.getenv("RESEND_FROM", "no-reply@andhyy.com").strip()
     owner_email = os.getenv("OWNER_EMAIL", "resend@andhyy.com").strip()
     
     # --- Discord ---
@@ -88,7 +88,7 @@ async def create_order(payload: OrderPayload):
     except Exception as email_error:
         raise HTTPException(
             status_code=500,
-            detail=f"Objednavku se nepodarilo odeslat e-mailem. {str(email_error)} yo",
+            detail=f"Objednavku se nepodarilo odeslat e-mailem.",
         )
 
     return {"message": "Objednavka byla odeslana. Potvrzeni jsme poslali na vas e-mail."}
