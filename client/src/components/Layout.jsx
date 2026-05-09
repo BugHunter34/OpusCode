@@ -16,21 +16,38 @@ const routeTheme = [
 function Layout() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
-  const isProductPage = ['/weby', '/hosting', '/web-aplikace', '/kurzy', '/jine'].includes(location.pathname)
+  const isProductPage = ['/weby', '/hosting', '/web-aplikace', '/kurzy', '/jine'].some((path) =>
+    location.pathname.startsWith(path),
+  )
   const activeTheme = routeTheme.find((theme) => theme.match(location.pathname)) || routeTheme[0]
 
   return (
     <div
-      className="relative min-h-screen overflow-hidden bg-[var(--bg)] text-[var(--text)]"
+      className="relative min-h-[100dvh] overflow-hidden bg-[var(--bg)] text-[var(--text)]"
       style={{
         '--accent': activeTheme.accent,
         '--accent-rgb': activeTheme.accentRgb,
       }}
     >
-      {isHomePage && <ReactBitsBackground />}
-      {isProductPage && (
-        <ProductsBackground key={location.pathname} pagePath={location.pathname} accentColor={activeTheme.accent} />
-      )}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[var(--bg)]" aria-hidden="true" />
+
+      <div
+        className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-150 ${
+          isHomePage ? 'opacity-100' : 'opacity-0'
+        }`}
+        aria-hidden="true"
+      >
+        <ReactBitsBackground />
+      </div>
+
+      <div
+        className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-150 ${
+          isProductPage ? 'opacity-100' : 'opacity-0'
+        }`}
+        aria-hidden="true"
+      >
+        <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
+      </div>
 
       <div className="relative z-10">
         <Topbar />

@@ -17,7 +17,7 @@ function Topbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         <Link to="/" className="text-sm font-bold uppercase tracking-[0.26em] text-accent">
           OpusCode.dev
@@ -64,7 +64,9 @@ function Topbar() {
               <NavLink
                 key={item.to}
                 to={item.to}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false)
+                }}
                 style={({ isActive }) =>
                   isActive
                     ? {

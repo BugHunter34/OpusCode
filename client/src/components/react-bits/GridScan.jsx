@@ -570,23 +570,7 @@ export const GridScan = ({
       container.removeChild(renderer.domElement);
     };
   }, [
-    sensitivity,
-    lineThickness,
-    linesColor,
-    scanColor,
-    scanOpacity,
-    gridScale,
-    lineStyle,
-    lineJitter,
-    scanDirection,
     enablePost,
-    noiseIntensity,
-    bloomIntensity,
-    scanGlow,
-    scanSoftness,
-    scanPhaseTaper,
-    scanDuration,
-    scanDelay,
     bloomThreshold,
     bloomSmoothing,
     chromaticAberration,
