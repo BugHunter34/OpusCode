@@ -6,7 +6,7 @@ const teamMembers = [
     tag: 'Owner',
     name: 'Andhyy Lightbringer',
     price: 'Výkonný Ředitel a vývojář',
-    imageUrl: 'https://api.andhyy.com/avatars/andhyy1.png',
+   // imageUrl: 'https://api.andhyy.com/avatars/andhyy1.png',
     desc: 'Backend',
     items: ['Email Worker', 'Discord', 'Money'],
   },

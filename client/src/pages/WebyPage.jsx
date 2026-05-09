@@ -7,21 +7,21 @@ const plans = [
     name: 'Jednoduchý web',
     price: 'od 6 200 Kc',
     desc: 'Pro malé firmy, které chtějí být dohledatelné online.',
-    items: ['Statický web', 'Do 5 stránek', 'Základní SEO nastavení', '300Kc/stránka'],
+    items: ['Statický web', 'Do 5 stránek', 'Základní SEO nastavení', '500Kč / stránka', ],
   },
   {
     tag: 'Oblíbené',
     name: 'Firemní web',
     price: 'od 13 700 Kc',
     desc: 'Pro firmy, které chtějí více obsahu a jednodušší správu.',
-    items: ['Dynamický web', 'Do 15 stránek', 'Napojení na API', '300Kc/stránka'],
+    items: ['Dynamický web', 'Do 15 stránek', 'Napojení na API', '300Kč / stránka'],
   },
   {
     tag: 'Na míru',
     name: 'Velký web',
     price: 'na poptavku',
     desc: 'Když potřebujete větší web s individuálním řešením.',
-    items: ['Neomezený rozsah', 'Napojení na další nástroje', 'Přednostní podpora', '300Kc/stránka'],
+    items: ['Neomezený rozsah', 'Napojení na další nástroje', 'Přednostní podpora', '300Kč / stránka'],
   },
 ]
 
