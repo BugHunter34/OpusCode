@@ -54,7 +54,8 @@ function ProductsBackground({ pagePath = '/weby', accentColor = '#8b5cf6' }) {
           width: '100%',
           height: '100%',
           position: 'relative',
-          background: `radial-gradient(circle at 72% 22%, ${tint}, transparent 46%), var(--bg)`,
+          background: `radial-gradient(circle at 50% 50%, ${tint}, transparent 48%), var(--bg)`,
+          backgroundPosition: 'center center',
         }}
       >
         <GridScan

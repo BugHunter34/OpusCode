@@ -9,7 +9,6 @@ const navItems = [
   { to: '/kurzy', label: 'Kurzy' },
   { to: '/jine', label: 'Jiné' },
   { to: '/kontakt', label: 'Kontakt' },
-  { to: '/o-nas', label: 'O nás' },
   { to: '/test', label: 'Test' },
 ]
 

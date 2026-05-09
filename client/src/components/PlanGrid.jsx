@@ -11,7 +11,7 @@ const getInitialForm = () => ({
   gdprConsent: false,
 })
 
-function PlanGrid({ plans, category = 'Nezařazené' }) {
+function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, containerMaxWidthClass = 'max-w-6xl' }) {
   const [selectedPlan, setSelectedPlan] = useState(null)
   const [formData, setFormData] = useState(getInitialForm)
   const [status, setStatus] = useState({ type: 'idle', message: '' })
@@ -113,9 +113,11 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
     }
   }
 
+  const desktopGridClass = desktopColumns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
+
   return (
-    <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 lg:px-12">
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <section className={`mx-auto w-full ${containerMaxWidthClass} px-5 pb-16 sm:px-8 lg:px-12`}>
+      <div className={`grid gap-4 md:grid-cols-2 ${desktopGridClass}`}>
         {plans.map((plan) => (
           <article
             key={plan.name}

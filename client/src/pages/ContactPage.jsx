@@ -1,4 +1,29 @@
 import PageHeader from '../components/PageHeader'
+import TeamGrid from '../components/TeamGrid'
+
+const teamMembers = [
+  {
+    tag: 'Owner',
+    name: 'Andhyy',
+    price: 'Majitel a vývojář',
+    desc: 'Backend',
+    items: ['Email Worker', 'Discord', 'Money'],
+  },
+  {
+    tag: 'Owner',
+    name: 'Afrox26TP',
+    price: 'Hlavní Designer a vývojář',
+    desc: 'Frontend',
+    items: ['Animace', 'Design', 'Návrhář'],
+  },
+  {
+    tag: 'Intern',
+    name: 'Lightsyy',
+    price: 'manažer zakázek',
+    desc: 'Sekretář',
+    items: ['Hi', 'Čau', 'konnichiwa'],
+  },
+]
 
 function ContactPage() {
   return (
@@ -41,6 +66,8 @@ function ContactPage() {
           </p>
         </div>
       </section>
+
+      <TeamGrid members={teamMembers} category="Opus Code Team" />
     </>
   )
 }
