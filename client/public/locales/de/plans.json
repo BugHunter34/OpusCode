@@ -8,25 +8,25 @@
       "simple": {
         "tag": "Basis",
         "name": "Einfache Webseite",
-        "price": "ab $249",
+        "price": "ab 250 €",
         "desc": "Für kleine Unternehmen, die online gefunden werden wollen.",
         "items": [
           "Statische Webseite",
           "Bis zu 5 Seiten",
           "Basis-SEO-Setup",
-          "$20 / Seite"
+          "20 € / Seite"
         ]
       },
       "corporate": {
         "tag": "Beliebt",
         "name": "Unternehmenswebseite",
-        "price": "ab $549",
+        "price": "ab 550 €",
         "desc": "Für Firmen, die mehr Inhalte und eine einfachere Verwaltung wünschen.",
         "items": [
           "Dynamische Webseite",
           "Bis zu 15 Seiten",
           "API-Integration",
-          "$15 / Seite"
+          "15 € / Seite"
         ]
       },
       "large": {
@@ -38,7 +38,7 @@
           "Unbegrenzter Umfang",
           "Integration mit anderen Tools",
           "Prioritäts-Support",
-          "$15 / Seite"
+          "15 € / Seite"
         ]
       }
     }
@@ -52,7 +52,7 @@
       "start": {
         "tag": "Basis",
         "name": "Hosting Start",
-        "price": "$1.99 / Monat",
+        "price": "1.5 € / Monat",
         "desc": "Klare Basis für kleinere Webseiten. Ohne Komplikationen.",
         "items": [
           "1 Webseite",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budget",
         "name": "Hosting Basic",
-        "price": "$5.99 / Monat",
+        "price": "5.5 € / Monat",
         "desc": "Wenn Sie etwas mehr wollen.",
         "items": [
           "1 Webseite",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Beliebt",
         "name": "Hosting Business",
-        "price": "$14.99 / Monat",
+        "price": "15 € / Monat",
         "desc": "Die beste Wahl für eine Standard-Unternehmenswebseite.",
         "items": [
           "1 Webseite + 1 Testversion",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Individuell",
         "name": "Hosting Premium",
-        "price": "ab $19.99 / Monat",
+        "price": "ab 20 € / Monat",
         "desc": "Für größere Projekte und mehrere Webseiten.",
         "items": [
           "Bis zu 3 Webseiten",
@@ -108,7 +108,7 @@
       "start": {
         "tag": "Start",
         "name": "Prozess der Webseitenerstellung",
-        "price": "ab $79",
+        "price": "ab 75 €",
         "desc": "Ein praktischer Leitfaden von der Idee bis zum Launch einer Unternehmenswebseite.",
         "items": [
           "Schritt-für-Schritt Webseitenstruktur",
@@ -119,7 +119,7 @@
       "popular": {
         "tag": "Beliebt",
         "name": "Prozess der Web-App-Erstellung",
-        "price": "ab $199",
+        "price": "ab 200 €",
         "desc": "Wie man eine Web-Applikation in der Praxis richtig plant und baut.",
         "items": [
           "Design von Funktionen und Benutzerrollen",
@@ -130,7 +130,7 @@
       "custom": {
         "tag": "Individuell",
         "name": "Webseiten-Management",
-        "price": "ab $119",
+        "price": "ab 115 €",
         "desc": "Wir bringen Ihnen bei, wie Sie die Webseite langfristig unabhängig vom Anbieter verwalten.",
         "items": [
           "Bearbeiten von Texten und Bildern",
@@ -149,7 +149,7 @@
       "design": {
         "tag": "Design",
         "name": "Visuelles Webdesign",
-        "price": "ab $119",
+        "price": "ab 115 €",
         "desc": "Wir bereiten ein klares Fundament für Ihre gesamte Webseite vor.",
         "items": [
           "Struktur",
@@ -160,7 +160,7 @@
       "automation": {
         "tag": "Zeitersparnis",
         "name": "Automatisierung von Routineaufgaben",
-        "price": "ab $299",
+        "price": "ab 295 €",
         "desc": "Wir wandeln manuelle Schritte in einen automatisierten Prozess um.",
         "items": [
           "1 spezifischer Prozess",
@@ -171,7 +171,7 @@
       "support": {
         "tag": "Support",
         "name": "Laufende Unterstützung",
-        "price": "$10 / Std.",
+        "price": "10 € / Std.",
         "desc": "Regelmäßige Verwaltung und sorgenfreie Anpassungen.",
         "items": [
           "24/7 Support",
@@ -190,7 +190,7 @@
       "start": {
         "tag": "Start",
         "name": "Einfache Web-App",
-        "price": "ab $999",
+        "price": "ab 999 €",
         "desc": "Für Firmen, die einen spezifischen Prozess digitalisieren wollen.",
         "items": [
           "1 Hauptfunktion",
@@ -201,7 +201,7 @@
       "business": {
         "tag": "Beliebt",
         "name": "Unternehmens-Web-App",
-        "price": "ab $1,850",
+        "price": "ab 1.850 €",
         "desc": "Für Firmen, die eine App für den täglichen Betrieb benötigen.",
         "items": [
           "Bis zu 3 Hauptfunktionen",
