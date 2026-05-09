@@ -4,7 +4,7 @@ import TeamGrid from '../components/TeamGrid'
 const teamMembers = [
   {
     tag: 'Owner',
-    name: 'Andhyy',
+    name: 'Adam Tomala - Andhyy',
     price: 'Majitel a vývojář',
    // imageUrl: 'https://api.andhyy.com/avatars/andhyy1.png',
     desc: 'Backend',

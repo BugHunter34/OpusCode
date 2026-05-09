@@ -16,8 +16,11 @@ function ContactPage() {
             <h2 className="mt-3 text-2xl font-semibold text-white">OpusCode</h2>
             <ul className="mt-4 space-y-3 text-slate-200">
               <li>E-mail: kontakt@opuscode.dev</li>
-              <li>Telefon: +420 777 123 456</li>
-              <li>Sídlo: Chudenická 1059/30, Hostivař, 102 00 Praha</li>
+              <li>Vedoucí: Adam Tomala – OpusCode</li>
+              <li>Telefon majitel: +420 737 911 901</li>
+              <li>Telefon podpora: +420 777 123 456</li>
+              <li>IČO: Comming Soon</li>
+              <li>Sídlo: Spojovací 1172, 294 01 Bakov nad Jizerou</li>
               <li>Web: www.opuscode.dev</li>
             </ul>
           </article>
