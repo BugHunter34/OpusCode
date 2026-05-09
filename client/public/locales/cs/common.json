@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Hlavní",
+    "websites": "Weby",
+    "hosting": "Hosting",
+    "webApps": "Webové aplikace",
+    "courses": "Kurzy",
+    "other": "Jiné",
+    "contact": "Kontakt",
+    "test": "Test"
+  },
+  "menu": "Menu"
+}

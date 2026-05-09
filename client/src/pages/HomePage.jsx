@@ -1,23 +1,26 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 function HomePage() {
+  const { t } = useTranslation('home')
+
   const portfolio = [
     {
       name: 'Muzeer',
-      type: 'Web aplikace',
-      result: 'Streamovací aplikace hudby',
+      type: t('portfolio.types.webApp'),
+      result: t('portfolio.results.muzeer'),
       url: 'https://muzeer.com',
     },
     {
       name: 'Conpath',
-      type: 'Větší firemní web',
-      result: 'Firemní web s vlastním stylizováním',
+      type: t('portfolio.types.bigWeb'),
+      result: t('portfolio.results.conpath'),
       url: 'https://conpath.info',
     },
     {
       name: 'afrox26TP',
-      type: 'Basic web',
-      result: 'Základní statický web',
+      type: t('portfolio.types.basicWeb'),
+      result: t('portfolio.results.afrox'),
       url: 'https://afrox26tp.com',
     },
   ]
@@ -26,13 +29,12 @@ function HomePage() {
     <>
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-5 pb-10 pt-12 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12">
         <article>
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">O nás</p>
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">{t('hero.tag')}</p>
           <h1 className="mt-3 text-4xl font-semibold text-white sm:text-6xl">
-            Vytvoříme vám moderní web s vlastním designem a strukturou.
+            {t('hero.title')}
           </h1>
           <p className="mt-5 max-w-2xl text-slate-300 sm:text-lg">
-            Vše vysvětlíme srozumitelně. Řekněte nám, co potřebujete, a my připravíme web nebo systém tak,
-            aby byl jednoduchý pro vás i vaše zákazníky.
+            {t('hero.subtitle')}
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -40,63 +42,44 @@ function HomePage() {
               className="rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider text-slate-900"
               style={{ backgroundColor: 'var(--accent)' }}
             >
-              Chci nový web
+              {t('hero.btnWeb')}
             </Link>
             <Link to="/web-aplikace" className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-white/10">
-              Chci webovou aplikaci
+              {t('hero.btnApp')}
             </Link>
           </div>
         </article>
 
         <aside className="rounded-3xl border border-white/10 bg-white/5 p-6">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Základní info</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('basicInfo.title')}</p>
           <ul className="mt-4 space-y-3 text-slate-200">
-            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">Doba realizace: do 1 týdne</li>
-            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">Máme tým zkušených vývojářů a programátorů</li>
-            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">Za vše ručíme</li>
-            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">Po spuštění: o web se staráme a můžeme ho dál vylepšovat</li>
+            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">{t('basicInfo.item1')}</li>
+            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">{t('basicInfo.item2')}</li>
+            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">{t('basicInfo.item3')}</li>
+            <li className="rounded-xl border border-white/10 bg-slate-900/60 px-4 py-3">{t('basicInfo.item4')}</li>
           </ul>
         </aside>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-14 sm:px-8 lg:px-12">
         <div className="rounded-3xl border border-white/10 bg-white/5 p-7">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">Jak funguje navázání spolupráce</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{t('collaboration.title')}</h2>
           <p className="mt-3 max-w-3xl text-slate-300">
-            Spolupráce je jednoduchá a přehledná. Od první zprávy až po finální předání víte, co se děje a co
-            bude následovat.
+            {t('collaboration.subtitle')}
           </p>
           <div className="mt-5 grid gap-3 md:grid-cols-2">
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">1. Výběr a kontakt</p>
-              <p className="mt-2">Vyberete si plán, nebo nám rovnou napíšete, co potřebujete.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">2. Krátká domluva</p>
-              <p className="mt-2">Spojíme se přes hovor, chat nebo videochat a doladíme zadání.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">3. Start práce</p>
-              <p className="mt-2">Po přijetí 25% zálohy začneme na projektu pracovat.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">4. Průběžné info</p>
-              <p className="mt-2">Pravidelně posíláme aktuální stav, abyste měli přehled.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">5. Úpravy během realizace</p>
-              <p className="mt-2">Změny jsou možné podle vybraného plánu nebo podle domluvy.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">6. Předání a reklamace</p>
-              <p className="mt-2">Finální práci můžete reklamovat s důvodným vyjádřením a vše spolu projdeme.</p>
-            </div>
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={num} className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-slate-200">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t(`collaboration.step${num}.title`)}</p>
+                <p className="mt-2">{t(`collaboration.step${num}.desc`)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 lg:px-12">
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">Portfolio</h2>
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">{t('portfolio.title')}</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {portfolio.map((project) => (
             <article key={project.name} className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -107,9 +90,9 @@ function HomePage() {
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-block text-sm font-semibold text-accent-soft underline underline-offset-4"
+                className="mt-4 inline-block text-sm font-semibold text-accent-soft underline underline-offset-4 hover:text-accent transition"
               >
-                Otevřít web
+                {t('portfolio.open')}
               </a>
             </article>
           ))}
@@ -118,14 +101,14 @@ function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-20 sm:px-8 lg:px-12">
         <div className="rounded-3xl border border-accent-soft bg-accent-soft p-7">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-soft">Co si můžete objednat</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-soft">{t('order.title')}</p>
           <p className="mt-3 text-slate-100">
-            Vyberte v menu nebo klikněte rovnou na: <Link className="text-accent-soft underline" to="/weby">Weby</Link>,{' '}
-            <Link className="text-accent-soft underline" to="/hosting">Hosting</Link>,{' '}
-            <Link className="text-accent-soft underline" to="/web-aplikace">Webové aplikace</Link>,{' '}
-            <Link className="text-accent-soft underline" to="/kurzy">Kurzy</Link>,{' '}
-            <Link className="text-accent-soft underline" to="/jine">Jiné</Link>.
-            <Link className="text-accent-soft underline" to="/test">Test</Link>.
+            {t('order.text')} <Link className="text-accent-soft underline hover:text-white transition" to="/weby">{t('common:nav.websites')}</Link>,{' '}
+            <Link className="text-accent-soft underline hover:text-white transition" to="/hosting">{t('common:nav.hosting')}</Link>,{' '}
+            <Link className="text-accent-soft underline hover:text-white transition" to="/web-aplikace">{t('common:nav.webApps')}</Link>,{' '}
+            <Link className="text-accent-soft underline hover:text-white transition" to="/kurzy">{t('common:nav.courses')}</Link>,{' '}
+            <Link className="text-accent-soft underline hover:text-white transition" to="/jine">{t('common:nav.other')}</Link>.{' '}
+            <Link className="text-accent-soft underline hover:text-white transition" to="/test">{t('common:nav.test')}</Link>.
           </p>
         </div>
       </section>

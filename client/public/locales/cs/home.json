@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "tag": "O nás",
+    "title": "Vytvoříme vám moderní web s vlastním designem a strukturou.",
+    "subtitle": "Vše vysvětlíme srozumitelně. Řekněte nám, co potřebujete, a my připravíme web nebo systém tak, aby byl jednoduchý pro vás i vaše zákazníky.",
+    "btnWeb": "Chci nový web",
+    "btnApp": "Chci webovou aplikaci"
+  },
+  "basicInfo": {
+    "title": "Základní info",
+    "item1": "Doba realizace: do 1 týdne",
+    "item2": "Máme tým zkušených vývojářů a programátorů",
+    "item3": "Za vše ručíme",
+    "item4": "Po spuštění: o web se staráme a můžeme ho dál vylepšovat"
+  },
+  "collaboration": {
+    "title": "Jak funguje navázání spolupráce",
+    "subtitle": "Spolupráce je jednoduchá a přehledná. Od první zprávy až po finální předání víte, co se děje a co bude následovat.",
+    "step1": { "title": "1. Výběr a kontakt", "desc": "Vyberete si plán, nebo nám rovnou napíšete, co potřebujete." },
+    "step2": { "title": "2. Krátká domluva", "desc": "Spojíme se přes hovor, chat nebo videochat a doladíme zadání." },
+    "step3": { "title": "3. Start práce", "desc": "Po přijetí 25% zálohy začneme na projektu pracovat." },
+    "step4": { "title": "4. Průběžné info", "desc": "Pravidelně posíláme aktuální stav, abyste měli přehled." },
+    "step5": { "title": "5. Úpravy během realizace", "desc": "Změny jsou možné podle vybraného plánu nebo podle domluvy." },
+    "step6": { "title": "6. Předání a reklamace", "desc": "Finální práci můžete reklamovat s důvodným vyjádřením a vše spolu projdeme." }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "open": "Otevřít web",
+    "types": {
+      "webApp": "Web aplikace",
+      "bigWeb": "Větší firemní web",
+      "basicWeb": "Basic web"
+    },
+    "results": {
+      "muzeer": "Streamovací aplikace hudby",
+      "conpath": "Firemní web s vlastním stylizováním",
+      "afrox": "Základní statický web"
+    }
+  },
+  "order": {
+    "title": "Co si můžete objednat",
+    "text": "Vyberte v menu nebo klikněte rovnou na:"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "websites": "Websites",
+    "hosting": "Hosting",
+    "webApps": "Web Apps",
+    "courses": "Courses",
+    "other": "Other",
+    "contact": "Contact",
+    "test": "Test"
+  },
+  "menu": "Menu"
+}

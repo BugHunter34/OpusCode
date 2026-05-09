@@ -1,19 +1,27 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-
-const navItems = [
-  { to: '/', label: 'Hlavní' },
-  { to: '/weby', label: 'Weby' },
-  { to: '/hosting', label: 'Hosting' },
-  { to: '/web-aplikace', label: 'Webové aplikace' },
-  { to: '/kurzy', label: 'Kurzy' },
-  { to: '/jine', label: 'Jiné' },
-  { to: '/kontakt', label: 'Kontakt' },
-  { to: '/test', label: 'Test' },
-]
+import { useTranslation } from 'react-i18next'
 
 function Topbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t, i18n } = useTranslation('common')
+
+  // Moved inside the component to access translations
+  const navItems = [
+    { to: '/', label: t('nav.home') },
+    { to: '/weby', label: t('nav.websites') },
+    { to: '/hosting', label: t('nav.hosting') },
+    { to: '/web-aplikace', label: t('nav.webApps') },
+    { to: '/kurzy', label: t('nav.courses') },
+    { to: '/jine', label: t('nav.other') },
+    { to: '/kontakt', label: t('nav.contact') },
+    { to: '/test', label: t('nav.test') },
+  ]
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === 'cs' ? 'en' : 'cs'
+    i18n.changeLanguage(nextLang)
+  }
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950">
@@ -29,10 +37,7 @@ function Topbar() {
               to={item.to}
               style={({ isActive }) =>
                 isActive
-                  ? {
-                      backgroundColor: 'var(--accent)',
-                      color: '#0f172a',
-                    }
+                  ? { backgroundColor: 'var(--accent)', color: '#0f172a' }
                   : undefined
               }
               className={({ isActive }) =>
@@ -46,14 +51,27 @@ function Topbar() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          onClick={() => setIsOpen((open) => !open)}
-          className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 md:hidden"
-          aria-label="Toggle menu"
-        >
-          Menu
-        </button>
+        {/* Action Buttons Container */}
+        <div className="flex items-center gap-3">
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 hover:bg-white/10 transition"
+            aria-label="Switch Language"
+          >
+            {i18n.language === 'cs' ? 'EN' : 'CS'}
+          </button>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
+            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 md:hidden hover:bg-white/10 transition"
+            aria-label="Toggle menu"
+          >
+            {t('menu')}
+          </button>
+        </div>
       </div>
 
       {isOpen && (
@@ -63,15 +81,10 @@ function Topbar() {
               <NavLink
                 key={item.to}
                 to={item.to}
-                onClick={() => {
-                  setIsOpen(false)
-                }}
+                onClick={() => setIsOpen(false)}
                 style={({ isActive }) =>
                   isActive
-                    ? {
-                        backgroundColor: 'var(--accent)',
-                        color: '#0f172a',
-                      }
+                    ? { backgroundColor: 'var(--accent)', color: '#0f172a' }
                     : undefined
                 }
                 className={({ isActive }) =>

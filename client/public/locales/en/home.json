@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "tag": "About us",
+    "title": "We will create a modern website with a custom design and structure for you.",
+    "subtitle": "We explain everything clearly. Tell us what you need, and we will prepare a website or system so that it is simple for both you and your customers.",
+    "btnWeb": "I want a new website",
+    "btnApp": "I want a web app"
+  },
+  "basicInfo": {
+    "title": "Basic info",
+    "item1": "Realization time: within 1 week",
+    "item2": "We have a team of experienced developers and programmers",
+    "item3": "We guarantee everything",
+    "item4": "After launch: we take care of the website and can continue to improve it"
+  },
+  "collaboration": {
+    "title": "How our cooperation works",
+    "subtitle": "Cooperation is simple and transparent. From the first message to the final handover, you know what is happening and what will follow.",
+    "step1": { "title": "1. Selection and contact", "desc": "You choose a plan, or write directly to us about what you need." },
+    "step2": { "title": "2. Brief agreement", "desc": "We connect via call, chat, or video call and fine-tune the assignment." },
+    "step3": { "title": "3. Starting work", "desc": "After receiving a 25% deposit, we start working on the project." },
+    "step4": { "title": "4. Continuous updates", "desc": "We regularly send updates so you have an overview." },
+    "step5": { "title": "5. Adjustments during realization", "desc": "Changes are possible according to the selected plan or agreement." },
+    "step6": { "title": "6. Handover and claims", "desc": "You can claim the final work with a justified statement, and we will go through everything together." }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "open": "Open website",
+    "types": {
+      "webApp": "Web app",
+      "bigWeb": "Larger corporate website",
+      "basicWeb": "Basic website"
+    },
+    "results": {
+      "muzeer": "Music streaming app",
+      "conpath": "Corporate website with custom styling",
+      "afrox": "Basic static website"
+    }
+  },
+  "order": {
+    "title": "What you can order",
+    "text": "Choose in the menu or click directly on:"
+  }
+}
