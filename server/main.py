@@ -1,13 +1,19 @@
 import os
-import resend
 import dotenv
-from fastapi import FastAPI, HTTPException
+from types import SimpleNamespace
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from email_templates import get_customer_email, get_owner_email
 from models import TextPayload, OrderPayload
 from rediscord import send_to_discord
+
+try:
+    import resend
+except ImportError:
+    resend = None
 
 dotenv.load_dotenv()
 
@@ -36,6 +42,9 @@ def _require_env(name: str, default: str = None) -> str:
     return value.strip()
 
 def _send_order_emails(payload: OrderPayload) -> None:
+    if resend is None:
+        raise RuntimeError("Missing dependency: resend. Run 'pip install -r requirements.txt' in server folder.")
+
     now = datetime.now()
     time_string = now.strftime("%d. %m. %H:%M") 
 
@@ -52,7 +61,8 @@ def _send_order_emails(payload: OrderPayload) -> None:
         "to": [owner_email],
         "reply_to": payload.email,
         "subject": owner_email_data["subject"],
-        "text": owner_email_data["text"]
+        "text": owner_email_data["text"],
+        "html": owner_email_data.get("html", "")
     })
 
     # --- Email to Customer ---
@@ -61,7 +71,8 @@ def _send_order_emails(payload: OrderPayload) -> None:
         "from": sender_email,
         "to": [payload.email],
         "subject": customer_email_data["subject"],
-        "text": customer_email_data["text"]
+        "text": customer_email_data["text"],
+        "html": customer_email_data.get("html", "")
     })
 
 # --- Routes ---
@@ -121,3 +132,32 @@ async def create_order(payload: OrderPayload):
             detail=f"Objednavku se nepodarilo odeslat e-mailem.{str(email_error)}",
         )
     return {"message": "Objednavka byla odeslana. Potvrzeni jsme poslali na vas e-mail."}
+
+
+@app.get("/preview-email", response_class=HTMLResponse)
+async def preview_email(
+    template: str = Query("customer", pattern="^(customer|owner)$"),
+    lang: str = Query("cs", pattern="^(cs|en)$"),
+):
+    """Preview endpoint for email HTML templates in browser."""
+    now = datetime.now()
+    time_string = now.strftime("%d. %m. %H:%M")
+    sample_payload = SimpleNamespace(
+        category="Web aplikace",
+        planName="Pro",
+        planPrice="24 990 Kc",
+        fullName="Jan Novak",
+        email="jan.novak@example.com",
+        phone="+420 777 123 456",
+        company="OpusCode s.r.o.",
+        note="Mam zajem o rychly start projektu.",
+        gdprConsent=True,
+        lang=lang,
+    )
+
+    email_data = (
+        get_owner_email(sample_payload, time_string)
+        if template == "owner"
+        else get_customer_email(sample_payload, time_string)
+    )
+    return email_data.get("html", "<h1>No HTML template found.</h1>")

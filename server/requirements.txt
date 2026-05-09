@@ -3,5 +3,6 @@ fastapi
 pydantic
 resend
 pydantic[email]
-dotenv
+python-dotenv
+email-validator
 requests
