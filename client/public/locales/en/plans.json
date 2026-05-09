@@ -1,0 +1,225 @@
+{
+  "websites": {
+    "eyebrow": "Web Solutions 24/7",
+    "title": "How much does a website cost",
+    "text": "Choose a plan based on how large of a website you need. We can always advise you on what is best for you.",
+    "category": "Websites",
+    "plans": {
+      "simple": {
+        "tag": "Base",
+        "name": "Simple Website",
+        "price": "from $249",
+        "desc": "For small businesses wanting to be found online.",
+        "items": [
+          "Static website",
+          "Up to 5 pages",
+          "Basic SEO setup",
+          "$20 / page"
+        ]
+      },
+      "corporate": {
+        "tag": "Popular",
+        "name": "Corporate Website",
+        "price": "from $549",
+        "desc": "For companies that want more content and easier management.",
+        "items": [
+          "Dynamic website",
+          "Up to 15 pages",
+          "API integration",
+          "$15 / page"
+        ]
+      },
+      "large": {
+        "tag": "Custom",
+        "name": "Large Website",
+        "price": "On Request",
+        "desc": "When you need a larger website with a custom solution.",
+        "items": [
+          "Unlimited scope",
+          "Integration with other tools",
+          "Priority support",
+          "$15 / page"
+        ]
+      }
+    }
+  },
+  "hosting": {
+    "eyebrow": "Hosting Solutions 24/7",
+    "title": "Hosting that pays off",
+    "text": "You know exactly what you get for the price. No technical fluff, just clear limits and support.",
+    "category": "Hosting",
+    "plans": {
+      "start": {
+        "tag": "Base",
+        "name": "Hosting Start",
+        "price": "$1.99 / mo",
+        "desc": "Clear base for a smaller web. No complexities.",
+        "items": [
+          "1 website",
+          "2.5 GB Storage",
+          "2 email accounts",
+          "SSL certificate"
+        ]
+      },
+      "basic": {
+        "tag": "Budget",
+        "name": "Hosting Basic",
+        "price": "$5.99 / mo",
+        "desc": "When you want something more.",
+        "items": [
+          "1 website",
+          "25 GB Storage",
+          "10 email accounts",
+          "Custom domain"
+        ]
+      },
+      "business": {
+        "tag": "Popular",
+        "name": "Hosting Business",
+        "price": "$14.99 / mo",
+        "desc": "The best choice for a standard corporate website.",
+        "items": [
+          "1 web + 1 test version",
+          "50 GB Storage",
+          "20 email accounts",
+          "Daily backup included"
+        ]
+      },
+      "premium": {
+        "tag": "Custom",
+        "name": "Hosting Premium",
+        "price": "from $19.99 / mo",
+        "desc": "For larger projects and multiple websites.",
+        "items": [
+          "Up to 3 websites",
+          "100 GB Storage",
+          "50 email accounts",
+          "Daily backup included"
+        ]
+      }
+    }
+  },
+  "courses": {
+    "eyebrow": "Course Solutions 24/7",
+    "title": "Courses and Training",
+    "text": "We will teach you and your team to work with the web quickly, clearly, and without unnecessary theory.",
+    "category": "Courses",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Website Creation Process",
+        "price": "from $79",
+        "desc": "A practical guide from an idea to launching a corporate website.",
+        "items": [
+          "Step-by-step website structure",
+          "Content and layout design",
+          "Publishing and basic review"
+        ]
+      },
+      "popular": {
+        "tag": "Popular",
+        "name": "Web App Creation Process",
+        "price": "from $199",
+        "desc": "How to properly design and build a web application in practice.",
+        "items": [
+          "Designing features and user roles",
+          "Division into development stages",
+          "Testing and handover"
+        ]
+      },
+      "custom": {
+        "tag": "Custom",
+        "name": "Website Management",
+        "price": "from $119",
+        "desc": "We will teach you how to manage the website long-term without depending on a supplier.",
+        "items": [
+          "Editing text and images",
+          "Regular checks and updates",
+          "Safe work in the administration"
+        ]
+      }
+    }
+  },
+  "other": {
+    "eyebrow": "Other Services",
+    "title": "Additional Services",
+    "text": "If you need something extra, we will prepare a simple custom plan with a clear price.",
+    "category": "Other",
+    "plans": {
+      "design": {
+        "tag": "Design",
+        "name": "Website Visual Design",
+        "price": "from $119",
+        "desc": "We will prepare a clear foundation for the entire website.",
+        "items": [
+          "Structure",
+          "Design",
+          "Layout"
+        ]
+      },
+      "automation": {
+        "tag": "Time Saver",
+        "name": "Automation of Routine Tasks",
+        "price": "from $299",
+        "desc": "We will convert manual steps into an automated process.",
+        "items": [
+          "1 specific process",
+          "Integration with 1 tool",
+          "Delivery within 14 days"
+        ]
+      },
+      "support": {
+        "tag": "Support",
+        "name": "Ongoing Assistance",
+        "price": "$10 / hr",
+        "desc": "Regular management and worry-free adjustments.",
+        "items": [
+          "24/7 support",
+          "Response within 24 hours",
+          "In-person meeting arrangement"
+        ]
+      }
+    }
+  },
+  "webApps": {
+    "eyebrow": "Web App Solutions 24/7",
+    "title": "When you need more than a classic website",
+    "text": "We create a simple online system that saves time for you and your team.",
+    "category": "Web Apps",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Simple Web App",
+        "price": "from $999",
+        "desc": "For companies wanting to digitize one specific process.",
+        "items": [
+          "1 main function",
+          "Up to 5 internal sections",
+          "1 admin panel"
+        ]
+      },
+      "business": {
+        "tag": "Popular",
+        "name": "Corporate Web App",
+        "price": "from $1,850",
+        "desc": "For companies wanting an app for daily operations.",
+        "items": [
+          "Up to 3 main functions",
+          "Up to 15 internal sections",
+          "1 external service integration"
+        ]
+      },
+      "custom": {
+        "tag": "Custom",
+        "name": "Large Web App",
+        "price": "On Request",
+        "desc": "For projects with larger scope and individual requirements.",
+        "items": [
+          "Unlimited functions",
+          "Unlimited sections",
+          "Multiple integrations"
+        ]
+      }
+    }
+  }
+}

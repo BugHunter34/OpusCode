@@ -6,7 +6,6 @@ function Topbar() {
   const [isOpen, setIsOpen] = useState(false)
   const { t, i18n } = useTranslation('common')
 
-  // Moved inside the component to access translations
   const navItems = [
     { to: '/', label: t('nav.home') },
     { to: '/weby', label: t('nav.websites') },
@@ -51,28 +50,34 @@ function Topbar() {
           ))}
         </nav>
 
-        {/* Action Buttons Container */}
+        {/* Container */}
         <div className="flex items-center gap-3">
-          {/* Language Switcher */}
-          <button
-            onClick={toggleLanguage}
-            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 hover:bg-white/10 transition"
-            aria-label="Switch Language"
+          
+          {/* DropDown select */}
+          <select
+            value={i18n.language}
+            onChange={(e) => i18n.changeLanguage(e.target.value)}
+            className="cursor-pointer rounded-md border border-white/20 bg-transparent px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-200 outline-none transition hover:bg-white/10 focus:border-accent focus:ring-1 focus:ring-accent"
+            aria-label="Select Language"
           >
-            {i18n.language === 'cs' ? 'EN' : 'CS'}
-          </button>
+            <option value="cs" className="bg-slate-900">Čeština</option>
+            <option value="en" className="bg-slate-900">English</option>
+            <option value="de" className="bg-slate-900">Deutsch</option>
+            <option value="pl" className="bg-slate-900">Polski</option>
+          </select>
 
           {/* Mobile Menu Toggle */}
           <button
             type="button"
             onClick={() => setIsOpen((open) => !open)}
-            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 md:hidden hover:bg-white/10 transition"
+            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 transition hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
           >
             {t('menu')}
           </button>
         </div>
       </div>
+
 
       {isOpen && (
         <nav className="border-t border-white/10 bg-slate-950 px-5 py-3 md:hidden">

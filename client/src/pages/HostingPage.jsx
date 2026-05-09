@@ -1,47 +1,30 @@
+import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import PlanGrid from '../components/PlanGrid'
 
-const plans = [
-  {
-    tag: 'Základ',
-    name: 'Hosting Start',
-    price: '40 Kc / měsíc',
-    desc: 'Jasný základ pro menší web. Bez složitostí.',
-    items: ['1 web', 'Úložiště 2.5 GB', '2 e-mailové schránky', 'SSL certifikát'],
-  },
-  {
-    tag: 'Budget',
-    name: 'Hosting Basic',
-    price: '140 Kc / měsíc',
-    desc: 'když chcete něco víc',
-    items: ['1 web', 'Úložiště 25 GB', '10 e-mailových schránek', 'Vlastní doména'],
-  },
-  {
-    tag: 'Oblíbené',
-    name: 'Hosting Business',
-    price: '370 Kc / měsíc',
-    desc: 'Nejlepší volba pro běžný firemní web.',
-    items: ['1 web + 1 testovací verze', 'Úložiště 50 GB', '20 e-mailových schránek', 'Denní zálohování v ceně'],
-  },
-  {
-    tag: 'Na míru',
-    name: 'Hosting Premium',
-    price: 'od 500 Kc / měsíc',
-    desc: 'Pro větší projekty a více webů.',
-    items: ['Až 3 weby', 'Úložiště 100 GB', '50 e-mailových schránek', 'Denní zálohování v ceně'],
-  },
-
-]
-
 function HostingPage() {
+  const { t } = useTranslation('plans')
+
+  const plans = [
+    t('hosting.plans.start', { returnObjects: true }),
+    t('hosting.plans.basic', { returnObjects: true }),
+    t('hosting.plans.business', { returnObjects: true }),
+    t('hosting.plans.premium', { returnObjects: true }),
+  ]
+
   return (
     <>
       <PageHeader
-        eyebrow="Hosting Solutions 24/7"
-        title="Hosting, který se vám vyplatí"
-        text="Přesně víte, co dostanete za cenu. Žádná technická omáčka, jen jasné limity a podpora."
+        eyebrow={t('hosting.eyebrow')}
+        title={t('hosting.title')}
+        text={t('hosting.text')}
       />
-      <PlanGrid plans={plans} category="Hosting" desktopColumns={4} containerMaxWidthClass="max-w-7xl" />
+      <PlanGrid 
+        plans={plans} 
+        category={t('hosting.category')} 
+        desktopColumns={4} 
+        containerMaxWidthClass="max-w-7xl" 
+      />
     </>
   )
 }

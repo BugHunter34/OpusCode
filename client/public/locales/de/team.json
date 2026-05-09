@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "owner": "Inhaber",
+    "intern": "Praktikant"
+  },
+  "roles": {
+    "ownerDev": "Inhaber & Entwickler",
+    "leadDesignDev": "Chefdesigner & Entwickler",
+    "orderManager": "Auftragsmanager"
+  },
+  "desc": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "secretary": "Sekretariat"
+  },
+  "items": {
+    "emailWorker": "E-Mail Worker",
+    "discord": "Discord",
+    "money": "Finanzen",
+    "animation": "Animation",
+    "design": "Design",
+    "designer": "Designer",
+    "hi": "Hallo",
+    "cau": "Tschüss",
+    "konnichiwa": "Konnichiwa"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "websites": {
+    "eyebrow": "Web-Lösungen 24/7",
+    "title": "Was kostet eine Webseite",
+    "text": "Wählen Sie einen Plan basierend auf der Größe Ihrer Webseite. Wir beraten Sie gerne, was am besten für Sie ist.",
+    "category": "Webseiten",
+    "plans": {
+      "simple": {
+        "tag": "Basis",
+        "name": "Einfache Webseite",
+        "price": "ab $249",
+        "desc": "Für kleine Unternehmen, die online gefunden werden wollen.",
+        "items": [
+          "Statische Webseite",
+          "Bis zu 5 Seiten",
+          "Basis-SEO-Setup",
+          "$20 / Seite"
+        ]
+      },
+      "corporate": {
+        "tag": "Beliebt",
+        "name": "Unternehmenswebseite",
+        "price": "ab $549",
+        "desc": "Für Firmen, die mehr Inhalte und eine einfachere Verwaltung wünschen.",
+        "items": [
+          "Dynamische Webseite",
+          "Bis zu 15 Seiten",
+          "API-Integration",
+          "$15 / Seite"
+        ]
+      },
+      "large": {
+        "tag": "Individuell",
+        "name": "Große Webseite",
+        "price": "Auf Anfrage",
+        "desc": "Wenn Sie eine größere Webseite mit einer maßgeschneiderten Lösung benötigen.",
+        "items": [
+          "Unbegrenzter Umfang",
+          "Integration mit anderen Tools",
+          "Prioritäts-Support",
+          "$15 / Seite"
+        ]
+      }
+    }
+  },
+  "hosting": {
+    "eyebrow": "Hosting-Lösungen 24/7",
+    "title": "Hosting, das sich auszahlt",
+    "text": "Sie wissen genau, was Sie für den Preis bekommen. Kein technisches Gerede, nur klare Limits und Support.",
+    "category": "Hosting",
+    "plans": {
+      "start": {
+        "tag": "Basis",
+        "name": "Hosting Start",
+        "price": "$1.99 / Monat",
+        "desc": "Klare Basis für kleinere Webseiten. Ohne Komplikationen.",
+        "items": [
+          "1 Webseite",
+          "2.5 GB Speicher",
+          "2 E-Mail-Konten",
+          "SSL-Zertifikat"
+        ]
+      },
+      "basic": {
+        "tag": "Budget",
+        "name": "Hosting Basic",
+        "price": "$5.99 / Monat",
+        "desc": "Wenn Sie etwas mehr wollen.",
+        "items": [
+          "1 Webseite",
+          "25 GB Speicher",
+          "10 E-Mail-Konten",
+          "Eigene Domain"
+        ]
+      },
+      "business": {
+        "tag": "Beliebt",
+        "name": "Hosting Business",
+        "price": "$14.99 / Monat",
+        "desc": "Die beste Wahl für eine Standard-Unternehmenswebseite.",
+        "items": [
+          "1 Webseite + 1 Testversion",
+          "50 GB Speicher",
+          "20 E-Mail-Konten",
+          "Tägliches Backup inklusive"
+        ]
+      },
+      "premium": {
+        "tag": "Individuell",
+        "name": "Hosting Premium",
+        "price": "ab $19.99 / Monat",
+        "desc": "Für größere Projekte und mehrere Webseiten.",
+        "items": [
+          "Bis zu 3 Webseiten",
+          "100 GB Speicher",
+          "50 E-Mail-Konten",
+          "Tägliches Backup inklusive"
+        ]
+      }
+    }
+  },
+  "courses": {
+    "eyebrow": "Schulungslösungen 24/7",
+    "title": "Kurse und Schulungen",
+    "text": "Wir bringen Ihnen und Ihrem Team bei, wie man schnell, klar und ohne unnötige Theorie mit dem Web arbeitet.",
+    "category": "Kurse",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Prozess der Webseitenerstellung",
+        "price": "ab $79",
+        "desc": "Ein praktischer Leitfaden von der Idee bis zum Launch einer Unternehmenswebseite.",
+        "items": [
+          "Schritt-für-Schritt Webseitenstruktur",
+          "Inhalts- und Layout-Design",
+          "Veröffentlichung und Basis-Check"
+        ]
+      },
+      "popular": {
+        "tag": "Beliebt",
+        "name": "Prozess der Web-App-Erstellung",
+        "price": "ab $199",
+        "desc": "Wie man eine Web-Applikation in der Praxis richtig plant und baut.",
+        "items": [
+          "Design von Funktionen und Benutzerrollen",
+          "Aufteilung in Entwicklungsphasen",
+          "Testen und Übergabe"
+        ]
+      },
+      "custom": {
+        "tag": "Individuell",
+        "name": "Webseiten-Management",
+        "price": "ab $119",
+        "desc": "Wir bringen Ihnen bei, wie Sie die Webseite langfristig unabhängig vom Anbieter verwalten.",
+        "items": [
+          "Bearbeiten von Texten und Bildern",
+          "Regelmäßige Checks und Updates",
+          "Sicheres Arbeiten in der Administration"
+        ]
+      }
+    }
+  },
+  "other": {
+    "eyebrow": "Andere Dienstleistungen",
+    "title": "Zusätzliche Services",
+    "text": "Wenn Sie etwas Extra benötigen, erstellen wir einen einfachen individuellen Plan mit klarem Preis.",
+    "category": "Sonstiges",
+    "plans": {
+      "design": {
+        "tag": "Design",
+        "name": "Visuelles Webdesign",
+        "price": "ab $119",
+        "desc": "Wir bereiten ein klares Fundament für Ihre gesamte Webseite vor.",
+        "items": [
+          "Struktur",
+          "Design",
+          "Layout"
+        ]
+      },
+      "automation": {
+        "tag": "Zeitersparnis",
+        "name": "Automatisierung von Routineaufgaben",
+        "price": "ab $299",
+        "desc": "Wir wandeln manuelle Schritte in einen automatisierten Prozess um.",
+        "items": [
+          "1 spezifischer Prozess",
+          "Integration mit 1 Tool",
+          "Lieferung innerhalb von 14 Tagen"
+        ]
+      },
+      "support": {
+        "tag": "Support",
+        "name": "Laufende Unterstützung",
+        "price": "$10 / Std.",
+        "desc": "Regelmäßige Verwaltung und sorgenfreie Anpassungen.",
+        "items": [
+          "24/7 Support",
+          "Reaktion innerhalb von 24 Stunden",
+          "Persönliche Termine möglich"
+        ]
+      }
+    }
+  },
+  "webApps": {
+    "eyebrow": "App-Lösungen 24/7",
+    "title": "Wenn Sie mehr als eine klassische Webseite benötigen",
+    "text": "Wir erstellen einfache Online-Systeme, die Ihnen und Ihrem Team Zeit sparen.",
+    "category": "Web-Apps",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Einfache Web-App",
+        "price": "ab $999",
+        "desc": "Für Firmen, die einen spezifischen Prozess digitalisieren wollen.",
+        "items": [
+          "1 Hauptfunktion",
+          "Bis zu 5 interne Bereiche",
+          "1 Admin-Panel"
+        ]
+      },
+      "business": {
+        "tag": "Beliebt",
+        "name": "Unternehmens-Web-App",
+        "price": "ab $1,850",
+        "desc": "Für Firmen, die eine App für den täglichen Betrieb benötigen.",
+        "items": [
+          "Bis zu 3 Hauptfunktionen",
+          "Bis zu 15 interne Bereiche",
+          "Integration mit 1 externen Service"
+        ]
+      },
+      "custom": {
+        "tag": "Individuell",
+        "name": "Große Web-App",
+        "price": "Auf Anfrage",
+        "desc": "Für Projekte mit großem Umfang und individuellen Anforderungen.",
+        "items": [
+          "Unbegrenzter Funktionsumfang",
+          "Unbegrenzte Anzahl an Bereichen",
+          "Mehrfache Integrationen"
+        ]
+      }
+    }
+  }
+}

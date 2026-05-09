@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-// Layout import removed!
+import { useTranslation } from 'react-i18next';
 
 export default function TestPage() {
+  const { t } = useTranslation('common');
   const [rootMessage, setRootMessage] = useState('');
   const [inputText, setInputText] = useState('');
   const [postResponse, setPostResponse] = useState('');
@@ -13,8 +14,9 @@ export default function TestPage() {
       .catch((err) => console.error("Error fetching root:", err));
   }, []);
 
-  // 2. Handle the POST request
   const handlePostRequest = async () => {
+    if (!inputText.trim()) return;
+
     try {
       const response = await fetch('https://api.opuscode.dev/test', {
         method: 'POST',
@@ -25,56 +27,61 @@ export default function TestPage() {
       });
       const data = await response.json();
       setPostResponse(data.message);
+      setInputText(''); // Clear input after sending
     } catch (err) {
       console.error("Error posting data:", err);
     }
   };
 
   return (
-    <>
-      {/* Container to center the testing tools */}
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        padding: '40px 20px',
-        minHeight: '50vh'
-      }}>
+    <section className="mx-auto flex min-h-[70vh] w-full max-w-6xl items-center justify-center px-5 py-10 sm:px-8 lg:px-12">
+      <div className="w-full max-w-xl rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
         
-        <h2>API Testing Page</h2>
+        <p className="text-center font-mono text-xs uppercase tracking-[0.2em] text-accent">
+          Endpoint Testing
+        </p>
+        <h2 className="mt-2 text-center text-3xl font-semibold text-white">
+          {t('testApi.title')}
+        </h2>
 
         {/* Display GET response */}
-        <div style={{ margin: '20px 0', padding: '15px', backgroundColor: '#f9f9f9', border: '1px solid #ddd', borderRadius: '8px', width: '100%', maxWidth: '400px', textAlign: 'center' }}>
-          <strong>Response from GET "/":</strong> 
-          <p style={{ color: '#555', marginTop: '10px' }}>{rootMessage || "Loading..."}</p>
+        <div className="mt-8 rounded-2xl border border-white/10 bg-slate-900/60 p-5 text-center">
+          <strong className="text-sm font-medium text-slate-300">
+            {t('testApi.getLabel')}
+          </strong> 
+          <p className="mt-2 font-mono text-accent-soft">
+            {rootMessage || t('testApi.loading')}
+          </p>
         </div>
 
         {/* Input and POST button */}
-        <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <input 
             type="text" 
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            placeholder="Type a message to send..."
-            style={{ padding: '10px', width: '250px', borderRadius: '4px', border: '1px solid #ccc' }}
+            placeholder={t('testApi.placeholder')}
+            className="w-full rounded-xl border border-white/15 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-[color:var(--accent)]"
           />
           <button 
             onClick={handlePostRequest} 
-            style={{ padding: '10px 20px', cursor: 'pointer', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px' }}
+            className="shrink-0 rounded-xl px-6 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110"
+            style={{ backgroundColor: 'var(--accent)' }}
           >
-            Send POST
+            {t('testApi.sendBtn')}
           </button>
         </div>
 
         {/* Display POST response */}
         {postResponse && (
-          <div style={{ color: 'green', fontWeight: 'bold', fontSize: '1.1rem', marginTop: '10px' }}>
-            {postResponse}
+          <div className="mt-6 rounded-xl border border-lime-500/20 bg-lime-500/10 p-4 text-center">
+            <p className="text-sm font-semibold text-lime-300">
+              {postResponse}
+            </p>
           </div>
         )}
 
       </div>
-    </>
+    </section>
   );
 }

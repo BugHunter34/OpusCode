@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "owner": "Owner",
+    "intern": "Intern"
+  },
+  "roles": {
+    "ownerDev": "Owner & Developer",
+    "leadDesignDev": "Lead Designer & Developer",
+    "orderManager": "Order Manager"
+  },
+  "desc": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "secretary": "Secretary"
+  },
+  "items": {
+    "emailWorker": "Email Worker",
+    "discord": "Discord",
+    "money": "Money",
+    "animation": "Animation",
+    "design": "Design",
+    "designer": "Designer",
+    "hi": "Hi",
+    "cau": "Bye",
+    "konnichiwa": "Konnichiwa"
+  }
+}

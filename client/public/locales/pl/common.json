@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Główna",
+    "websites": "Strony",
+    "hosting": "Hosting",
+    "webApps": "Aplikacje webowe",
+    "courses": "Kursy",
+    "other": "Inne",
+    "contact": "Kontakt",
+    "test": "Test"
+  },
+  "menu": "Menu",
+  "footer": {
+    "rights": "Solutions 24/7"
+  },
+  "buttons": {
+    "orderCard": "Zamów niezobowiązująco",
+    "close": "Zamknij",
+    "submit": "Wyślij zamówienie",
+    "submitting": "Wysyłanie...",
+    "backHome": "Wróć do strony głównej"
+  },
+  "form": {
+    "title": "Formularz zamówienia",
+    "categoryLabel": "Kategoria",
+    "priceLabel": "Cena",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "company": "Firma",
+    "note": "Uwagi do zamówienia",
+    "notePlaceholder": "Krótko opisz, czego potrzebujesz.",
+    "gdpr": "Wyrażam zgodę na przetwarzanie danych kontaktowych w celu realizacji zamówienia. *"
+  },
+  "errors": {
+    "formIncomplete": "Proszę wypełnić imię, e-mail i zgodę na przetwarzanie danych.",
+    "apiFallback": "Nie udało się wysłać zamówienia. Spróbuj ponownie.",
+    "general": "Wystąpił błąd podczas wysyłania formularza.",
+    "404": "Nie znaleziono strony"
+  },
+  "messages": {
+    "success": "Zamówienie zostało pomyślnie wysłane. Potwierdzenie wysłaliśmy na Twój e-mail."
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony"
+  },
+  "testApi": {
+    "title": "Strona testowa API",
+    "getLabel": "Odpowiedź z GET \"/\":",
+    "loading": "Ładowanie...",
+    "placeholder": "Wpisz wiadomość do wysłania...",
+    "sendBtn": "Wyślij POST"
+  }
+}

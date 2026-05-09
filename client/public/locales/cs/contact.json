@@ -1,0 +1,29 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Spojte se s námi",
+  "text": "Napište nám nebo zavolejte. Ozveme se co nejdříve s návrhem postupu a orientační cenou.",
+  "details": {
+    "eyebrow": "Kontaktní údaje",
+    "email": "E-mail",
+    "lead": "Vedoucí",
+    "ownerPhone": "Telefon majitel",
+    "supportPhone": "Telefon podpora",
+    "id": "IČO",
+    "address": "Sídlo",
+    "website": "Web"
+  },
+  "operating": {
+    "eyebrow": "Provozní informace",
+    "title": "Kdy jsme k dispozici",
+    "week": "Pondělí - Pátek: 8:00 - 18:00",
+    "weekend": "Víkend: dle domluvy",
+    "consult": "Online konzultace: Google Meet / telefon"
+  },
+  "quick": {
+    "eyebrow": "Rychlý kontakt",
+    "text1": "Pro objednávku konkrétního plánu klikněte na tlačítko ",
+    "strong": "Nezávazně objednat",
+    "text2": " u vybraného plánu. Otevře se formulář a po odeslání vám přijde potvrzení do e-mailu."
+  },
+  "teamCategory": "Opus Code Team"
+}

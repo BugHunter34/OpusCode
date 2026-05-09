@@ -1,0 +1,29 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Skontaktuj się z nami",
+  "text": "Napisz do nas lub zadzwoń. Skontaktujemy się z Tobą jak najszybciej z propozycją i szacunkową ceną.",
+  "details": {
+    "eyebrow": "Dane kontaktowe",
+    "email": "E-mail",
+    "lead": "Lider",
+    "ownerPhone": "Telefon właściciela",
+    "supportPhone": "Telefon wsparcia",
+    "id": "Numer ID",
+    "address": "Adres",
+    "website": "WWW"
+  },
+  "operating": {
+    "eyebrow": "Informacje operacyjne",
+    "title": "Kiedy jesteśmy dostępni",
+    "week": "Poniedziałek - Piątek: 8:00 - 18:00",
+    "weekend": "Weekend: Po umówieniu",
+    "consult": "Konsultacja online: Google Meet / Telefon"
+  },
+  "quick": {
+    "eyebrow": "Szybki kontakt",
+    "text1": "Aby zamówić konkretny plan, kliknij przycisk ",
+    "strong": "Poproś o wycenę",
+    "text2": " obok wybranego planu. Otworzy się formularz, a po jego przesłaniu otrzymasz potwierdzenie na e-mail."
+  },
+  "teamCategory": "Zespół Opus Code"
+}

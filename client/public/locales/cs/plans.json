@@ -1,0 +1,225 @@
+{
+  "websites": {
+    "eyebrow": "Web Solutions 24/7",
+    "title": "Kolik stojí web",
+    "text": "Vyberte si plán podle toho, jak velký web potřebujete. Kdykoli vám poradíme, co je pro vás nejlepší.",
+    "category": "Weby",
+    "plans": {
+      "simple": {
+        "tag": "Základ",
+        "name": "Jednoduchý web",
+        "price": "od 6 200 Kč",
+        "desc": "Pro malé firmy, které chtějí být dohledatelné online.",
+        "items": [
+          "Statický web",
+          "Do 5 stránek",
+          "Základní SEO nastavení",
+          "500 Kč / stránka"
+        ]
+      },
+      "corporate": {
+        "tag": "Oblíbené",
+        "name": "Firemní web",
+        "price": "od 13 700 Kč",
+        "desc": "Pro firmy, které chtějí více obsahu a jednodušší správu.",
+        "items": [
+          "Dynamický web",
+          "Do 15 stránek",
+          "Napojení na API",
+          "300 Kč / stránka"
+        ]
+      },
+      "large": {
+        "tag": "Na míru",
+        "name": "Velký web",
+        "price": "na poptávku",
+        "desc": "Když potřebujete větší web s individuálním řešením.",
+        "items": [
+          "Neomezený rozsah",
+          "Napojení na další nástroje",
+          "Přednostní podpora",
+          "300 Kč / stránka"
+        ]
+      }
+    }
+  },
+  "hosting": {
+    "eyebrow": "Hosting Solutions 24/7",
+    "title": "Hosting, který se vám vyplatí",
+    "text": "Přesně víte, co dostanete za cenu. Žádná technická omáčka, jen jasné limity a podpora.",
+    "category": "Hosting",
+    "plans": {
+      "start": {
+        "tag": "Základ",
+        "name": "Hosting Start",
+        "price": "40 Kč / měsíc",
+        "desc": "Jasný základ pro menší web. Bez složitostí.",
+        "items": [
+          "1 web",
+          "Úložiště 2.5 GB",
+          "2 e-mailové schránky",
+          "SSL certifikát"
+        ]
+      },
+      "basic": {
+        "tag": "Budget",
+        "name": "Hosting Basic",
+        "price": "140 Kč / měsíc",
+        "desc": "Když chcete něco víc.",
+        "items": [
+          "1 web",
+          "Úložiště 25 GB",
+          "10 e-mailových schránek",
+          "Vlastní doména"
+        ]
+      },
+      "business": {
+        "tag": "Oblíbené",
+        "name": "Hosting Business",
+        "price": "370 Kč / měsíc",
+        "desc": "Nejlepší volba pro běžný firemní web.",
+        "items": [
+          "1 web + 1 testovací verze",
+          "Úložiště 50 GB",
+          "20 e-mailových schránek",
+          "Denní zálohování v ceně"
+        ]
+      },
+      "premium": {
+        "tag": "Na míru",
+        "name": "Hosting Premium",
+        "price": "od 500 Kč / měsíc",
+        "desc": "Pro větší projekty a více webů.",
+        "items": [
+          "Až 3 weby",
+          "Úložiště 100 GB",
+          "50 e-mailových schránek",
+          "Denní zálohování v ceně"
+        ]
+      }
+    }
+  },
+  "courses": {
+    "eyebrow": "Kurzy Solutions 24/7",
+    "title": "Kurzy a školení",
+    "text": "Naučíme vás i váš tým pracovat s webem rychle, srozumitelně a bez zbytečné teorie.",
+    "category": "Kurzy",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Postup tvorby webu",
+        "price": "od 1 900 Kč",
+        "desc": "Praktický postup od nápadu až po spuštění firemního webu.",
+        "items": [
+          "Struktura webu krok za krokem",
+          "Návrh obsahu a rozložení",
+          "Publikace a základní kontrola"
+        ]
+      },
+      "popular": {
+        "tag": "Oblíbené",
+        "name": "Postup tvorby webové aplikace",
+        "price": "od 4 900 Kč",
+        "desc": "Jak správně navrhnout a postavit webovou aplikaci v praxi.",
+        "items": [
+          "Návrh funkcí a uživatelských rolí",
+          "Rozdělení do etap vývoje",
+          "Testování a předání do provozu"
+        ]
+      },
+      "custom": {
+        "tag": "Na míru",
+        "name": "Ovládání a údržba webu",
+        "price": "od 2 900 Kč",
+        "desc": "Naučíme vás web dlouhodobě spravovat bez závislosti na dodavateli.",
+        "items": [
+          "Úprava textů a obrázků",
+          "Pravidelná kontrola a aktualizace",
+          "Bezpečná práce v administraci"
+        ]
+      }
+    }
+  },
+  "other": {
+    "eyebrow": "Jiné",
+    "title": "Další služby",
+    "text": "Pokud potřebujete něco navíc, připravíme jednoduchý plán na míru i s jasnou cenou.",
+    "category": "Jiné",
+    "plans": {
+      "design": {
+        "tag": "Návrh",
+        "name": "Návrh vzhledu webu",
+        "price": "od 2 900 Kč",
+        "desc": "V návrhu připravíme jasný základ pro celý web.",
+        "items": [
+          "Struktura",
+          "Design",
+          "Layout"
+        ]
+      },
+      "automation": {
+        "tag": "Úspora času",
+        "name": "Automatizace rutinních činností",
+        "price": "od 7 400 Kč",
+        "desc": "Ruční kroky převedeme na automatický proces.",
+        "items": [
+          "1 konkrétní proces",
+          "Napojení na 1 nástroj",
+          "Předání do 14 dní"
+        ]
+      },
+      "support": {
+        "tag": "Podpora",
+        "name": "Průběžná pomoc",
+        "price": "250 Kč / hod",
+        "desc": "Pravidelná správa a úpravy bez starostí.",
+        "items": [
+          "24/7 podpora",
+          "Reakce do 24 hodin",
+          "Sjednání schůzky osobně"
+        ]
+      }
+    }
+  },
+  "webApps": {
+    "eyebrow": "Webové aplikace Solutions 24/7",
+    "title": "Když potřebujete víc než klasický web",
+    "text": "Vytvoříme jednoduchý online systém, který ušetří čas vám i lidem v týmu.",
+    "category": "Webové aplikace",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Jednoduchá webová aplikace",
+        "price": "od 22 250 Kč",
+        "desc": "Pro firmy, které chtějí digitalizovat jeden konkrétní proces.",
+        "items": [
+          "1 hlavní funkce",
+          "Do 5 interních sekcí",
+          "1 admin panel"
+        ]
+      },
+      "business": {
+        "tag": "Oblíbené",
+        "name": "Firemní webová aplikace",
+        "price": "od 39 750 Kč",
+        "desc": "Pro firmy, které chtějí aplikaci pro každodenní provoz.",
+        "items": [
+          "Do 3 hlavních funkcí",
+          "Do 15 interních sekcí",
+          "Napojení na 1 externí službu"
+        ]
+      },
+      "custom": {
+        "tag": "Na míru",
+        "name": "Velká webová aplikace",
+        "price": "na poptávku",
+        "desc": "Pro projekty s větším rozsahem a individuálními požadavky.",
+        "items": [
+          "Neomezený rozsah funkcí",
+          "Neomezený počet sekcí",
+          "Více napojení podle domluvy"
+        ]
+      }
+    }
+  }
+}

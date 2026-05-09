@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "tag": "O nas",
+    "title": "Stworzymy dla Ciebie nowoczesną stronę z własnym designem i strukturą.",
+    "subtitle": "Wszystko wyjaśnimy zrozumiale. Powiedz nam, czego potrzebujesz, a my przygotujemy stronę lub system tak, aby był prosty dla Ciebie i Twoich klientów.",
+    "btnWeb": "Chcę nową stronę",
+    "btnApp": "Chcę aplikację webową"
+  },
+  "basicInfo": {
+    "title": "Podstawowe informacje",
+    "item1": "Czas realizacji: do 1 tygodnia",
+    "item2": "Mamy zespół doświadczonych programistów i deweloperów",
+    "item3": "Gwarantujemy jakość za wszystko",
+    "item4": "Po uruchomieniu: dbamy o stronę i możemy ją dalej ulepszać"
+  },
+  "collaboration": {
+    "title": "Jak działa nawiązanie współpracy",
+    "subtitle": "Współpraca jest prosta i przejrzysta. Od pierwszej wiadomości aż po ostateczne przekazanie wiesz, co się dzieje i co będzie dalej.",
+    "step1": { "title": "1. Wybór i kontakt", "desc": "Wybierasz plan lub od razu piszesz do nas, czego potrzebujesz." },
+    "step2": { "title": "2. Krótkie ustalenia", "desc": "Łączymy się przez telefon, czat lub wideo i doprecyzowujemy szczegóły." },
+    "step3": { "title": "3. Rozpoczęcie pracy", "desc": "Po otrzymaniu zaliczki w wysokości 25% rozpoczynamy pracę nad projektem." },
+    "step4": { "title": "4. Bieżące informacje", "desc": "Regularnie przesyłamy aktualny status, abyś miał pełen przegląd." },
+    "step5": { "title": "5. Poprawki w trakcie realizacji", "desc": "Zmiany są możliwe w zależności od wybranego planu lub naszych ustaleń." },
+    "step6": { "title": "6. Przekazanie i reklamacje", "desc": "Możesz złożyć reklamację dotyczącą końcowej pracy wraz z uzasadnieniem, a my wszystko wspólnie przeanalizujemy." }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "open": "Otwórz stronę",
+    "types": {
+      "webApp": "Aplikacja webowa",
+      "bigWeb": "Większa strona firmowa",
+      "basicWeb": "Podstawowa strona"
+    },
+    "results": {
+      "muzeer": "Aplikacja do streamingu muzyki",
+      "conpath": "Strona firmowa z własnym stylem",
+      "afrox": "Podstawowa strona statyczna"
+    }
+  },
+  "order": {
+    "title": "Co możesz zamówić",
+    "text": "Wybierz w menu lub kliknij bezpośrednio w:"
+  }
+}

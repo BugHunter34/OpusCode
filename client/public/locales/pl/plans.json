@@ -1,0 +1,225 @@
+{
+  "websites": {
+    "eyebrow": "Rozwiązania internetowe 24/7",
+    "title": "Ile kosztuje strona internetowa",
+    "text": "Wybierz plan dopasowany do wielkości Twojej witryny. Zawsze chętnie doradzimy, co będzie dla Ciebie najlepsze.",
+    "category": "Strony internetowe",
+    "plans": {
+      "simple": {
+        "tag": "Podstawa",
+        "name": "Prosta strona",
+        "price": "od $249",
+        "desc": "Dla małych firm chcących zaistnieć w sieci.",
+        "items": [
+          "Statyczna strona",
+          "Do 5 podstron",
+          "Podstawowa konfiguracja SEO",
+          "$20 / strona"
+        ]
+      },
+      "corporate": {
+        "tag": "Popularne",
+        "name": "Strona firmowa",
+        "price": "od $549",
+        "desc": "Dla firm potrzebujących więcej treści i łatwego zarządzania.",
+        "items": [
+          "Dynamiczna strona",
+          "Do 15 podstron",
+          "Integracja z API",
+          "$15 / strona"
+        ]
+      },
+      "large": {
+        "tag": "Indywidualne",
+        "name": "Duża strona internetowa",
+        "price": "Na zapytanie",
+        "desc": "Gdy potrzebujesz rozbudowanej witryny z dedykowanym rozwiązaniem.",
+        "items": [
+          "Nieograniczony zakres",
+          "Integracja z innymi narzędziami",
+          "Priorytetowe wsparcie",
+          "$15 / strona"
+        ]
+      }
+    }
+  },
+  "hosting": {
+    "eyebrow": "Rozwiązania hostingowe 24/7",
+    "title": "Hosting, który się opłaca",
+    "text": "Wiesz dokładnie, za co płacisz. Żadnego technicznego bełkotu, tylko jasne limity i wsparcie.",
+    "category": "Hosting",
+    "plans": {
+      "start": {
+        "tag": "Podstawa",
+        "name": "Hosting Start",
+        "price": "$1.99 / mies.",
+        "desc": "Jasna podstawa dla mniejszych stron. Bez komplikacji.",
+        "items": [
+          "1 strona",
+          "2.5 GB przestrzeni",
+          "2 konta e-mail",
+          "Certyfikat SSL"
+        ]
+      },
+      "basic": {
+        "tag": "Budżet",
+        "name": "Hosting Basic",
+        "price": "$5.99 / mies.",
+        "desc": "Gdy potrzebujesz czegoś więcej.",
+        "items": [
+          "1 strona",
+          "25 GB przestrzeni",
+          "10 kont e-mail",
+          "Własna domena"
+        ]
+      },
+      "business": {
+        "tag": "Popularne",
+        "name": "Hosting Business",
+        "price": "$14.99 / mies.",
+        "desc": "Najlepszy wybór dla standardowej strony firmowej.",
+        "items": [
+          "1 strona + 1 wersja testowa",
+          "50 GB przestrzeni",
+          "20 kont e-mail",
+          "Codzienne kopie zapasowe w cenie"
+        ]
+      },
+      "premium": {
+        "tag": "Indywidualne",
+        "name": "Hosting Premium",
+        "price": "od $19.99 / mies.",
+        "desc": "Dla większych projektów i wielu stron.",
+        "items": [
+          "Do 3 stron",
+          "100 GB przestrzeni",
+          "50 kont e-mail",
+          "Codzienne kopie zapasowe w cenie"
+        ]
+      }
+    }
+  },
+  "courses": {
+    "eyebrow": "Rozwiązania szkoleniowe 24/7",
+    "title": "Kursy i szkolenia",
+    "text": "Nauczymy Ciebie i Twój zespół pracy z siecią szybko, przejrzyście i bez zbędnej teorii.",
+    "category": "Kursy",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Proces tworzenia strony",
+        "price": "od $79",
+        "desc": "Praktyczny przewodnik od pomysłu do uruchomienia strony firmowej.",
+        "items": [
+          "Struktura strony krok po kroku",
+          "Projektowanie treści i układu",
+          "Publikacja i podstawowa kontrola"
+        ]
+      },
+      "popular": {
+        "tag": "Popularne",
+        "name": "Proces tworzenia aplikacji webowej",
+        "price": "od $199",
+        "desc": "Jak w praktyce poprawnie zaprojektować i zbudować aplikację internetową.",
+        "items": [
+          "Projektowanie funkcji i ról użytkowników",
+          "Podział na etapy rozwoju",
+          "Testowanie i przekazanie"
+        ]
+      },
+      "custom": {
+        "tag": "Indywidualne",
+        "name": "Zarządzanie stroną",
+        "price": "od $119",
+        "desc": "Nauczymy Cię długofalowego zarządzania stroną bez zależności od dostawcy.",
+        "items": [
+          "Edycja tekstów i obrazów",
+          "Regularne kontrole i aktualizacje",
+          "Bezpieczna praca w panelu administracyjnym"
+        ]
+      }
+    }
+  },
+  "other": {
+    "eyebrow": "Inne usługi",
+    "title": "Usługi dodatkowe",
+    "text": "Jeśli potrzebujesz czegoś extra, przygotujemy prosty plan dopasowany do Twoich potrzeb w jasnej cenie.",
+    "category": "Inne",
+    "plans": {
+      "design": {
+        "tag": "Projekt",
+        "name": "Wizualny projekt strony",
+        "price": "od $119",
+        "desc": "Przygotujemy przejrzyste fundamenty dla całej Twojej witryny.",
+        "items": [
+          "Struktura",
+          "Design",
+          "Układ"
+        ]
+      },
+      "automation": {
+        "tag": "Oszczędność czasu",
+        "name": "Automatyzacja rutynowych zadań",
+        "price": "od $299",
+        "desc": "Zamienimy ręczne czynności w zautomatyzowany proces.",
+        "items": [
+          "1 konkretny proces",
+          "Integracja z 1 narzędziem",
+          "Realizacja w 14 dni"
+        ]
+      },
+      "support": {
+        "tag": "Wsparcie",
+        "name": "Stała pomoc",
+        "price": "$10 / godz.",
+        "desc": "Regularne zarządzanie i bezstresowe poprawki.",
+        "items": [
+          "Wsparcie 24/7",
+          "Reakcja w 24 godziny",
+          "Możliwość spotkań osobistych"
+        ]
+      }
+    }
+  },
+  "webApps": {
+    "eyebrow": "Rozwiązania aplikacyjne 24/7",
+    "title": "Gdy potrzebujesz czegoś więcej niż zwykłej strony",
+    "text": "Tworzymy proste systemy online, które oszczędzają czas Twój i Twojego zespołu.",
+    "category": "Aplikacje webowe",
+    "plans": {
+      "start": {
+        "tag": "Start",
+        "name": "Prosta aplikacja webowa",
+        "price": "od $999",
+        "desc": "Dla firm chcących zdigitalizować jeden konkretny proces.",
+        "items": [
+          "1 główna funkcja",
+          "Do 5 sekcji wewnętrznych",
+          "1 panel administratora"
+        ]
+      },
+      "business": {
+        "tag": "Popularne",
+        "name": "Firmowa aplikacja webowa",
+        "price": "od $1,850",
+        "desc": "Dla firm potrzebujących aplikacji do codziennej pracy.",
+        "items": [
+          "Do 3 głównych funkcji",
+          "Do 15 sekcji wewnętrznych",
+          "Integracja z 1 usługą zewnętrzną"
+        ]
+      },
+      "custom": {
+        "tag": "Indywidualne",
+        "name": "Duża aplikacja webowa",
+        "price": "Na zapytanie",
+        "desc": "Dla projektów o dużym zasięgu i indywidualnych wymaganiach.",
+        "items": [
+          "Nieograniczony zakres funkcji",
+          "Nieograniczona liczba sekcji",
+          "Wiele integracji"
+        ]
+      }
+    }
+  }
+}

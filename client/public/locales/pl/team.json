@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "owner": "Właściciel",
+    "intern": "Stażysta"
+  },
+  "roles": {
+    "ownerDev": "Właściciel i Deweloper",
+    "leadDesignDev": "Główny Projektant i Deweloper",
+    "orderManager": "Menedżer Zamówień"
+  },
+  "desc": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "secretary": "Sekretarz"
+  },
+  "items": {
+    "emailWorker": "Obsługa E-mail",
+    "discord": "Discord",
+    "money": "Finanse",
+    "animation": "Animacja",
+    "design": "Design",
+    "designer": "Projektant",
+    "hi": "Cześć",
+    "cau": "Pa",
+    "konnichiwa": "Konnichiwa"
+  }
+}

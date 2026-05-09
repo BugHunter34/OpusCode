@@ -9,5 +9,46 @@
     "contact": "Contact",
     "test": "Test"
   },
-  "menu": "Menu"
+  "menu": "Menu",
+  "footer": {
+    "rights": "Solutions 24/7"
+  },
+  "buttons": {
+    "orderCard": "Request Quote",
+    "close": "Close",
+    "submit": "Send Order",
+    "submitting": "Sending...",
+    "backHome": "Back to Home"
+  },
+  "form": {
+    "title": "Order Form",
+    "categoryLabel": "Category",
+    "priceLabel": "Price",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "note": "Order Note",
+    "notePlaceholder": "Briefly describe what you need.",
+    "gdpr": "I agree to the processing of contact data for the purpose of order fulfillment. *"
+  },
+  "errors": {
+    "formIncomplete": "Please fill in your name, email, and data consent.",
+    "apiFallback": "Failed to send the order. Please try again.",
+    "general": "An error occurred while submitting the form.",
+    "404": "Page Not Found"
+  },
+  "messages": {
+    "success": "The order was successfully sent. We have sent a confirmation to your email."
+  },
+  "notFound": {
+    "title": "Page Not Found"
+  },
+  "testApi": {
+    "title": "API Testing Page",
+    "getLabel": "Response from GET \"/\":",
+    "loading": "Loading...",
+    "placeholder": "Type a message to send...",
+    "sendBtn": "Send POST"
+  }
 }

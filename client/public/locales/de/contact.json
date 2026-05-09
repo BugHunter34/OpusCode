@@ -1,0 +1,29 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Nehmen Sie Kontakt mit uns auf",
+  "text": "Schreiben Sie uns oder rufen Sie uns an. Wir melden uns so schnell wie möglich mit einem Angebot und einem Kostenvoranschlag bei Ihnen.",
+  "details": {
+    "eyebrow": "Kontaktdaten",
+    "email": "E-Mail",
+    "lead": "Leitung",
+    "ownerPhone": "Telefon Inhaber",
+    "supportPhone": "Telefon Support",
+    "id": "ID-Nummer",
+    "address": "Adresse",
+    "website": "Webseite"
+  },
+  "operating": {
+    "eyebrow": "Betriebsinformationen",
+    "title": "Wann wir verfügbar sind",
+    "week": "Montag - Freitag: 08:00 - 18:00 Uhr",
+    "weekend": "Wochenende: Nach Vereinbarung",
+    "consult": "Online-Beratung: Google Meet / Telefon"
+  },
+  "quick": {
+    "eyebrow": "Schneller Kontakt",
+    "text1": "Um einen bestimmten Plan zu bestellen, klicken Sie auf die Schaltfläche ",
+    "strong": "Angebot anfordern",
+    "text2": " neben dem ausgewählten Plan. Ein Formular wird geöffnet und nach dem Absenden erhalten Sie eine Bestätigung per E-Mail."
+  },
+  "teamCategory": "Opus Code Team"
+}

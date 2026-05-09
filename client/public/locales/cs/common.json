@@ -9,5 +9,46 @@
     "contact": "Kontakt",
     "test": "Test"
   },
-  "menu": "Menu"
+  "menu": "Menu",
+  "footer": {
+    "rights": "Solutions 24/7"
+  },
+  "buttons": {
+    "orderCard": "Nezávazně objednat",
+    "close": "Zavřít",
+    "submit": "Odeslat objednávku",
+    "submitting": "Odesílám...",
+    "backHome": "Zpět na hlavní"
+  },
+  "form": {
+    "title": "Objednávkový formulář",
+    "categoryLabel": "Kategorie",
+    "priceLabel": "Cena",
+    "name": "Jméno a příjmení",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "company": "Firma",
+    "note": "Poznámka k objednávce",
+    "notePlaceholder": "Stručně popište, co potřebujete.",
+    "gdpr": "Souhlasím se zpracováním kontaktních údajů za účelem vyřízení objednávky. *"
+  },
+  "errors": {
+    "formIncomplete": "Vyplňte prosím jméno, e-mail a souhlas se zpracováním údajů.",
+    "apiFallback": "Nepodařilo se odeslat objednávku. Zkuste to prosím znovu.",
+    "general": "Nastala chyba při odeslání formuláře.",
+    "404": "Stránka nebyla nalezena"
+  },
+  "messages": {
+    "success": "Objednávka byla úspěšně odeslána. Potvrzení jsme poslali na váš e-mail."
+  },
+  "notFound": {
+    "title": "Stránka nebyla nalezena"
+  },
+  "testApi": {
+    "title": "API Testovací stránka",
+    "getLabel": "Odpověď z GET \"/\":",
+    "loading": "Načítání...",
+    "placeholder": "Napište zprávu k odeslání...",
+    "sendBtn": "Odeslat POST"
+  }
 }

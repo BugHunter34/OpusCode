@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "tag": "Über uns",
+    "title": "Wir erstellen für Sie eine moderne Website mit eigenem Design und Struktur.",
+    "subtitle": "Wir erklären alles verständlich. Sagen Sie uns, was Sie brauchen, und wir bereiten eine Website oder ein System so vor, dass es für Sie und Ihre Kunden einfach ist.",
+    "btnWeb": "Ich möchte eine neue Website",
+    "btnApp": "Ich möchte eine Web-App"
+  },
+  "basicInfo": {
+    "title": "Basisinfos",
+    "item1": "Realisierungszeit: bis zu 1 Woche",
+    "item2": "Wir haben ein Team aus erfahrenen Entwicklern und Programmierern",
+    "item3": "Wir garantieren für alles",
+    "item4": "Nach dem Start: Wir pflegen die Website und können sie weiter verbessern"
+  },
+  "collaboration": {
+    "title": "Wie unsere Zusammenarbeit funktioniert",
+    "subtitle": "Die Zusammenarbeit ist einfach und transparent. Von der ersten Nachricht bis zur finalen Übergabe wissen Sie, was passiert und was als Nächstes kommt.",
+    "step1": { "title": "1. Auswahl und Kontakt", "desc": "Sie wählen einen Plan oder schreiben uns direkt, was Sie brauchen." },
+    "step2": { "title": "2. Kurze Absprache", "desc": "Wir verbinden uns per Anruf, Chat oder Videoanruf und stimmen die Anforderungen ab." },
+    "step3": { "title": "3. Arbeitsbeginn", "desc": "Nach Eingang einer Anzahlung von 25% beginnen wir mit der Arbeit am Projekt." },
+    "step4": { "title": "4. Laufende Updates", "desc": "Wir senden regelmäßig den aktuellen Status, damit Sie den Überblick behalten." },
+    "step5": { "title": "5. Anpassungen während der Umsetzung", "desc": "Änderungen sind je nach gewähltem Plan oder Absprache möglich." },
+    "step6": { "title": "6. Übergabe und Reklamation", "desc": "Sie können die endgültige Arbeit mit einer begründeten Erklärung reklamieren, und wir gehen alles gemeinsam durch." }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "open": "Website öffnen",
+    "types": {
+      "webApp": "Web-App",
+      "bigWeb": "Größere Unternehmenswebsite",
+      "basicWeb": "Basis-Website"
+    },
+    "results": {
+      "muzeer": "Musik-Streaming-App",
+      "conpath": "Unternehmenswebsite mit eigenem Styling",
+      "afrox": "Einfache statische Website"
+    }
+  },
+  "order": {
+    "title": "Was Sie bestellen können",
+    "text": "Wählen Sie im Menü oder klicken Sie direkt auf:"
+  }
+}

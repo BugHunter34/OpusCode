@@ -1,76 +1,86 @@
+import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import TeamGrid from '../components/TeamGrid'
 
-const teamMembers = [
-  {
-    tag: 'Owner',
-    name: 'Andhyy',
-    price: 'Majitel a vývojář',
-    desc: 'Backend',
-    items: ['Email Worker', 'Discord', 'Money'],
-  },
-  {
-    tag: 'Owner',
-    name: 'Afrox26TP',
-    price: 'Hlavní Designer a vývojář',
-    desc: 'Frontend',
-    items: ['Animace', 'Design', 'Návrhář'],
-  },
-  {
-    tag: 'Intern',
-    name: 'Lightsyy',
-    price: 'manažer zakázek',
-    desc: 'Sekretář',
-    items: ['Hi', 'Čau', 'konnichiwa'],
-  },
-]
-
 function ContactPage() {
+  const { t } = useTranslation(['contact', 'team'])
+
+  const teamMembers = [
+    {
+      tag: t('team:tags.owner'),
+      name: 'Andhyy',
+      price: t('team:roles.ownerDev'),
+      desc: t('team:desc.backend'),
+      items: [t('team:items.emailWorker'), t('team:items.discord'), t('team:items.money')],
+    },
+    {
+      tag: t('team:tags.owner'),
+      name: 'Afrox26TP',
+      price: t('team:roles.leadDesignDev'),
+      desc: t('team:desc.frontend'),
+      items: [t('team:items.animation'), t('team:items.design'), t('team:items.designer')],
+    },
+    {
+      tag: t('team:tags.intern'),
+      name: 'Lightsyy',
+      price: t('team:roles.orderManager'),
+      desc: t('team:desc.secretary'),
+      items: [t('team:items.hi'), t('team:items.cau'), t('team:items.konnichiwa')],
+    },
+  ]
+
   return (
     <>
       <PageHeader
-        eyebrow="Kontakt"
-        title="Spojte se s námi"
-        text="Napište nám nebo zavolejte. Ozveme se co nejdříve s návrhem postupu a orientační cenou."
+        eyebrow={t('contact:eyebrow')}
+        title={t('contact:title')}
+        text={t('contact:text')}
       />
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 lg:px-12">
         <div className="grid gap-4 md:grid-cols-2">
           <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Kontaktní údaje</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+              {t('contact:details.eyebrow')}
+            </p>
             <h2 className="mt-3 text-2xl font-semibold text-white">OpusCode</h2>
             <ul className="mt-4 space-y-3 text-slate-200">
-              <li>E-mail: kontakt@opuscode.dev</li>
-              <li>Vedoucí: Adam Tomala – OpusCode</li>
-              <li>Telefon majitel: +420 737 911 901</li>
-              <li>Telefon podpora: +420 777 123 456</li>
-              <li>IČO: Comming Soon</li>
-              <li>Sídlo: Spojovací 1172, 294 01 Bakov nad Jizerou</li>
-              <li>Web: www.opuscode.dev</li>
+              <li>{t('contact:details.email')}: kontakt@opuscode.dev</li>
+              <li>{t('contact:details.lead')}: Adam Tomala – OpusCode</li>
+              <li>{t('contact:details.ownerPhone')}: +420 737 911 901</li>
+              <li>{t('contact:details.supportPhone')}: +420 777 123 456</li>
+              <li>{t('contact:details.id')}: Comming Soon</li>
+              <li>{t('contact:details.address')}: Spojovací 1172, 294 01 Bakov nad Jizerou</li>
+              <li>{t('contact:details.website')}: www.opuscode.dev</li>
             </ul>
           </article>
 
           <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Provozní informace</p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">Kdy jsme k dispozici</h2>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+              {t('contact:operating.eyebrow')}
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">
+              {t('contact:operating.title')}
+            </h2>
             <ul className="mt-4 space-y-3 text-slate-200">
-              <li>Pondělí - Pátek: 8:00 - 18:00</li>
-              <li>Víkend: dle domluvy</li>
-              <li>Online konzultace: Google Meet / telefon</li>
+              <li>{t('contact:operating.week')}</li>
+              <li>{t('contact:operating.weekend')}</li>
+              <li>{t('contact:operating.consult')}</li>
             </ul>
           </article>
         </div>
 
         <div className="mt-6 rounded-2xl border border-accent-soft bg-accent-soft p-6 text-slate-100">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-soft">Rychlý kontakt</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-soft">
+            {t('contact:quick.eyebrow')}
+          </p>
           <p className="mt-3">
-            Pro objednávku konkrétního plánu klikněte na tlačítko <strong>Nezávazně objednat</strong> u vybraného
-            plánu. Otevře se formulář a po odeslání vám přijde potvrzení do e-mailu.
+            {t('contact:quick.text1')} <strong>{t('contact:quick.strong')}</strong>{t('contact:quick.text2')}
           </p>
         </div>
       </section>
 
-      <TeamGrid members={teamMembers} category="Opus Code Team" />
+      <TeamGrid members={teamMembers} category={t('contact:teamCategory')} />
     </>
   )
 }

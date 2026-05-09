@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Topbar from './Topbar'
 import ReactBitsBackground from './ReactBitsBackground'
 import ProductsBackground from './ProductsBackground'
+import { useTranslation } from 'react-i18next'
 
 const routeTheme = [
   { match: (path) => path === '/', accent: '#3b82f6', accentRgb: '59 130 246' },
@@ -14,6 +15,7 @@ const routeTheme = [
 ]
 
 function Layout() {
+  const { t } = useTranslation('common')
   const location = useLocation()
   const isHomePage = location.pathname === '/'
   const isProductPage = ['/weby', '/hosting', '/web-aplikace', '/kurzy', '/jine'].some((path) =>
@@ -56,7 +58,8 @@ function Layout() {
         <footer className="border-t border-white/10 py-8">
           <div className="mx-auto flex w-full max-w-6xl flex-col justify-between gap-2 px-5 text-sm text-slate-300 sm:flex-row sm:px-8 lg:px-12">
             <p>Solutions 24/7</p>
-            <p>Weby | Hosting | Webové aplikace | Kurzy | Jiné | Kontakt</p>
+            <p>{t('nav.websites')} | {t('nav.hosting')} | {t('nav.webApps')} | 
+            {t('nav.courses')} | {t('nav.other')} | {t('nav.contact')}</p>
           </div>
         </footer>
       </div>

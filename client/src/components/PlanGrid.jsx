@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const API_BASE_URL = "https://api.opuscode.dev"
 
@@ -11,7 +12,8 @@ const getInitialForm = () => ({
   gdprConsent: false,
 })
 
-function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, containerMaxWidthClass = 'max-w-6xl' }) {
+function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, containerMaxWidthClass = 'max-w-6xl' }) {
+  const { t, i18n } = useTranslation('common')
   const [selectedPlan, setSelectedPlan] = useState(null)
   const [formData, setFormData] = useState(getInitialForm)
   const [status, setStatus] = useState({ type: 'idle', message: '' })
@@ -68,7 +70,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
     }
 
     if (!canSubmit) {
-      setStatus({ type: 'error', message: 'Vyplňte prosím jméno, e-mail a souhlas se zpracováním údajů.' })
+      setStatus({ type: 'error', message: t('errors.formIncomplete') })
       return
     }
 
@@ -85,6 +87,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
           category,
           planName: selectedPlan.name,
           planPrice: selectedPlan.price,
+          language: i18n.language,
           ...formData,
         }),
       })
@@ -93,12 +96,12 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
 
       // if 400-500
       if (!response.ok) {
-        throw new Error(responseData.detail || 'Nepodařilo se odeslat objednávku. Zkuste to prosím znovu.')
+        throw new Error(responseData.detail || t('errors.apiFallback'))
       }
 
       setStatus({
         type: 'success',
-        message: responseData.message || 'Objednávka byla úspěšně odeslána. Potvrzení jsme poslali na váš e-mail.',
+        message: responseData.message || t('messages.success'),
       })
       // clear form
       setFormData(getInitialForm())
@@ -106,7 +109,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
     } catch (error) {
       setStatus({
         type: 'error',
-        message: error.message || 'Nastala chyba při odeslání formuláře.',
+        message: error.message || t('errors.general'),
       })
     } finally {
       setIsSubmitting(false)
@@ -142,7 +145,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
               className="mt-5 w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110"
               style={{ backgroundColor: 'var(--accent)' }}
             >
-              Nezávazně objednat
+              {t('buttons.orderCard')}
             </button>
           </article>
         ))}
@@ -159,10 +162,10 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Objednávkový formulář</p>
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('form.title')}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-white">{selectedPlan.name}</h3>
                 <p className="mt-1 text-sm text-slate-300">
-                  Kategorie: {category} | Cena: {selectedPlan.price}
+                  {t('form.categoryLabel')}: {category} | {t('form.priceLabel')}: {selectedPlan.price}
                 </p>
               </div>
               <button
@@ -170,14 +173,14 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
                 onClick={closeForm}
                 className="rounded-lg border border-white/20 px-3 py-2 text-sm text-slate-200 hover:bg-white/10"
               >
-                Zavřít
+                {t('buttons.close')}
               </button>
             </div>
 
             <form className="mt-5 max-h-[75vh] space-y-4 overflow-y-auto pr-1 sm:max-h-[80vh]" onSubmit={handleSubmit}>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
-                  Jméno a příjmení *
+                  {t('form.name')} *
                   <input
                     required
                     name="fullName"
@@ -188,7 +191,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
                 </label>
 
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
-                  E-mail *
+                  {t('form.email')} *
                   <input
                     required
                     type="email"
@@ -202,7 +205,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
-                  Telefon
+                  {t('form.phone')}
                   <input
                     name="phone"
                     value={formData.phone}
@@ -212,7 +215,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
                 </label>
 
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
-                  Firma
+                  {t('form.company')}
                   <input
                     name="company"
                     value={formData.company}
@@ -223,14 +226,14 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
               </div>
 
               <label className="flex flex-col gap-2 text-sm text-slate-200">
-                Poznámka k objednávce
+                {t('form.note')}
                 <textarea
                   name="note"
                   rows={4}
                   value={formData.note}
                   onChange={handleFieldChange}
                   className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
-                  placeholder="Stručně popište, co potřebujete."
+                  placeholder={t('form.notePlaceholder')}
                 />
               </label>
 
@@ -242,7 +245,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
                   onChange={handleFieldChange}
                   className="mt-1"
                 />
-                <span>Souhlasím se zpracováním kontaktních údajů za účelem vyřízení objednávky. *</span>
+                <span>{t('form.gdpr')}</span>
               </label>
 
               {status.message && (
@@ -257,7 +260,7 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
                 className="w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                 style={{ backgroundColor: 'var(--accent)' }}
               >
-                {isSubmitting ? 'Odesílám...' : 'Odeslat objednávku'}
+                {isSubmitting ? t('buttons.submitting') : t('buttons.submit')}
               </button>
             </form>
           </div>
@@ -268,4 +271,3 @@ function PlanGrid({ plans, category = 'Nezařazené', desktopColumns = 3, contai
 }
 
 export default PlanGrid
-
