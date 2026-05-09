@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import PageHeader from '../components/PageHeader'
 import TeamGrid from '../components/TeamGrid'
 
@@ -25,18 +26,12 @@ const teamMembers = [
     items: ['Hi', 'Čau', 'konnichiwa'],
   },
 ]
+=======
+import { Navigate } from 'react-router-dom'
+>>>>>>> 6ae52a758277f1ddc3861047c84e255393e36bdb
 
 function AboutUs() {
-    return (
-    <>
-      <PageHeader
-        eyebrow="O nás"
-        title="Poznejte náš tým"
-        text=""
-      />
-      <TeamGrid members={teamMembers} category="Opus Code Team" />
-    </>
-    )
+  return <Navigate to="/kontakt" replace />
 }
 
 export default AboutUs

@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.gridscan > canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #070b14;
+}
+
 .gridscan__preview {
   position: absolute;
   right: 12px;
