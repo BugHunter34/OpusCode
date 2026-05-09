@@ -13,7 +13,8 @@ EMAIL_I18N = {
         "outro1": "Ozveme se vám co nejdříve s dalšími kroky.",
         "outro2": "Vyčkejte, než vás někdo z našeho týmu kontaktuje.",
         "outro3": "Pokud máte nějaké otázky, zavolejte nebo napište nám na číslo / e-mail.",
-        "team": "Tým OpusCode"
+        "team": "Tým OpusCode",
+        "automatic": "Tento e-mail byl odeslán automaticky ze systému OpusCode"
     },
     "en": {
         "subject": "Order Confirmation - OpusCode",
@@ -26,7 +27,8 @@ EMAIL_I18N = {
         "outro1": "We will contact you shortly with the next steps.",
         "outro2": "Please wait until someone from our team contacts you.",
         "outro3": "If you have any questions, call us or write to us by phone/email.",
-        "team": "OpusCode Team"
+        "team": "OpusCode Team",
+        "automatic": "This email was sent automatically by the OpusCode system"
     },
     "sk": {
         "subject": "Potvrdenie objednávky - OpusCode",
@@ -39,7 +41,8 @@ EMAIL_I18N = {
         "outro1": "Ozveme sa vám čo najskôr s ďalšími krokmi.",
         "outro2": "Počkajte, kým vás niekto z nášho tímu kontaktuje.",
         "outro3": "Ak máte nejaké otázky, zavolajte alebo napíšte nám na číslo / e-mail.",
-        "team": "Tím OpusCode"
+        "team": "Tím OpusCode",
+        "automatic": "Tento e-mail bol zaslaný automaticky systémom OpusCode"
     },
     "de": {
         "subject": "Bestellbestätigung - OpusCode",
@@ -52,7 +55,8 @@ EMAIL_I18N = {
         "outro1": "Wir werden uns in Kürze mit den nächsten Schritten bei Ihnen melden.",
         "outro2": "Bitte warten Sie, bis sich jemand aus unserem Team mit Ihnen in Verbindung setzt.",
         "outro3": "Wenn Sie Fragen haben, rufen Sie uns an oder schreiben Sie uns per E-Mail.",
-        "team": "OpusCode Team"
+        "team": "OpusCode Team",
+        "automatic": "Dieses E-Mail wurde automatisch vom OpusCode-System gesendet"
     },
     "pl": {
         "subject": "Potwierdzenie zamówienia - OpusCode",
@@ -65,12 +69,13 @@ EMAIL_I18N = {
         "outro1": "Skontaktujemy się z Tobą wkrótce w sprawie kolejnych kroków.",
         "outro2": "Prosimy o cierpliwość, aż ktoś z naszego zespołu się z Tobą skontaktuje.",
         "outro3": "Jeśli masz pytania, zadzwoń lub napisz do nas e-mail.",
-        "team": "Zespół OpusCode"
+        "team": "Zespół OpusCode",
+        "automatic": "Ten e-mail został wysłany automatycznie systemem OpusCode"
     }
 }
 
 
-def _base_email_html(*, title: str, subtitle: str, rows_html: str, note_block: str = "") -> str:
+def _base_email_html(*, title: str, subtitle: str, rows_html: str, note_block: str = "", footer_text: str = "") -> str:
     """Shared HTML frame for both owner and customer emails."""
     return f"""<!doctype html>
 <html lang=\"cs\">
@@ -96,7 +101,7 @@ def _base_email_html(*, title: str, subtitle: str, rows_html: str, note_block: s
             {note_block}
             <tr>
               <td style=\"padding:20px 28px 24px 28px;\">
-                <p style=\"margin:0;font-size:12px;line-height:1.6;color:#64748b;\">Tento e-mail byl odeslán automaticky ze systému OpusCode.</p>
+                <p style=\"margin:0;font-size:12px;line-height:1.6;color:#64748b;\">{footer_text}.</p>
               </td>
             </tr>
           </table>
@@ -154,6 +159,7 @@ def get_customer_email(payload, time_string: str) -> dict:
             title=f"{t['greeting']} {payload.fullName},",
             subtitle=f"{t['intro']} {t['outro2']} {t['outro3']}",
             rows_html=rows,
+            footer_text=t["automatic"],
         ),
     }
 
