@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'cs', // deafult czech
-    ns: ['common', 'home'], // namespaces
+    ns: ['common', 'home', 'contact', 'plans', 'team'], // namespaces
     defaultNS: 'common',
     debug: true, // errors in console
     interpolation: {

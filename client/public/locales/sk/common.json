@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Hlavná",
+    "websites": "Weby",
+    "hosting": "Hosting",
+    "webApps": "Webové aplikácie",
+    "courses": "Kurzy",
+    "other": "Iné",
+    "contact": "Kontakt",
+    "test": "Test"
+  },
+  "menu": "Menu",
+  "footer": {
+    "rights": "Solutions 24/7"
+  },
+  "buttons": {
+    "orderCard": "Nezáväzne objednať",
+    "close": "Zavrieť",
+    "submit": "Odoslať objednávku",
+    "submitting": "Odosielam...",
+    "backHome": "Späť na hlavnú"
+  },
+  "form": {
+    "title": "Objednávkový formulár",
+    "categoryLabel": "Kategória",
+    "priceLabel": "Cena",
+    "name": "Meno a priezvisko",
+    "email": "E-mail",
+    "phone": "Telefón",
+    "company": "Firma",
+    "note": "Poznámka k objednávke",
+    "notePlaceholder": "Stručne popíšte, čo potrebujete.",
+    "gdpr": "Súhlasím so spracovaním kontaktných údajov za účelom vybavenia objednávky. *"
+  },
+  "errors": {
+    "formIncomplete": "Vyplňte prosím meno, e-mail a súhlas so spracovaním údajov.",
+    "apiFallback": "Nepodarilo sa odoslať objednávku. Skúste to prosím znova.",
+    "general": "Nastala chyba pri odosielaní formulára.",
+    "404": "Stránka sa nenašla"
+  },
+  "messages": {
+    "success": "Objednávka bola úspešne odoslaná. Potvrdenie sme poslali na váš e-mail."
+  },
+  "notFound": {
+    "title": "Stránka sa nenašla"
+  },
+  "testApi": {
+    "title": "API Testovacia stránka",
+    "getLabel": "Odpoveď z GET \"/\":",
+    "loading": "Načítava sa...",
+    "placeholder": "Napíšte správu na odoslanie...",
+    "sendBtn": "Odoslať POST"
+  }
+}

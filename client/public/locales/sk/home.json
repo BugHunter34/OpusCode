@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "tag": "O nás",
+    "title": "Vytvoríme vám moderný web s vlastným dizajnom a štruktúrou.",
+    "subtitle": "Všetko vysvetlíme zrozumiteľne. Povedzte nám, čo potrebujete, a my pripravíme web alebo systém tak, aby bol jednoduchý pre vás aj vašich zákazníkov.",
+    "btnWeb": "Chcem nový web",
+    "btnApp": "Chcem webovú aplikáciu"
+  },
+  "basicInfo": {
+    "title": "Základné info",
+    "item1": "Doba realizácie: do 1 týždňa",
+    "item2": "Máme tím skúsených vývojárov a programátorov",
+    "item3": "Za všetko ručíme",
+    "item4": "Po spustení: o web sa staráme a môžeme ho ďalej vylepšovať"
+  },
+  "collaboration": {
+    "title": "Ako funguje nadviazanie spolupráce",
+    "subtitle": "Spolupráca je jednoduchá a prehľadná. Od prvej správy až po finálne odovzdanie viete, čo sa deje a čo bude nasledovať.",
+    "step1": { "title": "1. Výber a kontakt", "desc": "Vyberiete si plán, alebo nám rovno napíšete, čo potrebujete." },
+    "step2": { "title": "2. Krátka dohoda", "desc": "Spojíme sa cez hovor, chat alebo videochat a doladíme zadanie." },
+    "step3": { "title": "3. Štart práce", "desc": "Po prijatí 25% zálohy začneme na projekte pracovať." },
+    "step4": { "title": "4. Priebežné info", "desc": "Pravidelne posielame aktuálny stav, aby ste mali prehľad." },
+    "step5": { "title": "5. Úpravy počas realizácie", "desc": "Zmeny sú možné podľa vybraného plánu alebo podľa dohody." },
+    "step6": { "title": "6. Odovzdanie a reklamácia", "desc": "Finálnu prácu môžete reklamovať s odôvodneným vyjadrením a všetko spolu prejdeme." }
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "open": "Otvoriť web",
+    "types": {
+      "webApp": "Web aplikácia",
+      "bigWeb": "Väčší firemný web",
+      "basicWeb": "Basic web"
+    },
+    "results": {
+      "muzeer": "Streamovacia aplikácia hudby",
+      "conpath": "Firemný web s vlastným štýlom",
+      "afrox": "Základný statický web"
+    }
+  },
+  "order": {
+    "title": "Čo si môžete objednať",
+    "text": "Vyberte v menu alebo kliknite rovno na:"
+  }
+}

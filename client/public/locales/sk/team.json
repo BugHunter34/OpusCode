@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "owner": "Majiteľ",
+    "intern": "Stážista"
+  },
+  "roles": {
+    "ownerDev": "Majiteľ a vývojár",
+    "leadDesignDev": "Hlavný dizajnér a vývojár",
+    "orderManager": "manažér zákaziek"
+  },
+  "desc": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "secretary": "Sekretár"
+  },
+  "items": {
+    "emailWorker": "Email Worker",
+    "discord": "Discord",
+    "money": "Peniaze",
+    "animation": "Animácie",
+    "design": "Dizajn",
+    "designer": "Návrhár",
+    "hi": "Hi",
+    "cau": "Čau",
+    "konnichiwa": "konnichiwa"
+  }
+}

@@ -17,11 +17,6 @@ function Topbar() {
     { to: '/test', label: t('nav.test') },
   ]
 
-  const toggleLanguage = () => {
-    const nextLang = i18n.language === 'cs' ? 'en' : 'cs'
-    i18n.changeLanguage(nextLang)
-  }
-
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
@@ -61,9 +56,11 @@ function Topbar() {
             aria-label="Select Language"
           >
             <option value="cs" className="bg-slate-900">Čeština</option>
+            <option value="sk" className="bg-slate-900">Slovenština</option>
             <option value="en" className="bg-slate-900">English</option>
             <option value="de" className="bg-slate-900">Deutsch</option>
             <option value="pl" className="bg-slate-900">Polski</option>
+            
           </select>
 
           {/* Mobile Menu Toggle */}
