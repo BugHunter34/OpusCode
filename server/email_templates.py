@@ -1,5 +1,74 @@
 from models import OrderPayload
 
+# --- Dictionary ---
+EMAIL_I18N = {
+    "cs": {
+        "subject": "Potvrzení objednávky - OpusCode",
+        "cat_label": "Kategorie",
+        "plan_label": "Plán",
+        "price_label": "Cena",
+        "time_label": "Přijetí objednávky",
+        "greeting": "Dobrý den",
+        "intro": "děkujeme za objednávku. Potvrzujeme přijetí poptávky s těmito údaji:",
+        "outro1": "Ozveme se vám co nejdříve s dalšími kroky.",
+        "outro2": "Vyčkejte, než vás někdo z našeho týmu kontaktuje.",
+        "outro3": "Pokud máte nějaké otázky, zavolejte nebo napište nám na číslo / e-mail.",
+        "team": "Tým OpusCode"
+    },
+    "en": {
+        "subject": "Order Confirmation - OpusCode",
+        "cat_label": "Category",
+        "plan_label": "Plan",
+        "price_label": "Price",
+        "time_label": "Received",
+        "greeting": "Hello",
+        "intro": "Thank you for your order. We confirm the receipt of your request with the following details:",
+        "outro1": "We will contact you shortly with the next steps.",
+        "outro2": "Please wait until someone from our team contacts you.",
+        "outro3": "If you have any questions, call us or write to us by phone/email.",
+        "team": "OpusCode Team"
+    },
+    "sk": {
+        "subject": "Potvrdenie objednávky - OpusCode",
+        "cat_label": "Kategória",
+        "plan_label": "Plán",
+        "price_label": "Cena",
+        "time_label": "Prijatie objednávky",
+        "greeting": "Dobrý deň",
+        "intro": "ďakujeme za objednávku. Potvrdzujeme prijatie dopytu s týmito údajmi:",
+        "outro1": "Ozveme sa vám čo najskôr s ďalšími krokmi.",
+        "outro2": "Počkajte, kým vás niekto z nášho tímu kontaktuje.",
+        "outro3": "Ak máte nejaké otázky, zavolajte alebo napíšte nám na číslo / e-mail.",
+        "team": "Tím OpusCode"
+    },
+    "de": {
+        "subject": "Bestellbestätigung - OpusCode",
+        "cat_label": "Kategorie",
+        "plan_label": "Plan",
+        "price_label": "Preis",
+        "time_label": "Bestelleingang",
+        "greeting": "Hallo",
+        "intro": "Vielen Dank für Ihre Bestellung. Wir bestätigen den Eingang Ihrer Anfrage mit folgenden Daten:",
+        "outro1": "Wir werden uns in Kürze mit den nächsten Schritten bei Ihnen melden.",
+        "outro2": "Bitte warten Sie, bis sich jemand aus unserem Team mit Ihnen in Verbindung setzt.",
+        "outro3": "Wenn Sie Fragen haben, rufen Sie uns an oder schreiben Sie uns per E-Mail.",
+        "team": "OpusCode Team"
+    },
+    "pl": {
+        "subject": "Potwierdzenie zamówienia - OpusCode",
+        "cat_label": "Kategoria",
+        "plan_label": "Plan",
+        "price_label": "Cena",
+        "time_label": "Otrzymano",
+        "greeting": "Dzień dobry",
+        "intro": "dziękujemy za zamówienie. Potwierdzamy otrzymanie zapytania z następującymi danymi:",
+        "outro1": "Skontaktujemy się z Tobą wkrótce w sprawie kolejnych kroków.",
+        "outro2": "Prosimy o cierpliwość, aż ktoś z naszego zespołu się z Tobą skontaktuje.",
+        "outro3": "Jeśli masz pytania, zadzwoń lub napisz do nas e-mail.",
+        "team": "Zespół OpusCode"
+    }
+}
+
 
 def _base_email_html(*, title: str, subtitle: str, rows_html: str, note_block: str = "") -> str:
     """Shared HTML frame for both owner and customer emails."""
@@ -46,78 +115,44 @@ def _row_html(label: str, value: str) -> str:
     </tr>
     """
 
-
 def get_customer_email(payload, time_string: str) -> dict:
-    """Vrátí předmět a tělo e-mailu pro zákazníka podle jeho jazyka."""
-    lang = getattr(payload, "lang", "cs").lower()
+    """Returns the subject and body of the customer email based on their language."""
+    # Get code
+    lang_code = getattr(payload, "lang", "en").lower()
+    if lang_code not in EMAIL_I18N:
+        lang_code = "en"
+        
+    t = EMAIL_I18N[lang_code]
 
-    if lang == "en":
-        rows = "".join(
-            [
-                _row_html("Category", payload.category),
-                _row_html("Plan", payload.planName),
-                _row_html("Price", payload.planPrice),
-                _row_html("Received", time_string),
-            ]
-        )
+    # build rows - dynamic
+    rows = "".join([
+        _row_html(t["cat_label"], payload.category),
+        _row_html(t["plan_label"], payload.planName),
+        _row_html(t["price_label"], payload.planPrice),
+        _row_html(t["time_label"], time_string),
+    ])
 
-        return {
-            "subject": "Order Confirmation - OpusCode",
-            "text": "\n".join(
-                [
-                    f"Hello {payload.fullName},",
-                    "",
-                    "Thank you for your order. We confirm the receipt of your request with the following details:",
-                    f"- Category: {payload.category}",
-                    f"- Plan: {payload.planName}",
-                    f"- Price: {payload.planPrice}",
-                    f"- Received: {time_string}",
-                    "",
-                    "We will contact you shortly with the next steps.",
-                    "Please wait until someone from our team contacts you.",
-                    "If you have any questions, call us or write to us by phone/email.",
-                    "",
-                    "OpusCode Team",
-                ]
-            ),
-            "html": _base_email_html(
-                title=f"Hello {payload.fullName},",
-                  subtitle="Thank you for your order. We confirm the receipt of your request. Please wait until someone from our team contacts you. If you have any questions, call us or write to us by phone/email.",
-                rows_html=rows,
-            ),
-        }
-
-    rows = "".join(
-        [
-            _row_html("Kategorie", payload.category),
-            _row_html("Plán", payload.planName),
-            _row_html("Cena", payload.planPrice),
-            _row_html("Přijetí objednávky", time_string),
-        ]
-    )
-
+    # Formated email parts
     return {
-        "subject": "Potvrzení objednávky - OpusCode",
-        "text": "\n".join(
-            [
-                f"Dobrý den {payload.fullName},",
-                "",
-                "děkujeme za objednávku. Potvrzujeme přijetí poptávky s těmito údaji:",
-                f"- Kategorie: {payload.category}",
-                f"- Plán: {payload.planName}",
-                f"- Cena: {payload.planPrice}",
-                f"- Přijetí objednávky: {time_string}",
-                "",
-                "Ozveme se vám co nejdříve s dalšími kroky.",
-                "Vyčkejte, než vás někdo z našeho týmu kontaktuje.",
-                "Pokud máte nějaké otázky, zavolejte nebo napište nám na číslo / e-mail.",
-                "",
-                "Tým OpusCode",
-            ]
-        ),
+        "subject": t["subject"],
+        "text": "\n".join([
+            f"{t['greeting']} {payload.fullName},",
+            "",
+            t["intro"],
+            f"- {t['cat_label']}: {payload.category}",
+            f"- {t['plan_label']}: {payload.planName}",
+            f"- {t['price_label']}: {payload.planPrice}",
+            f"- {t['time_label']}: {time_string}",
+            "",
+            t["outro1"],
+            t["outro2"],
+            t["outro3"],
+            "",
+            t["team"],
+        ]),
         "html": _base_email_html(
-            title=f"Dobrý den {payload.fullName},",
-              subtitle="Děkujeme za objednávku. Potvrzujeme přijetí poptávky s těmito údaji. Vyčkejte, než vás někdo z našeho týmu kontaktuje. Pokud máte nějaké otázky, zavolejte nebo napište nám na číslo / e-mail.",
+            title=f"{t['greeting']} {payload.fullName},",
+            subtitle=f"{t['intro']} {t['outro2']} {t['outro3']}",
             rows_html=rows,
         ),
     }
