@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const API_BASE_URL = "https://api.opuscode.dev"
 
@@ -27,6 +27,30 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
     setStatus({ type: 'idle', message: '' })
     setIsSubmitting(false)
   }
+
+  useEffect(() => {
+    if (!selectedPlan) {
+      document.body.classList.remove('modal-open')
+      return
+    }
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setSelectedPlan(null)
+        setFormData(getInitialForm())
+        setStatus({ type: 'idle', message: '' })
+        setIsSubmitting(false)
+      }
+    }
+
+    document.body.classList.add('modal-open')
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.classList.remove('modal-open')
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [selectedPlan])
 
   const handleFieldChange = (event) => {
     const { name, value, type, checked } = event.target
@@ -123,8 +147,14 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
       </div>
 
       {selectedPlan && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 px-4 py-8">
-          <div className="w-full max-w-2xl rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+        <div
+          className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 px-4 py-6 backdrop-blur-[1px]"
+          onClick={closeForm}
+        >
+          <div
+            className="mx-auto w-full max-w-2xl rounded-2xl border border-white/10 bg-slate-900 p-5 shadow-2xl sm:p-6"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Objednávkový formulář</p>
@@ -142,7 +172,7 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
               </button>
             </div>
 
-            <form className="mt-5 space-y-4" onSubmit={handleSubmit}>
+            <form className="mt-5 max-h-[75vh] space-y-4 overflow-y-auto pr-1 sm:max-h-[80vh]" onSubmit={handleSubmit}>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
                   Jméno a příjmení *
@@ -221,7 +251,6 @@ function PlanGrid({ plans, category = 'Nezařazené' }) {
 
               <button
                 type="submit"
-                onClick={handleSubmit}
                 disabled={isSubmitting || !canSubmit}
                 className="w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                 style={{ backgroundColor: 'var(--accent)' }}
