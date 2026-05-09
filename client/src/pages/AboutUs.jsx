@@ -4,8 +4,8 @@ import TeamGrid from '../components/TeamGrid'
 const teamMembers = [
   {
     tag: 'Owner',
-    name: 'Andhyy Lightbringer',
-    price: 'Výkonný Ředitel a vývojář',
+    name: 'Andhyy',
+    price: 'Majitel a vývojář',
    // imageUrl: 'https://api.andhyy.com/avatars/andhyy1.png',
     desc: 'Backend',
     items: ['Email Worker', 'Discord', 'Money'],
@@ -21,8 +21,8 @@ const teamMembers = [
     tag: 'Intern',
     name: 'Lightsyy',
     price: 'manažer zakázek',
-    desc: 'Cold Caller',
-    items: ['Věčně je broke', 'Čau', 'Fent Bender Gold'],
+    desc: 'Sekretář',
+    items: ['Hi', 'Čau', 'konnichiwa'],
   },
 ]
 

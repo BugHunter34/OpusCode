@@ -29,7 +29,7 @@ function TeamGrid({ members }) {
                 />
               </div>
             )}
-            <p className="mt-3 text-sm text-slate-300">{member.desc}</p>
+            <p className="mt-3 text-sm text-slate-300 font-bold">{member.desc}</p>
 
             {/* Skills */}
             {member.items && member.items.length > 0 && (
