@@ -8,24 +8,24 @@ function ContactPage() {
   const teamMembers = [
     {
       tag: t('team:tags.owner'),
-      name: 'Andhyy',
-      price: t('team:roles.ownerDev'),
+      name: 'Adam Tomala',
+      price: 'Lead Backendu',
       desc: t('team:desc.backend'),
-      items: [t('team:items.emailWorker'), t('team:items.discord'), t('team:items.money')],
+      items: ['Databáze', 'API', 'Struktura'],
     },
     {
       tag: t('team:tags.owner'),
-      name: 'Afrox26TP',
-      price: t('team:roles.leadDesignDev'),
+      name: 'Tomáš Pýcha',
+      price: 'Lead Frontendu',
       desc: t('team:desc.frontend'),
       items: [t('team:items.animation'), t('team:items.design'), t('team:items.designer')],
     },
     {
       tag: t('team:tags.intern'),
-      name: 'Lightsyy',
-      price: t('team:roles.orderManager'),
+      name: 'Samuel Morávek',
+      price: 'Lead Communication',
       desc: t('team:desc.secretary'),
-      items: [t('team:items.hi'), t('team:items.cau'), t('team:items.konnichiwa')],
+      items: ['Tester', 'Cold caller', 'Klientský follow-up'],
     },
   ]
 
@@ -47,7 +47,7 @@ function ContactPage() {
             <ul className="mt-4 space-y-3 text-slate-200">
               <li>{t('contact:details.email')}: kontakt@opuscode.dev</li>
               <li>{t('contact:details.lead')}: Adam Tomala – OpusCode</li>
-              <li>{t('contact:details.ownerPhone')}: +420 737 911 901</li>
+              <li>Telefon vedoucího: +420 737 911 901</li>
               <li>{t('contact:details.supportPhone')}: +420 777 123 456</li>
               <li>{t('contact:details.id')}: Comming Soon</li>
               <li>{t('contact:details.address')}: Spojovací 1172, 294 01 Bakov nad Jizerou</li>

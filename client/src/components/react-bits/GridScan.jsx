@@ -506,6 +506,11 @@ export const GridScan = ({
       if (composerRef.current) composerRef.current.setSize(container.clientWidth, container.clientHeight);
     };
     window.addEventListener('resize', onResize);
+    const resizeObserver =
+      typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => onResize()) : null;
+    if (resizeObserver) {
+      resizeObserver.observe(container);
+    }
 
     let last = performance.now();
     const tick = () => {
@@ -558,6 +563,9 @@ export const GridScan = ({
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       window.removeEventListener('resize', onResize);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
       material.dispose();
       quad.geometry.dispose();
 

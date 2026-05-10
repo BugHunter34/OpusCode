@@ -48,33 +48,33 @@ function ProductsBackground({ pagePath = '/weby', accentColor = '#8b5cf6' }) {
   const tint = hexToRgba(scanColor, 0.14)
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          position: 'relative',
-          background: `radial-gradient(circle at 50% 50%, ${tint}, transparent 48%), var(--bg)`,
-          backgroundPosition: 'center center',
-        }}
-      >
-        <GridScan
-          sensitivity={0.55}
-          lineThickness={1}
-          linesColor={linesColor}
-          scanColor={scanColor}
-          scanOpacity={0.42}
-          gridScale={0.1}
-          lineStyle="solid"
-          lineJitter={0.1}
-          scanDirection="backward"
-          noiseIntensity={0.006}
-          scanGlow={0.62}
-          scanSoftness={2}
-          scanDuration={2}
-          scanDelay={2}
-          scanOnClick={false}
-        />
+    <div className="pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden" aria-hidden="true">
+      <div className="h-full w-full">
+        <div
+          className="relative h-full w-full"
+          style={{
+            background: `radial-gradient(circle at 50% 50%, ${tint}, transparent 48%), var(--bg)`,
+            backgroundPosition: 'center center',
+          }}
+        >
+          <GridScan
+            sensitivity={0.55}
+            lineThickness={1}
+            linesColor={linesColor}
+            scanColor={scanColor}
+            scanOpacity={0.42}
+            gridScale={0.1}
+            lineStyle="solid"
+            lineJitter={0.1}
+            scanDirection="backward"
+            noiseIntensity={0.006}
+            scanGlow={0.62}
+            scanSoftness={2}
+            scanDuration={2}
+            scanDelay={2}
+            scanOnClick={false}
+          />
+        </div>
       </div>
     </div>
   )
