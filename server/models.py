@@ -10,7 +10,8 @@ class OrderPayload(BaseModel):
     planPrice: str 
     fullName: str
     email: EmailStr
-    phone: str = ""
-    company: str = ""
-    note: str = ""
+    phone: str
+    company: str
+    note: str
     gdprConsent: bool
+    lang: str

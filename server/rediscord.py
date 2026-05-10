@@ -24,7 +24,7 @@ def send_to_discord(payload: OrderPayload, time_string: str) -> None:
             },
             {
                 "name": "Customer Info", 
-                "value": f"**Name:** {payload.fullName}\n**Email:** {payload.email}\n**Phone:** {payload.phone or '-'}\n**Company:** {payload.company or '-'}", 
+                "value": f"**Country:** {payload.lang}\n**Name:** {payload.fullName}\n**Email:** {payload.email}\n**Phone:** {payload.phone or '-'}\n**Company:** {payload.company or '-'}", 
                 "inline": False
             },
             {

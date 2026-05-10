@@ -87,7 +87,7 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
           category,
           planName: selectedPlan.name,
           planPrice: selectedPlan.price,
-          language: i18n.language,
+          lang: i18n.language, // was i18n.lang 
           ...formData,
         }),
       })
