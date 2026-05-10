@@ -27,6 +27,13 @@ function ContactPage() {
       desc: t('team:desc.secretary'),
       items: ['Tester', 'Cold caller', t('team:items.clientFW')],
     },
+    {
+      tag: t('team:tags.intern'),
+      name: 'PolishMilk',
+      price: `Translator`,
+      desc: t(''),
+      items: ['Tester', 'Polish Translation'],
+    },
   ]
 
   return (
