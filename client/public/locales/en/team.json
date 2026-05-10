@@ -6,7 +6,11 @@
   "roles": {
     "ownerDev": "Owner & Developer",
     "leadDesignDev": "Lead Designer & Developer",
-    "orderManager": "Order Manager"
+    "orderManager": "Order Manager",
+    "Backend": "Backend",
+    "Frontend": "Frontend",
+    "Communication": "Communication",
+    "Lead": "Lead"
   },
   "desc": {
     "backend": "Backend",
@@ -22,6 +26,9 @@
     "designer": "Designer",
     "hi": "Hi",
     "cau": "Bye",
-    "konnichiwa": "Konnichiwa"
+    "konnichiwa": "Konnichiwa",
+    "DB": "Database",
+    "clientFW": "Client Follow-Up",
+    "structure": "Structure"
   }
 }

@@ -9,23 +9,23 @@ function ContactPage() {
     {
       tag: t('team:tags.owner'),
       name: 'Adam Tomala',
-      price: 'Lead Backendu',
+      price: `${t('team:roles.Lead')} ${t('team:roles.Backend')}`,
       desc: t('team:desc.backend'),
-      items: ['Databáze', 'API', 'Struktura'],
+      items: [t('team:items.DB'), 'API', t('team:items.structure')],
     },
     {
       tag: t('team:tags.owner'),
       name: 'Tomáš Pýcha',
-      price: 'Lead Frontendu',
+      price: `${t('team:roles.Lead')} ${t('team:roles.Frontend')}`,
       desc: t('team:desc.frontend'),
       items: [t('team:items.animation'), t('team:items.design'), t('team:items.designer')],
     },
     {
       tag: t('team:tags.intern'),
       name: 'Samuel Morávek',
-      price: 'Lead Communication',
+      price: `${t('team:roles.Lead')} ${t('team:roles.Communication')}`,
       desc: t('team:desc.secretary'),
-      items: ['Tester', 'Cold caller', 'Klientský follow-up'],
+      items: ['Tester', 'Cold caller', t('team:items.clientFW')],
     },
   ]
 
@@ -46,8 +46,8 @@ function ContactPage() {
             <h2 className="mt-3 text-2xl font-semibold text-white">OpusCode</h2>
             <ul className="mt-4 space-y-3 text-slate-200">
               <li>{t('contact:details.email')}: kontakt@opuscode.dev</li>
-              <li>{t('contact:details.lead')}: Adam Tomala – OpusCode</li>
-              <li>Telefon vedoucího: +420 737 911 901</li>
+              <li>{t('contact:details.lead')}: Adam Tomala</li>
+              <li>{t('contact:details.ownerPhone')}: +420 737 911 901</li>
               <li>{t('contact:details.supportPhone')}: +420 777 123 456</li>
               <li>{t('contact:details.id')}: Comming Soon</li>
               <li>{t('contact:details.address')}: Spojovací 1172, 294 01 Bakov nad Jizerou</li>

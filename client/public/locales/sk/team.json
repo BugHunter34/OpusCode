@@ -6,7 +6,11 @@
   "roles": {
     "ownerDev": "Majiteľ a vývojár",
     "leadDesignDev": "Hlavný dizajnér a vývojár",
-    "orderManager": "manažér zákaziek"
+    "orderManager": "manažér zákaziek",
+    "Backend": "Backend",
+    "Frontend": "Frontend",
+    "Communication": "komunikácie",
+    "Lead": "vedenie"
   },
   "desc": {
     "backend": "Backend",
@@ -22,6 +26,9 @@
     "designer": "Návrhár",
     "hi": "Hi",
     "cau": "Čau",
-    "konnichiwa": "konnichiwa"
+    "konnichiwa": "konnichiwa",
+    "DB": "Databáze",
+    "clientFW": "Zákaznícka podpora",
+    "structure": "štruktúra"
   }
 }

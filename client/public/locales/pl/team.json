@@ -6,7 +6,11 @@
   "roles": {
     "ownerDev": "Właściciel i Deweloper",
     "leadDesignDev": "Główny Projektant i Deweloper",
-    "orderManager": "Menedżer Zamówień"
+    "orderManager": "Menedżer Zamówień",
+    "Backend": "Backend",
+    "Frontend": "Frontend",
+    "Communication": "komunikacja",
+    "Lead": "zarządzanie"
   },
   "desc": {
     "backend": "Backend",
@@ -22,6 +26,9 @@
     "designer": "Projektant",
     "hi": "Cześć",
     "cau": "Pa",
-    "konnichiwa": "Konnichiwa"
+    "konnichiwa": "Konnichiwa",
+    "DB": "Database",
+    "clientFW": "śledzenie klienta",
+    "structure": "Struktura"
   }
 }
