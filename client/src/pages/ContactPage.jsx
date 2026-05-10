@@ -9,30 +9,31 @@ function ContactPage() {
     {
       tag: t('team:tags.owner'),
       name: 'Adam Tomala',
-      price: `${t('team:roles.Lead')} ${t('team:roles.Backend')}`,
+      role: `${t('team:roles.Lead')} ${t('team:roles.Backend')}`,
       desc: t('team:desc.backend'),
       items: [t('team:items.DB'), 'API', t('team:items.structure')],
     },
     {
       tag: t('team:tags.owner'),
       name: 'Tomáš Pýcha',
-      price: `${t('team:roles.Lead')} ${t('team:roles.Frontend')}`,
+      role: `${t('team:roles.Lead')} ${t('team:roles.Frontend')}`,
       desc: t('team:desc.frontend'),
       items: [t('team:items.animation'), t('team:items.design'), t('team:items.designer')],
     },
     {
       tag: t('team:tags.intern'),
       name: 'Samuel Morávek',
-      price: `${t('team:roles.Lead')} ${t('team:roles.Communication')}`,
+      role: `${t('team:roles.Lead')} ${t('team:roles.Communication')}`,
       desc: t('team:desc.secretary'),
       items: ['Tester', 'Cold caller', t('team:items.clientFW')],
     },
     {
       tag: t('team:tags.intern'),
-      name: 'PolishMilk',
-      price: `Translator`,
+      name: `Kamil Komoond ${t('team:items.PolishMilk')}`,
+      role: `${t('team:items.translator')}`,
       desc: t(''),
-      items: ['Tester', 'Polish Translation'],
+      imageUrl: 'https://api.andhyy.com/avatars/PolishMilk.jpg',
+      items: ['Tester', `${t('team:items.Polish')} ${t('team:items.translator')}`],
     },
   ]
 

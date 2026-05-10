@@ -14,7 +14,7 @@ function TeamGrid({ members }) {
             </p>
             <h2 className="mt-3 text-2xl font-semibold text-white">{member.name}</h2>
             
-            <p className="mt-1 text-xl font-bold text-accent-soft">{member.price}</p>
+            <p className="mt-1 text-xl font-bold text-accent-soft">{member.role}</p>
             <p>  </p>
             {/* Photo Grid*/}
             {member.imageUrl && (
