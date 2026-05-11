@@ -1,0 +1,117 @@
+{
+  "title": "Terms of Service",
+  "lastUpdated": "Last Updated: October 26, 2023",
+  "intro": "Welcome to OpusCode! We are glad you are here. Please read these Terms of Service carefully. They are a legal agreement between you and OpusCode.",
+  "section1": {
+    "title": "1. What These Terms Cover",
+    "text": "These Terms of Service (\"Terms\") explain the rules for using our services. When you use our website at https://www.opuscode.dev/ or any services we provide, you agree to these Terms. If you do not agree, please do not use our services."
+  },
+  "section2": {
+    "title": "2. Who We Are",
+    "text": "OpusCode is a business based in the Czech Republic. We offer web hosting and website creation services."
+  },
+  "section3": {
+    "title": "3. Our Services",
+    "intro": "OpusCode provides:",
+    "items": [
+      { "title": "Web Hosting:", "desc": "We host your website files so your site is available online." },
+      { "title": "Website Creation:", "desc": "We design and build websites for you." },
+      { "title": "Data Processing:", "desc": "Our services may involve processing data from users of the websites we host or create. This often happens without those users needing an account directly with OpusCode. For example, we might handle data from contact forms or website analytics. We handle this data according to our Privacy Policy." }
+    ]
+  },
+  "section4": {
+    "title": "4. Your Responsibilities",
+    "intro": "When you use our services, you agree to:",
+    "items": [
+      { "title": "Provide True Information:", "desc": "Give us accurate and complete details when you sign up or ask for services." },
+      { "title": "Keep Your Information Safe:", "desc": "If you have login details, keep them private. You are responsible for all activity under your account." },
+      { "title": "Follow the Law:", "desc": "Use our services only for lawful purposes. You must not break any laws in the Czech Republic, the EU, or any other relevant area." },
+      { "title": "Respect Others:", "desc": "Do not use our services to send spam, viruses, or harmful content. Do not harass, threaten, or harm anyone." },
+      { "title": "Your Content:", "desc": "You are responsible for all content you upload, publish, or display using our services. Make sure you have the right to use this content. Do not use content that is illegal, offensive, or infringes on others' rights." },
+      { "title": "Pay Your Fees:", "desc": "Pay all fees for our services on time." }
+    ]
+  },
+  "section5": {
+    "title": "5. What You Must Not Do",
+    "intro": "You must not:",
+    "items": [
+      { "title": "", "desc": "Use our services for any illegal activities." },
+      { "title": "", "desc": "Try to access our systems or others' accounts without permission." },
+      { "title": "", "desc": "Interfere with our services or networks." },
+      { "title": "", "desc": "Copy, sell, or reuse any part of our services without our written permission." },
+      { "title": "", "desc": "Host or link to content that is harmful, obscene, or promotes violence or discrimination." }
+    ]
+  },
+  "section6": {
+    "title": "6. Payments and Fees",
+    "items": [
+      { "title": "Service Fees:", "desc": "You agree to pay the fees for the services you choose. These fees are listed on our website or in your service agreement." },
+      { "title": "Billing:", "desc": "We will bill you for services as agreed. This may be monthly, annually, or based on your specific project." },
+      { "title": "Late Payments:", "desc": "If you do not pay on time, we may suspend or stop your services. We may also charge late fees." },
+      { "title": "Refunds:", "desc": "Unless stated otherwise in a specific service agreement, fees are generally non-refundable." }
+    ]
+  },
+  "section7": {
+    "title": "7. Intellectual Property",
+    "items": [
+      { "title": "Our Property:", "desc": "All parts of our website, software, and services (like text, graphics, logos) belong to OpusCode or our licensors. You cannot use them without our permission." },
+      { "title": "Your Property:", "desc": "You own the content you provide to us for your website or hosting. You give us a license to use this content only as needed to provide our services to you. This means we can store, display, and transmit your content as part of our service." }
+    ]
+  },
+  "section8": {
+    "title": "8. Data and Privacy",
+    "text": "We care about your privacy. We collect and use information according to our Privacy Policy. Please read our Privacy Policy to understand how we handle data, including data processed for users of the websites we create or host."
+  },
+  "section9": {
+    "title": "9. Ending Your Service",
+    "items": [
+      { "title": "By You:", "desc": "You can stop using our services at any time by contacting us. You must still pay any outstanding fees." },
+      { "title": "By Us:", "desc": "We can stop providing services to you if you break these Terms, do not pay your fees, or if we believe your use harms our services or others. We will usually try to warn you first." },
+      { "title": "After Termination:", "desc": "When services end, we may delete your data and content. You are responsible for backing up your data before termination." }
+    ]
+  },
+  "section10": {
+    "title": "10. Disclaimer of Warranties",
+    "text": "We provide our services \"as is\" and \"as available.\" This means we do not make any promises or guarantees about them. For example, we do not promise that our services will always be error-free, secure, or available without interruption. We do not guarantee that our services will meet all your specific needs."
+  },
+  "section11": {
+    "title": "11. Limitation of Liability",
+    "text": "OpusCode will not be liable for any indirect, incidental, special, or consequential damages. This includes things like lost profits, lost data, or business interruption, even if we knew such damages could happen. Our total liability to you for any claim arising from these Terms or our services will not be more than the amount you paid us in the past twelve (12) months."
+  },
+  "section12": {
+    "title": "12. Indemnification",
+    "intro": "You agree to protect OpusCode, our employees, and partners from any claims, losses, or expenses (including legal fees) that arise from:",
+    "items": [
+      { "title": "", "desc": "Your use of our services." },
+      { "title": "", "desc": "Your breach of these Terms." },
+      { "title": "", "desc": "Content you provide that infringes on others' rights." }
+    ]
+  },
+  "section13": {
+    "title": "13. Changes to These Terms",
+    "text": "We may update these Terms from time to time. We will post the new Terms on our website and update the \"Last Updated\" date. If the changes are big, we may notify you directly. Your continued use of our services after the changes means you accept the new Terms."
+  },
+  "section14": {
+    "title": "14. Governing Law and Dispute Resolution",
+    "items": [
+      { "title": "Governing Law:", "desc": "These Terms are governed by the laws of the Czech Republic and applicable European Union law." },
+      { "title": "Dispute Resolution:", "desc": "If a dispute arises, we ask that you first try to resolve it with us informally. If we cannot resolve it, any legal action must be brought in the courts located in the Czech Republic." }
+    ]
+  },
+  "section15": {
+    "title": "15. General Provisions",
+    "items": [
+      { "title": "Entire Agreement:", "desc": "These Terms, along with any service agreements, make up the entire agreement between you and OpusCode." },
+      { "title": "Severability:", "desc": "If any part of these Terms is found to be unenforceable, the rest of the Terms will still apply." },
+      { "title": "No Waiver:", "desc": "If we do not enforce a right under these Terms, it does not mean we give up that right in the future." }
+    ]
+  },
+  "section16": {
+    "title": "16. Contact Us",
+    "text": "If you have questions about these Terms, please contact us:\nOpusCode\nEmail: info@opuscode.dev\nWebsite: https://www.opuscode.dev/"
+  },
+  "disclaimer": {
+    "title": "Important Disclaimer",
+    "text": "This document is a template and for informational purposes only. It is not legal advice. We strongly recommend that you consult with a legal professional in the Czech Republic or EU to review and customize these Terms of Service to ensure they fully comply with all applicable laws and accurately reflect your specific business practices."
+  }
+}

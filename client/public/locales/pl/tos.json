@@ -1,0 +1,117 @@
+{
+  "title": "Regulamin",
+  "lastUpdated": "Ostatnia aktualizacja: 26 października 2023 r.",
+  "intro": "Witamy w OpusCode! Cieszymy się, że tu jesteś. Prosimy o uważne zapoznanie się z niniejszym Regulaminem. Stanowi on prawną umowę między Tobą a OpusCode.",
+  "section1": {
+    "title": "1. Czego dotyczy ten Regulamin",
+    "text": "Niniejszy Regulamin („Regulamin”) określa zasady korzystania z naszych usług. Korzystając z naszej strony internetowej pod adresem https://www.opuscode.dev/ lub z jakichkolwiek świadczonych przez nas usług, wyrażasz zgodę na niniejszy Regulamin. Jeśli nie wyrażasz zgody, prosimy o niekorzystanie z naszych usług."
+  },
+  "section2": {
+    "title": "2. Kim jesteśmy",
+    "text": "OpusCode to firma z siedzibą w Czechach. Oferujemy usługi hostingu i tworzenia stron internetowych."
+  },
+  "section3": {
+    "title": "3. Nasze usługi",
+    "intro": "OpusCode zapewnia:",
+    "items": [
+      { "title": "Hosting stron WWW:", "desc": "Przechowujemy pliki Twojej strony, aby była ona dostępna w Internecie." },
+      { "title": "Tworzenie stron internetowych:", "desc": "Projektujemy i budujemy strony internetowe dla Ciebie." },
+      { "title": "Przetwarzanie danych:", "desc": "Nasze usługi mogą obejmować przetwarzanie danych użytkowników stron, które hostujemy lub tworzymy. Często odbywa się to bez konieczności posiadania przez tych użytkowników konta bezpośrednio w OpusCode. Możemy na przykład obsługiwać dane z formularzy kontaktowych lub analiz stron internetowych. Przetwarzamy te dane zgodnie z naszą Polityką prywatności." }
+    ]
+  },
+  "section4": {
+    "title": "4. Twoje obowiązki",
+    "intro": "Korzystając z naszych usług, zgadzasz się:",
+    "items": [
+      { "title": "Podawać prawdziwe informacje:", "desc": "Podaj nam dokładne i kompletne dane podczas rejestracji lub składania zapytania o usługi." },
+      { "title": "Dbać o bezpieczeństwo swoich danych:", "desc": "Jeśli posiadasz dane logowania, zachowaj je w tajemnicy. Jesteś odpowiedzialny za wszystkie działania podejmowane w ramach Twojego konta." },
+      { "title": "Przestrzegać prawa:", "desc": "Korzystaj z naszych usług wyłącznie w celach zgodnych z prawem. Nie wolno Ci łamać żadnych przepisów prawa w Czechach, UE ani w żadnym innym właściwym obszarze." },
+      { "title": "Szanować innych:", "desc": "Nie używaj naszych usług do wysyłania spamu, wirusów ani szkodliwych treści. Nie nękaj, nie groź ani nie krzywdź nikogo." },
+      { "title": "Twoje treści:", "desc": "Jesteś odpowiedzialny za wszystkie treści, które przesyłasz, publikujesz lub wyświetlasz za pomocą naszych usług. Upewnij się, że masz prawo do korzystania z tych treści. Nie używaj treści niezgodnych z prawem, obraźliwych lub naruszających prawa innych osób." },
+      { "title": "Uiszczać opłaty:", "desc": "Terminowo opłacaj wszystkie opłaty za nasze usługi." }
+    ]
+  },
+  "section5": {
+    "title": "5. Czego nie wolno Ci robić",
+    "intro": "Nie wolno Ci:",
+    "items": [
+      { "title": "", "desc": "Używać naszych usług do jakichkolwiek działań niezgodnych z prawem." },
+      { "title": "", "desc": "Próbować uzyskać dostęp do naszych systemów lub kont innych osób bez zezwolenia." },
+      { "title": "", "desc": "Zakłócać działania naszych usług lub sieci." },
+      { "title": "", "desc": "Kopiować, sprzedawać lub ponownie wykorzystywać jakiejkolwiek części naszych usług bez naszej pisemnej zgody." },
+      { "title": "", "desc": "Hostować lub linkować do treści, które są szkodliwe, obsceniczne lub promują przemoc albo dyskryminację." }
+    ]
+  },
+  "section6": {
+    "title": "6. Płatności i opłaty",
+    "items": [
+      { "title": "Opłaty za usługi:", "desc": "Zgadzasz się uiszczać opłaty za wybrane przez siebie usługi. Opłaty te są wymienione na naszej stronie internetowej lub w umowie o świadczenie usług." },
+      { "title": "Rozliczenia:", "desc": "Będziemy wystawiać rachunki za usługi zgodnie z ustaleniami. Może to być miesięcznie, rocznie lub na podstawie konkretnego projektu." },
+      { "title": "Opóźnienia w płatnościach:", "desc": "Jeśli nie zapłacisz na czas, możemy zawiesić lub zatrzymać świadczenie usług. Możemy również naliczyć opłaty za opóźnienie." },
+      { "title": "Zwroty:", "desc": "O ile w określonej umowie o świadczenie usług nie postanowiono inaczej, opłaty na ogół nie podlegają zwrotowi." }
+    ]
+  },
+  "section7": {
+    "title": "7. Własność intelektualna",
+    "items": [
+      { "title": "Nasza własność:", "desc": "Wszystkie elementy naszej strony, oprogramowania i usług (takie jak tekst, grafika, logo) należą do OpusCode lub naszych licencjodawców. Nie możesz ich używać bez naszej zgody." },
+      { "title": "Twoja własność:", "desc": "Jesteś właścicielem treści, które nam przekazujesz na swoją stronę internetową lub hosting. Udzielasz nam licencji na korzystanie z tych treści tylko w zakresie niezbędnym do świadczenia Ci naszych usług. Oznacza to, że możemy przechowywać, wyświetlać i przesyłać Twoje treści w ramach naszej usługi." }
+    ]
+  },
+  "section8": {
+    "title": "8. Dane i prywatność",
+    "text": "Dbamy o Twoją prywatność. Zbieramy i wykorzystujemy informacje zgodnie z naszą Polityką prywatności. Prosimy o zapoznanie się z naszą Polityką prywatności, aby zrozumieć, w jaki sposób obchodzimy się z danymi, w tym danymi przetwarzanymi dla użytkowników stron, które tworzymy lub hostujemy."
+  },
+  "section9": {
+    "title": "9. Zakończenie świadczenia usług",
+    "items": [
+      { "title": "Przez Ciebie:", "desc": "Możesz zrezygnować z naszych usług w dowolnym momencie, kontaktując się z nami. Nadal musisz uregulować wszelkie zaległe opłaty." },
+      { "title": "Przez nas:", "desc": "Możemy przestać świadczyć Ci usługi, jeśli naruszysz niniejszy Regulamin, nie opłacisz usług lub jeśli uznamy, że Twoje korzystanie szkodzi naszym usługom lub innym osobom. Zazwyczaj najpierw spróbujemy Cię ostrzec." },
+      { "title": "Po zakończeniu:", "desc": "Gdy usługi zostaną zakończone, możemy usunąć Twoje dane i treści. Jesteś odpowiedzialny za utworzenie kopii zapasowej swoich danych przed zakończeniem." }
+    ]
+  },
+  "section10": {
+    "title": "10. Wyłączenie gwarancji",
+    "text": "Świadczymy nasze usługi „tak jak są” i „w miarę dostępności”. Oznacza to, że nie składamy żadnych obietnic ani gwarancji z nimi związanych. Na przykład nie obiecujemy, że nasze usługi będą zawsze wolne od błędów, bezpieczne lub dostępne bez przerw. Nie gwarantujemy, że nasze usługi spełnią wszystkie Twoje konkretne potrzeby."
+  },
+  "section11": {
+    "title": "11. Ograniczenie odpowiedzialności",
+    "text": "OpusCode nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne lub wtórne. Obejmuje to takie rzeczy jak utracone zyski, utracone dane lub przerwy w działalności, nawet jeśli wiedzieliśmy, że takie szkody mogą wystąpić. Nasza całkowita odpowiedzialność wobec Ciebie za wszelkie roszczenia wynikające z niniejszego Regulaminu lub naszych usług nie przekroczy kwoty, którą zapłaciłeś nam w ciągu ostatnich dwunastu (12) miesięcy."
+  },
+  "section12": {
+    "title": "12. Odszkodowanie",
+    "intro": "Zgadzasz się chronić OpusCode, naszych pracowników i partnerów przed wszelkimi roszczeniami, stratami lub wydatkami (w tym kosztami prawnymi), które wynikają z:",
+    "items": [
+      { "title": "", "desc": "Twojego korzystania z naszych usług." },
+      { "title": "", "desc": "Naruszenia przez Ciebie niniejszego Regulaminu." },
+      { "title": "", "desc": "Treści przez Ciebie dostarczonych, które naruszają prawa innych osób." }
+    ]
+  },
+  "section13": {
+    "title": "13. Zmiany w Regulaminie",
+    "text": "Od czasu do czasu możemy aktualizować niniejszy Regulamin. Nowy Regulamin opublikujemy na naszej stronie internetowej i zaktualizujemy datę „Ostatnia aktualizacja”. Jeśli zmiany będą znaczące, możemy powiadomić Cię bezpośrednio. Dalsze korzystanie z naszych usług po zmianach oznacza akceptację nowego Regulaminu."
+  },
+  "section14": {
+    "title": "14. Prawo właściwe i rozwiązywanie sporów",
+    "items": [
+      { "title": "Prawo właściwe:", "desc": "Niniejszy Regulamin podlega prawu czeskiemu i obowiązującemu prawu Unii Europejskiej." },
+      { "title": "Rozwiązywanie sporów:", "desc": "Jeśli dojdzie do sporu, prosimy, abyś najpierw spróbował rozwiązać go z nami nieformalnie. Jeśli nie będziemy w stanie go rozwiązać, wszelkie kroki prawne muszą zostać podjęte w sądach znajdujących się w Czechach." }
+    ]
+  },
+  "section15": {
+    "title": "15. Postanowienia ogólne",
+    "items": [
+      { "title": "Całość porozumienia:", "desc": "Niniejszy Regulamin, wraz z wszelkimi umowami o świadczenie usług, stanowi całość porozumienia między Tobą a OpusCode." },
+      { "title": "Rozdzielność postanowień:", "desc": "Jeśli jakakolwiek część niniejszego Regulaminu zostanie uznana za niewykonalną, reszta Regulaminu nadal będzie obowiązywać." },
+      { "title": "Brak zrzeczenia się:", "desc": "Jeśli nie wyegzekwujemy prawa wynikającego z niniejszego Regulaminu, nie oznacza to, że zrzekamy się tego prawa w przyszłości." }
+    ]
+  },
+  "section16": {
+    "title": "16. Skontaktuj się z nami",
+    "text": "Jeśli masz pytania dotyczące niniejszego Regulaminu, skontaktuj się z nami:\nOpusCode\nE-mail: info@opuscode.dev\nStrona internetowa: https://www.opuscode.dev/"
+  },
+  "disclaimer": {
+    "title": "Ważne zastrzeżenie",
+    "text": "Ten dokument jest szablonem i służy wyłącznie celom informacyjnym. Nie stanowi on porady prawnej. Zdecydowanie zalecamy skonsultowanie się z prawnikiem w Czechach lub w UE w celu przeglądu i dostosowania niniejszego Regulaminu, aby upewnić się, że jest on w pełni zgodny ze wszystkimi obowiązującymi przepisami i dokładnie odzwierciedla Twoje konkretne praktyki biznesowe."
+  }
+}

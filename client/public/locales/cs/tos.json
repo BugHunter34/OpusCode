@@ -1,0 +1,117 @@
+{
+  "title": "Všeobecné obchodní podmínky",
+  "lastUpdated": "Poslední aktualizace: 26. října 2023",
+  "intro": "Vítejte v OpusCode! Jsme rádi, že jste tady. Přečtěte si prosím pečlivě tyto Všeobecné obchodní podmínky. Představují právní dohodu mezi vámi a společností OpusCode.",
+  "section1": {
+    "title": "1. Co tyto podmínky pokrývají",
+    "text": "Tyto Všeobecné obchodní podmínky („Podmínky“) vysvětlují pravidla pro používání našich služeb. Používáním našeho webu na adrese https://www.opuscode.dev/ nebo jakýchkoli služeb, které poskytujeme, souhlasíte s těmito Podmínkami. Pokud s nimi nesouhlasíte, naše služby prosím nepoužívejte."
+  },
+  "section2": {
+    "title": "2. Kdo jsme",
+    "text": "OpusCode je podnik se sídlem v České republice. Nabízíme webhosting a služby tvorby webových stránek."
+  },
+  "section3": {
+    "title": "3. Naše služby",
+    "intro": "OpusCode poskytuje:",
+    "items": [
+      { "title": "Webhosting:", "desc": "Hostujeme soubory vašeho webu, aby byl dostupný online." },
+      { "title": "Tvorba webových stránek:", "desc": "Navrhujeme a vytváříme pro vás webové stránky." },
+      { "title": "Zpracování dat:", "desc": "Naše služby mohou zahrnovat zpracování dat od uživatelů webových stránek, které hostujeme nebo vytváříme. K tomu často dochází, aniž by tito uživatelé potřebovali účet přímo u OpusCode. Můžeme například zpracovávat data z kontaktních formulářů nebo webové analytiky. S těmito daty nakládáme v souladu s našimi Zásadami ochrany osobních údajů." }
+    ]
+  },
+  "section4": {
+    "title": "4. Vaše povinnosti",
+    "intro": "Při používání našich služeb souhlasíte s tím, že:",
+    "items": [
+      { "title": "Poskytnete pravdivé informace:", "desc": "Při registraci nebo žádosti o služby nám poskytnete přesné a úplné údaje." },
+      { "title": "Udržíte své údaje v bezpečí:", "desc": "Pokud máte přihlašovací údaje, udržujte je v tajnosti. Jste zodpovědní za veškerou aktivitu pod vaším účtem." },
+      { "title": "Budete dodržovat zákony:", "desc": "Naše služby budete používat pouze k zákonným účelům. Nesmíte porušovat žádné zákony České republiky, EU ani jiné příslušné oblasti." },
+      { "title": "Budete respektovat ostatní:", "desc": "Nepoužívejte naše služby k rozesílání spamu, virů nebo škodlivého obsahu. Nikoho neobtěžujte, nevyhrožujte mu ani mu neubližujte." },
+      { "title": "Váš obsah:", "desc": "Jste zodpovědní za veškerý obsah, který nahrajete, publikujete nebo zobrazíte pomocí našich služeb. Ujistěte se, že máte právo tento obsah používat. Nepoužívejte obsah, který je nezákonný, urážlivý nebo porušuje práva ostatních." },
+      { "title": "Včasné platby:", "desc": "Plaťte všechny poplatky za naše služby včas." }
+    ]
+  },
+  "section5": {
+    "title": "5. Co nesmíte dělat",
+    "intro": "Nesmíte:",
+    "items": [
+      { "title": "", "desc": "Používat naše služby k jakýmkoli nezákonným aktivitám." },
+      { "title": "", "desc": "Pokoušet se o přístup k našim systémům nebo účtům jiných osob bez povolení." },
+      { "title": "", "desc": "Narušovat naše služby nebo sítě." },
+      { "title": "", "desc": "Kopírovat, prodávat nebo znovu používat jakoukoli část našich služeb bez našeho písemného souhlasu." },
+      { "title": "", "desc": "Hostovat nebo odkazovat na obsah, který je škodlivý, obscénní nebo propaguje násilí či diskriminaci." }
+    ]
+  },
+  "section6": {
+    "title": "6. Platby a poplatky",
+    "items": [
+      { "title": "Poplatky za služby:", "desc": "Souhlasíte se zaplacením poplatků za služby, které si vyberete. Tyto poplatky jsou uvedeny na našem webu nebo ve vaší smlouvě o poskytování služeb." },
+      { "title": "Fakturace:", "desc": "Služby vám budeme účtovat dle dohody. Může to být měsíčně, ročně nebo na základě vašeho konkrétního projektu." },
+      { "title": "Pozdní platby:", "desc": "Pokud nezaplatíte včas, můžeme vaše služby pozastavit nebo ukončit. Můžeme si také účtovat poplatky z prodlení." },
+      { "title": "Vrácení peněz:", "desc": "Pokud není ve smlouvě o konkrétní službě uvedeno jinak, poplatky se obecně nevracejí." }
+    ]
+  },
+  "section7": {
+    "title": "7. Duševní vlastnictví",
+    "items": [
+      { "title": "Naše vlastnictví:", "desc": "Všechny části našeho webu, softwaru a služeb (jako jsou texty, grafika, loga) patří společnosti OpusCode nebo našim poskytovatelům licencí. Nemůžete je používat bez našeho svolení." },
+      { "title": "Vaše vlastnictví:", "desc": "Vlastníte obsah, který nám poskytnete pro svůj web nebo hosting. Udělujete nám licenci používat tento obsah pouze v rozsahu nezbytném k poskytování našich služeb. To znamená, že můžeme ukládat, zobrazovat a přenášet váš obsah jako součást naší služby." }
+    ]
+  },
+  "section8": {
+    "title": "8. Data a soukromí",
+    "text": "Záleží nám na vašem soukromí. Informace shromažďujeme a používáme v souladu s našimi Zásadami ochrany osobních údajů. Přečtěte si prosím naše Zásady ochrany osobních údajů, abyste pochopili, jak nakládáme s daty, včetně dat zpracovávaných pro uživatele webových stránek, které vytváříme nebo hostujeme."
+  },
+  "section9": {
+    "title": "9. Ukončení služby",
+    "items": [
+      { "title": "Z vaší strany:", "desc": "Používání našich služeb můžete kdykoli ukončit tak, že nás kontaktujete. Stále však musíte uhradit veškeré dlužné poplatky." },
+      { "title": "Z naší strany:", "desc": "Můžeme vám přestat poskytovat služby, pokud porušíte tyto Podmínky, nezaplatíte poplatky, nebo pokud se domníváme, že vaše používání poškozuje naše služby nebo jiné uživatele. Obvykle se vás pokusíme nejprve upozornit." },
+      { "title": "Po ukončení:", "desc": "Když služby skončí, můžeme smazat vaše data a obsah. Před ukončením jste zodpovědní za zálohování svých dat." }
+    ]
+  },
+  "section10": {
+    "title": "10. Odmítnutí záruk",
+    "text": "Naše služby poskytujeme „tak, jak jsou“ a „jak jsou dostupné“. To znamená, že ohledně nich nečiníme žádné sliby ani záruky. Neslibujeme například, že naše služby budou vždy bezchybné, bezpečné nebo dostupné bez přerušení. Nezaručujeme, že naše služby splní všechny vaše konkrétní potřeby."
+  },
+  "section11": {
+    "title": "11. Omezení odpovědnosti",
+    "text": "Společnost OpusCode nenese odpovědnost za žádné nepřímé, náhodné, zvláštní nebo následné škody. To zahrnuje věci jako ušlý zisk, ztracená data nebo přerušení podnikání, a to i v případě, že jsme věděli, že by k takovým škodám mohlo dojít. Naše celková odpovědnost vůči vám za jakýkoli nárok vyplývající z těchto Podmínek nebo našich služeb nepřesáhne částku, kterou jste nám zaplatili za posledních dvanáct (12) měsíců."
+  },
+  "section12": {
+    "title": "12. Odškodnění",
+    "intro": "Souhlasíte s tím, že budete chránit společnost OpusCode, naše zaměstnance a partnery před jakýmikoli nároky, ztrátami nebo výdaji (včetně poplatků za právní zastoupení), které vzniknou v důsledku:",
+    "items": [
+      { "title": "", "desc": "Vašeho používání našich služeb." },
+      { "title": "", "desc": "Vašeho porušení těchto Podmínek." },
+      { "title": "", "desc": "Obsahu, který poskytnete a který porušuje práva ostatních." }
+    ]
+  },
+  "section13": {
+    "title": "13. Změny těchto Podmínek",
+    "text": "Tyto Podmínky můžeme čas od času aktualizovat. Nové Podmínky zveřejníme na našem webu a aktualizujeme datum „Poslední aktualizace“. Pokud budou změny zásadní, můžeme vás upozornit přímo. Vaše další používání našich služeb po změnách znamená, že nové Podmínky přijímáte."
+  },
+  "section14": {
+    "title": "14. Rozhodné právo a řešení sporů",
+    "items": [
+      { "title": "Rozhodné právo:", "desc": "Tyto Podmínky se řídí zákony České republiky a příslušnými právními předpisy Evropské unie." },
+      { "title": "Řešení sporů:", "desc": "V případě sporu vás žádáme, abyste se jej s námi nejprve pokusili vyřešit neformálně. Pokud se nám to nepodaří, jakékoli právní kroky musí být podány u soudů v České republice." }
+    ]
+  },
+  "section15": {
+    "title": "15. Obecná ustanovení",
+    "items": [
+      { "title": "Úplná dohoda:", "desc": "Tyto Podmínky spolu s jakýmikoli smlouvami o poskytování služeb tvoří úplnou dohodu mezi vámi a společností OpusCode." },
+      { "title": "Oddělitelnost:", "desc": "Pokud bude jakákoli část těchto Podmínek shledána nevymahatelnou, zbytek Podmínek zůstává v platnosti." },
+      { "title": "Vzdání se práv:", "desc": "Pokud neuplatníme právo podle těchto Podmínek, neznamená to, že se tohoto práva vzdáváme do budoucna." }
+    ]
+  },
+  "section16": {
+    "title": "16. Kontaktujte nás",
+    "text": "Máte-li dotazy k těmto Podmínkám, kontaktujte nás:\nOpusCode\nE-mail: info@opuscode.dev\nWeb: https://www.opuscode.dev/"
+  },
+  "disclaimer": {
+    "title": "Důležité upozornění",
+    "text": "Tento dokument je šablona a slouží pouze pro informační účely. Nejedná se o právní poradenství. Důrazně doporučujeme, abyste se poradili s právním odborníkem v České republice nebo v EU a tyto Všeobecné obchodní podmínky zkontrolovali a upravili tak, aby plně vyhovovaly všem platným zákonům a přesně odrážely vaše konkrétní obchodní praktiky."
+  }
+}

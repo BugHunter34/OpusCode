@@ -1,0 +1,117 @@
+{
+  "title": "Allgemeine Geschäftsbedingungen",
+  "lastUpdated": "Zuletzt aktualisiert: 26. Oktober 2023",
+  "intro": "Willkommen bei OpusCode! Wir freuen uns, dass Sie hier sind. Bitte lesen Sie diese Allgemeinen Geschäftsbedingungen sorgfältig durch. Sie stellen eine rechtliche Vereinbarung zwischen Ihnen und OpusCode dar.",
+  "section1": {
+    "title": "1. Was diese Bedingungen abdecken",
+    "text": "Diese Allgemeinen Geschäftsbedingungen („Bedingungen“) erklären die Regeln für die Nutzung unserer Dienste. Wenn Sie unsere Website unter https://www.opuscode.dev/ oder die von uns bereitgestellten Dienste nutzen, stimmen Sie diesen Bedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie unsere Dienste bitte nicht."
+  },
+  "section2": {
+    "title": "2. Wer wir sind",
+    "text": "OpusCode ist ein Unternehmen mit Sitz in der Tschechischen Republik. Wir bieten Webhosting und Dienstleistungen zur Erstellung von Websites an."
+  },
+  "section3": {
+    "title": "3. Unsere Dienste",
+    "intro": "OpusCode bietet:",
+    "items": [
+      { "title": "Webhosting:", "desc": "Wir hosten Ihre Website-Dateien, damit Ihre Website online verfügbar ist." },
+      { "title": "Erstellung von Websites:", "desc": "Wir entwerfen und erstellen Websites für Sie." },
+      { "title": "Datenverarbeitung:", "desc": "Unsere Dienste können die Verarbeitung von Daten von Nutzern der Websites umfassen, die wir hosten oder erstellen. Dies geschieht oft, ohne dass diese Nutzer direkt ein Konto bei OpusCode benötigen. Zum Beispiel verarbeiten wir möglicherweise Daten aus Kontaktformularen oder Website-Analysen. Wir behandeln diese Daten gemäß unserer Datenschutzerklärung." }
+    ]
+  },
+  "section4": {
+    "title": "4. Ihre Verantwortlichkeiten",
+    "intro": "Wenn Sie unsere Dienste nutzen, stimmen Sie zu:",
+    "items": [
+      { "title": "Wahre Informationen anzugeben:", "desc": "Geben Sie uns genaue und vollständige Details an, wenn Sie sich anmelden oder Dienste anfragen." },
+      { "title": "Ihre Informationen sicher aufzubewahren:", "desc": "Wenn Sie Anmeldedaten haben, halten Sie diese geheim. Sie sind für alle Aktivitäten unter Ihrem Konto verantwortlich." },
+      { "title": "Sich an das Gesetz zu halten:", "desc": "Nutzen Sie unsere Dienste nur für rechtmäßige Zwecke. Sie dürfen keine Gesetze in der Tschechischen Republik, der EU oder einer anderen relevanten Region verletzen." },
+      { "title": "Andere zu respektieren:", "desc": "Nutzen Sie unsere Dienste nicht, um Spam, Viren oder schädliche Inhalte zu versenden. Belästigen, bedrohen oder verletzen Sie niemanden." },
+      { "title": "Ihre Inhalte:", "desc": "Sie sind für alle Inhalte verantwortlich, die Sie über unsere Dienste hochladen, veröffentlichen oder anzeigen. Stellen Sie sicher, dass Sie das Recht haben, diese Inhalte zu nutzen. Verwenden Sie keine Inhalte, die illegal oder anstößig sind oder die Rechte anderer verletzen." },
+      { "title": "Ihre Gebühren zu zahlen:", "desc": "Zahlen Sie alle Gebühren für unsere Dienste pünktlich." }
+    ]
+  },
+  "section5": {
+    "title": "5. Was Sie nicht tun dürfen",
+    "intro": "Sie dürfen nicht:",
+    "items": [
+      { "title": "", "desc": "Unsere Dienste für illegale Aktivitäten nutzen." },
+      { "title": "", "desc": "Versuchen, ohne Erlaubnis auf unsere Systeme oder die Konten anderer zuzugreifen." },
+      { "title": "", "desc": "Unsere Dienste oder Netzwerke stören." },
+      { "title": "", "desc": "Teile unserer Dienste ohne unsere schriftliche Erlaubnis kopieren, verkaufen oder wiederverwenden." },
+      { "title": "", "desc": "Inhalte hosten oder verlinken, die schädlich oder obszön sind oder Gewalt oder Diskriminierung fördern." }
+    ]
+  },
+  "section6": {
+    "title": "6. Zahlungen und Gebühren",
+    "items": [
+      { "title": "Servicegebühren:", "desc": "Sie stimmen zu, die Gebühren für die von Ihnen gewählten Dienste zu zahlen. Diese Gebühren sind auf unserer Website oder in Ihrem Servicevertrag aufgeführt." },
+      { "title": "Abrechnung:", "desc": "Wir stellen Ihnen die Dienste wie vereinbart in Rechnung. Dies kann monatlich, jährlich oder basierend auf Ihrem spezifischen Projekt erfolgen." },
+      { "title": "Zahlungsverzug:", "desc": "Wenn Sie nicht pünktlich zahlen, können wir Ihre Dienste aussetzen oder beenden. Wir können auch Versäumnisgebühren erheben." },
+      { "title": "Rückerstattungen:", "desc": "Sofern in einem spezifischen Servicevertrag nicht anders angegeben, sind Gebühren im Allgemeinen nicht erstattungsfähig." }
+    ]
+  },
+  "section7": {
+    "title": "7. Geistiges Eigentum",
+    "items": [
+      { "title": "Unser Eigentum:", "desc": "Alle Teile unserer Website, Software und Dienste (wie Texte, Grafiken, Logos) gehören OpusCode oder unseren Lizenzgebern. Sie dürfen diese nicht ohne unsere Erlaubnis nutzen." },
+      { "title": "Ihr Eigentum:", "desc": "Sie besitzen die Inhalte, die Sie uns für Ihre Website oder das Hosting zur Verfügung stellen. Sie erteilen uns eine Lizenz, diese Inhalte nur insoweit zu nutzen, wie es zur Bereitstellung unserer Dienste erforderlich ist. Das bedeutet, dass wir Ihre Inhalte als Teil unseres Dienstes speichern, anzeigen und übertragen dürfen." }
+    ]
+  },
+  "section8": {
+    "title": "8. Daten und Datenschutz",
+    "text": "Ihr Datenschutz ist uns wichtig. Wir erheben und verwenden Informationen gemäß unserer Datenschutzerklärung. Bitte lesen Sie unsere Datenschutzerklärung, um zu verstehen, wie wir mit Daten umgehen, einschließlich der Daten, die für Nutzer der Websites, die wir erstellen oder hosten, verarbeitet werden."
+  },
+  "section9": {
+    "title": "9. Beendigung Ihres Dienstes",
+    "items": [
+      { "title": "Durch Sie:", "desc": "Sie können die Nutzung unserer Dienste jederzeit beenden, indem Sie uns kontaktieren. Sie müssen jedoch weiterhin alle ausstehenden Gebühren zahlen." },
+      { "title": "Durch uns:", "desc": "Wir können die Bereitstellung von Diensten für Sie einstellen, wenn Sie diese Bedingungen verletzen, Ihre Gebühren nicht zahlen oder wenn wir glauben, dass Ihre Nutzung unseren Diensten oder anderen schadet. Wir werden in der Regel versuchen, Sie vorher zu warnen." },
+      { "title": "Nach der Beendigung:", "desc": "Wenn die Dienste enden, können wir Ihre Daten und Inhalte löschen. Sie sind dafür verantwortlich, Ihre Daten vor der Beendigung zu sichern." }
+    ]
+  },
+  "section10": {
+    "title": "10. Gewährleistungsausschluss",
+    "text": "Wir stellen unsere Dienste „wie besehen“ und „wie verfügbar“ zur Verfügung. Das bedeutet, dass wir keine Versprechen oder Garantien darüber abgeben. Zum Beispiel versprechen wir nicht, dass unsere Dienste immer fehlerfrei, sicher oder ohne Unterbrechung verfügbar sind. Wir garantieren nicht, dass unsere Dienste alle Ihre spezifischen Anforderungen erfüllen."
+  },
+  "section11": {
+    "title": "11. Haftungsbeschränkung",
+    "text": "OpusCode haftet nicht für indirekte, zufällige, besondere oder Folgeschäden. Dies umfasst Dinge wie entgangene Gewinne, verlorene Daten oder Betriebsunterbrechungen, selbst wenn wir wussten, dass solche Schäden eintreten könnten. Unsere Gesamthaftung Ihnen gegenüber für alle Ansprüche, die sich aus diesen Bedingungen oder unseren Diensten ergeben, ist auf den Betrag beschränkt, den Sie uns in den letzten zwölf (12) Monaten gezahlt haben."
+  },
+  "section12": {
+    "title": "12. Freistellung",
+    "intro": "Sie stimmen zu, OpusCode, unsere Mitarbeiter und Partner vor allen Ansprüchen, Verlusten oder Ausgaben (einschließlich Anwaltskosten) zu schützen, die sich aus Folgendem ergeben:",
+    "items": [
+      { "title": "", "desc": "Ihrer Nutzung unserer Dienste." },
+      { "title": "", "desc": "Ihrem Verstoß gegen diese Bedingungen." },
+      { "title": "", "desc": "Inhalten, die Sie bereitstellen und die die Rechte anderer verletzen." }
+    ]
+  },
+  "section13": {
+    "title": "13. Änderungen dieser Bedingungen",
+    "text": "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wir werden die neuen Bedingungen auf unserer Website veröffentlichen und das Datum „Zuletzt aktualisiert“ aktualisieren. Bei wesentlichen Änderungen werden wir Sie möglicherweise direkt benachrichtigen. Ihre fortgesetzte Nutzung unserer Dienste nach den Änderungen bedeutet, dass Sie die neuen Bedingungen akzeptieren."
+  },
+  "section14": {
+    "title": "14. Geltendes Recht und Streitbeilegung",
+    "items": [
+      { "title": "Geltendes Recht:", "desc": "Diese Bedingungen unterliegen den Gesetzen der Tschechischen Republik und dem anwendbaren Recht der Europäischen Union." },
+      { "title": "Streitbeilegung:", "desc": "Wenn ein Streitfall entsteht, bitten wir Sie, zunächst zu versuchen, diesen informell mit uns zu lösen. Wenn wir ihn nicht lösen können, müssen rechtliche Schritte vor den Gerichten in der Tschechischen Republik eingeleitet werden." }
+    ]
+  },
+  "section15": {
+    "title": "15. Allgemeine Bestimmungen",
+    "items": [
+      { "title": "Vollständige Vereinbarung:", "desc": "Diese Bedingungen bilden zusammen mit etwaigen Serviceverträgen die gesamte Vereinbarung zwischen Ihnen und OpusCode." },
+      { "title": "Salvatorische Klausel:", "desc": "Sollte ein Teil dieser Bedingungen für nicht durchsetzbar befunden werden, bleibt der Rest der Bedingungen weiterhin gültig." },
+      { "title": "Kein Verzicht:", "desc": "Wenn wir ein Recht aus diesen Bedingungen nicht durchsetzen, bedeutet dies nicht, dass wir in Zukunft auf dieses Recht verzichten." }
+    ]
+  },
+  "section16": {
+    "title": "16. Kontaktieren Sie uns",
+    "text": "Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte:\nOpusCode\nE-Mail: info@opuscode.dev\nWebsite: https://www.opuscode.dev/"
+  },
+  "disclaimer": {
+    "title": "Wichtiger Hinweis",
+    "text": "Dieses Dokument ist eine Vorlage und dient nur zu Informationszwecken. Es stellt keine Rechtsberatung dar. Wir empfehlen dringend, einen Rechtsexperten in der Tschechischen Republik oder der EU zu konsultieren, um diese Allgemeinen Geschäftsbedingungen zu überprüfen und anzupassen, um sicherzustellen, dass sie allen geltenden Gesetzen vollständig entsprechen und Ihre spezifischen Geschäftspraktiken genau widerspiegeln."
+  }
+}

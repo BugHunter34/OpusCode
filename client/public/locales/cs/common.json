@@ -30,7 +30,7 @@
     "company": "Firma",
     "note": "Poznámka k objednávce",
     "notePlaceholder": "Stručně popište, co potřebujete.",
-    "gdpr": "Souhlasím se zpracováním kontaktních údajů za účelem vyřízení objednávky. *"
+    "gdpr": "Souhlasím se <1>Všeobecnými obchodními podmínkami</1> a se zpracováním mých kontaktních údajů za účelem vyřízení objednávky. *"
   },
   "errors": {
     "formIncomplete": "Vyplňte prosím jméno, e-mail a souhlas se zpracováním údajů.",

@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { Trans } from 'react-i18next'
 
 const API_BASE_URL = "https://api.opuscode.dev"
 
@@ -243,9 +245,24 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
                   type="checkbox"
                   checked={formData.gdprConsent}
                   onChange={handleFieldChange}
-                  className="mt-1"
+                  className="mt-1 shrink-0" 
                 />
-                <span>{t('form.gdpr')}</span>
+                <span className="leading-relaxed">
+                  <Trans 
+                    i18nKey="form.gdpr" 
+                    t={t}
+                    components={{
+                      1: (
+                        <Link 
+                          to="/tos" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-semibold text-accent-soft underline underline-offset-4 transition hover:text-accent"
+                        />
+                      )
+                    }}
+                  />
+                </span>
               </label>
 
               {status.message && (

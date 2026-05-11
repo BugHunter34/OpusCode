@@ -30,7 +30,7 @@
     "company": "Firma",
     "note": "Bestellhinweis",
     "notePlaceholder": "Beschreiben Sie kurz, was Sie benötigen.",
-    "gdpr": "Ich stimme der Verarbeitung meiner Kontaktdaten zur Auftragsabwicklung zu. *"
+    "gdpr": "Ich stimme den <1>Allgemeinen Geschäftsbedingungen</1> und der Verarbeitung meiner Kontaktdaten zur Bestellabwicklung zu. *"
   },
   "errors": {
     "formIncomplete": "Bitte füllen Sie Name, E-Mail und die Zustimmung zur Datenverarbeitung aus.",

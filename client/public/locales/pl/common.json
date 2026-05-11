@@ -30,7 +30,7 @@
     "company": "Firma",
     "note": "Uwagi do zamówienia",
     "notePlaceholder": "Krótko opisz, czego potrzebujesz.",
-    "gdpr": "Wyrażam zgodę na przetwarzanie danych kontaktowych w celu realizacji zamówienia. *"
+    "gdpr": "Wyrażam zgodę na <1>Regulamin</1> oraz przetwarzanie moich danych kontaktowych w celu realizacji zamówienia. *"
   },
   "errors": {
     "formIncomplete": "Proszę wypełnić imię, e-mail i zgodę na przetwarzanie danych.",
