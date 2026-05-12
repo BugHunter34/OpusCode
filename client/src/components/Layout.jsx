@@ -32,6 +32,10 @@ function Layout() {
       }}
     >
       <div className="pointer-events-none absolute inset-0 z-0 bg-[var(--bg)]" aria-hidden="true" />
+      <div className="ambient-grid pointer-events-none absolute inset-0 z-0" aria-hidden="true" />
+      <div className="ambient-blob ambient-blob--one pointer-events-none z-0" aria-hidden="true" />
+      <div className="ambient-blob ambient-blob--two pointer-events-none z-0" aria-hidden="true" />
+      <div className="ambient-blob ambient-blob--three pointer-events-none z-0" aria-hidden="true" />
 
       <div
         className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-150 ${
@@ -53,7 +57,9 @@ function Layout() {
 
       <div className="relative z-10">
         <Topbar />
-        <Outlet />
+        <main key={location.pathname} className="page-reveal">
+          <Outlet />
+        </main>
 
         <footer className="border-t border-white/10 py-8">
           <div className="mx-auto flex w-full max-w-6xl flex-col justify-between gap-2 px-5 text-sm text-slate-300 sm:flex-row sm:px-8 lg:px-12">

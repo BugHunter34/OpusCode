@@ -1,12 +1,13 @@
 {
   "hero": {
     "tag": "O nás",
-    "title": "Vytvoríme vám moderný web s vlastným dizajnom a štruktúrou.",
-    "subtitle": "Všetko vysvetlíme zrozumiteľne. Povedzte nám, čo potrebujete, a my pripravíme web alebo systém tak, aby bol jednoduchý pre vás aj vašich zákazníkov.",
+    "title": "Digitálne riešenia, ktoré posúvajú biznis.",
+    "subtitle": "Weby, aplikácie aj automatizácia. Navrhnuté rozumne, postavené pre rast.",
     "btnWeb": "Chcem nový web",
     "btnApp": "Chcem webovú aplikáciu"
   },
   "basicInfo": {
+    "altTitle": "Rýchly prehľad",
     "title": "Základné info",
     "item1": "Doba realizácie: do 1 týždňa",
     "item2": "Máme tím skúsených vývojárov a programátorov",
@@ -39,6 +40,15 @@
   },
   "order": {
     "title": "Čo si môžete objednať",
-    "text": "Vyberte v menu alebo kliknite rovno na:"
+    "text": "Kompletná ponuka na jednom mieste:",
+    "services": {
+      "websites": "Weby a e-shopy na mieru s dôrazom na rýchlosť, UX a konverzie.",
+      "hosting": "Spoľahlivý hosting, domény, zabezpečenie a dlhodobá správa.",
+      "webApps": "Moderné webové aplikácie, interné systémy a klientske portály.",
+      "courses": "Kurzy a konzultácie, ktoré pomôžu vášmu tímu rásť rýchlejšie.",
+      "other": "Automatizácia, integrácie a ďalšie digitálne riešenia podľa vašich cieľov.",
+      "moreTitle": "A ďalšie",
+      "moreDesc": "Potrebujete niečo navyše? Napíšte nám a navrhneme riešenie presne pre vás."
+    }
   }
 }
