@@ -1,7 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Trans, useTranslation } from 'react-i18next'
-import { Code2, Gauge, GraduationCap, LayoutTemplate, Mail, Map, Rocket, ScrollText, Search, ServerCog } from 'lucide-react'
+import { Code2, Gauge, GraduationCap, LayoutTemplate, Mail, MapPin, Phone, Rocket, ScrollText, Search, ServerCog } from 'lucide-react'
+
+const API_BASE_URL = 'https://api.opuscode.dev'
+
+const getInitialLandingForm = () => ({
+  fullName: '',
+  email: '',
+  phone: '',
+  note: '',
+  gdprConsent: false,
+})
 
 function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) {
   const elementRef = useRef(null)
@@ -47,7 +57,12 @@ function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) 
 }
 
 function HomePage() {
-  const { t } = useTranslation('home')
+  const { t, i18n } = useTranslation(['home', 'common'])
+  const [landingForm, setLandingForm] = useState(getInitialLandingForm)
+  const [landingStatus, setLandingStatus] = useState({ type: 'idle', message: '' })
+  const [isLandingSubmitting, setIsLandingSubmitting] = useState(false)
+  const [contactActionMessage, setContactActionMessage] = useState({ type: 'idle', message: '' })
+  const contactMessageTimeoutRef = useRef(null)
 
   const portfolio = [
     {
@@ -70,7 +85,7 @@ function HomePage() {
     },
   ]
 
-  const stepIcons = [Search, Map, Rocket, Gauge, ScrollText, Search]
+  const stepIcons = [Search, MapPin, Rocket, Gauge, ScrollText, Search]
 
   const collaborationSteps = [1, 2, 3, 4, 5, 6].map((num, index) => ({
     id: num,
@@ -117,6 +132,133 @@ function HomePage() {
       to: '/kontakt',
     },
   ]
+
+  const canSubmitLandingForm =
+    landingForm.fullName.trim() && landingForm.email.trim() && landingForm.gdprConsent
+
+  const handleLandingFieldChange = (event) => {
+    const { name, value, type, checked } = event.target
+    setLandingForm((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
+  }
+
+  const handleLandingSubmit = async (event) => {
+    event.preventDefault()
+
+    if (!canSubmitLandingForm) {
+      setLandingStatus({ type: 'error', message: t('common:errors.formIncomplete') })
+      return
+    }
+
+    setIsLandingSubmitting(true)
+    setLandingStatus({ type: 'idle', message: '' })
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/order`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          category: 'Landing contact',
+          planName: 'Quick message',
+          planPrice: 'Custom',
+          fullName: landingForm.fullName,
+          email: landingForm.email,
+          phone: landingForm.phone,
+          company: '',
+          note: landingForm.note,
+          gdprConsent: landingForm.gdprConsent,
+          lang: i18n.language,
+        }),
+      })
+
+      const responseData = await response.json()
+
+      if (!response.ok) {
+        throw new Error(responseData.detail || t('common:errors.apiFallback'))
+      }
+
+      setLandingStatus({
+        type: 'success',
+        message: responseData.message || t('common:messages.success'),
+      })
+      setLandingForm(getInitialLandingForm())
+    } catch (error) {
+      setLandingStatus({
+        type: 'error',
+        message: error.message || t('common:errors.general'),
+      })
+    } finally {
+      setIsLandingSubmitting(false)
+    }
+  }
+
+  const showContactActionMessage = (type, message) => {
+    if (contactMessageTimeoutRef.current) {
+      window.clearTimeout(contactMessageTimeoutRef.current)
+    }
+
+    setContactActionMessage({ type, message })
+    contactMessageTimeoutRef.current = window.setTimeout(() => {
+      setContactActionMessage({ type: 'idle', message: '' })
+      contactMessageTimeoutRef.current = null
+    }, 2200)
+  }
+
+  const copyTextFallback = (text) => {
+    const input = document.createElement('textarea')
+    input.value = text
+    input.setAttribute('readonly', '')
+    input.style.position = 'absolute'
+    input.style.left = '-9999px'
+    document.body.appendChild(input)
+    input.select()
+    const copied = document.execCommand('copy')
+    document.body.removeChild(input)
+    return copied
+  }
+
+  const handleEmailClick = async (event) => {
+    event.preventDefault()
+    const email = 'kontakt@opuscode.dev'
+
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(email)
+      } else {
+        const copied = copyTextFallback(email)
+        if (!copied) {
+          throw new Error('copy-failed')
+        }
+      }
+
+      showContactActionMessage('success', t('finalCta.feedback.emailCopied'))
+    } catch {
+      showContactActionMessage('error', t('finalCta.feedback.emailCopyFailed'))
+    }
+  }
+
+  const handlePhoneClick = (event) => {
+    const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobi/i.test(navigator.userAgent)
+
+    if (!isMobile) {
+      return
+    }
+
+    event.preventDefault()
+    window.location.href = 'tel:+420737911901'
+  }
+
+  useEffect(() => {
+    return () => {
+      if (contactMessageTimeoutRef.current) {
+        window.clearTimeout(contactMessageTimeoutRef.current)
+      }
+    }
+  }, [])
 
   return (
     <>
@@ -266,6 +408,164 @@ function HomePage() {
             </ScrollReveal>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-[92rem] px-5 pb-20 sm:px-8 lg:px-14">
+        <ScrollReveal
+          delay={80}
+          className="p-0"
+        >
+          <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <article>
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">{t('finalCta.tag')}</p>
+              <h2 className="font-display mt-4 max-w-2xl text-4xl font-semibold leading-tight text-white sm:text-5xl">
+                {t('finalCta.title')}
+              </h2>
+              <p className="mt-4 max-w-2xl text-slate-300 sm:text-lg">{t('finalCta.text')}</p>
+
+              <div className="mt-7 grid gap-3 sm:max-w-2xl sm:grid-cols-3">
+                <a
+                  href="mailto:kontakt@opuscode.dev"
+                  onClick={handleEmailClick}
+                  className="flex items-center gap-2 rounded-xl border border-white/12 bg-white/5 px-3 py-3 text-sm text-slate-200 transition hover:border-accent-soft hover:text-white"
+                >
+                  <Mail size={16} className="text-accent" />
+                  <span>{t('finalCta.items.email')}</span>
+                </a>
+                <a
+                  href="tel:+420737911901"
+                  onClick={handlePhoneClick}
+                  className="flex items-center gap-2 rounded-xl border border-white/12 bg-white/5 px-3 py-3 text-sm text-slate-200 transition hover:border-accent-soft hover:text-white"
+                >
+                  <Phone size={16} className="text-accent" />
+                  <span>{t('finalCta.items.phone')}</span>
+                </a>
+                <div className="flex items-center gap-2 rounded-xl border border-white/12 bg-white/5 px-3 py-3 text-sm text-slate-200">
+                  <MapPin size={16} className="text-accent" />
+                  <span>{t('finalCta.items.location')}</span>
+                </div>
+              </div>
+
+              {contactActionMessage.message && (
+                <p
+                  className={`mt-3 text-sm ${contactActionMessage.type === 'success' ? 'text-lime-300' : 'text-rose-300'}`}
+                  role="status"
+                  aria-live="polite"
+                >
+                  {contactActionMessage.message}
+                </p>
+              )}
+            </article>
+
+            <article className="rounded-2xl border border-white/12 bg-[rgb(10_23_42_/_0.88)] p-5 sm:p-6">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('finalCta.cardTag')}</p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">{t('finalCta.cardTitle')}</h3>
+              <p className="mt-3 text-slate-300">{t('finalCta.cardText')}</p>
+
+              <form className="mt-5 space-y-3" onSubmit={handleLandingSubmit}>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <label className="flex flex-col gap-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    {t('common:form.name')}
+                    <input
+                      required
+                      name="fullName"
+                      value={landingForm.fullName}
+                      onChange={handleLandingFieldChange}
+                      placeholder="Jan Novak"
+                      className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-slate-500 focus:border-accent-soft"
+                    />
+                  </label>
+
+                  <label className="flex flex-col gap-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    {t('common:form.email')}
+                    <input
+                      required
+                      type="email"
+                      name="email"
+                      value={landingForm.email}
+                      onChange={handleLandingFieldChange}
+                      placeholder="jan@firma.cz"
+                      className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-slate-500 focus:border-accent-soft"
+                    />
+                  </label>
+                </div>
+
+                <label className="flex flex-col gap-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                  {t('common:form.phone')}
+                  <input
+                    name="phone"
+                    value={landingForm.phone}
+                    onChange={handleLandingFieldChange}
+                    placeholder="+420 123 456 789"
+                    className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-slate-500 focus:border-accent-soft"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                  {t('common:form.note')}
+                  <textarea
+                    name="note"
+                    rows={4}
+                    value={landingForm.note}
+                    onChange={handleLandingFieldChange}
+                    placeholder={t('common:form.notePlaceholder')}
+                    className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-slate-500 focus:border-accent-soft"
+                  />
+                </label>
+
+                <label className="flex items-start gap-2 pt-1 text-xs leading-relaxed text-slate-300">
+                  <input
+                    name="gdprConsent"
+                    type="checkbox"
+                    checked={landingForm.gdprConsent}
+                    onChange={handleLandingFieldChange}
+                    className="mt-1 shrink-0"
+                  />
+                  <span>
+                    <Trans
+                      i18nKey="form.gdpr"
+                      t={t}
+                      ns="common"
+                      components={{
+                        1: (
+                          <Link
+                            to="/tos"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-accent-soft underline underline-offset-4 transition hover:text-accent"
+                          />
+                        ),
+                      }}
+                    />
+                  </span>
+                </label>
+
+                {landingStatus.message && (
+                  <p className={`text-sm ${landingStatus.type === 'success' ? 'text-lime-300' : 'text-rose-300'}`}>
+                    {landingStatus.message}
+                  </p>
+                )}
+
+                <div className="mt-2 flex flex-wrap items-center gap-3">
+                  <button
+                    type="submit"
+                    disabled={isLandingSubmitting || !canSubmitLandingForm}
+                    className="rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 shadow-[0_0_26px_rgb(45_212_191_/_0.45)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+                    style={{ backgroundColor: '#34d399' }}
+                  >
+                    {isLandingSubmitting ? t('common:buttons.submitting') : t('finalCta.primaryBtn')}
+                  </button>
+                  <Link
+                    to="/kontakt"
+                    className="text-sm font-semibold text-accent-soft underline underline-offset-4 transition hover:text-accent"
+                  >
+                    {t('common:nav.contact')}
+                  </Link>
+                </div>
+              </form>
+            </article>
+          </div>
+        </ScrollReveal>
       </section>
 
     </>

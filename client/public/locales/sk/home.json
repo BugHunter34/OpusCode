@@ -50,5 +50,24 @@
       "moreTitle": "A ďalšie",
       "moreDesc": "Potrebujete niečo navyše? Napíšte nám a navrhneme riešenie presne pre vás."
     }
+  },
+  "finalCta": {
+    "tag": "Kontakt",
+    "title": "Poďme sa porozprávať o vašom projekte",
+    "text": "Napíšte nám pár viet o tom, čo plánujete. Ozveme sa do 24 hodín s návrhom ďalšieho postupu.",
+    "items": {
+      "email": "kontakt@opuscode.dev",
+      "phone": "+420 737 911 901",
+      "location": "Bakov nad Jizerou"
+    },
+    "cardTag": "Kontaktný formulár",
+    "cardTitle": "Prvá konzultácia je zadarmo",
+    "cardText": "Zaberie to len chvíľu. Napíšte cieľ a rozpočet, zvyšok navrhneme my.",
+    "primaryBtn": "Odoslať správu",
+    "secondaryBtn": "Pozrieť služby",
+    "feedback": {
+      "emailCopied": "E-mail bol skopírovaný do schránky.",
+      "emailCopyFailed": "Kopírovanie sa nepodarilo. Skúste to prosím znova."
+    }
   }
 }
