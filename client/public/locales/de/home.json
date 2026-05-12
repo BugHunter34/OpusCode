@@ -50,5 +50,24 @@
       "moreTitle": "Und mehr",
       "moreDesc": "Sie brauchen mehr? Kontaktieren Sie uns, wir entwerfen die passende Lösung für Sie."
     }
+  },
+  "finalCta": {
+    "tag": "Kontakt",
+    "title": "Lassen Sie uns über Ihr Projekt sprechen",
+    "text": "Schreiben Sie uns kurz, was Sie planen. Wir melden uns innerhalb von 24 Stunden mit einem klaren Vorschlag für die nächsten Schritte.",
+    "items": {
+      "email": "kontakt@opuscode.dev",
+      "phone": "+420 737 911 901",
+      "location": "Bakov nad Jizerou"
+    },
+    "cardTag": "Kontaktformular",
+    "cardTitle": "Die erste Beratung ist kostenlos",
+    "cardText": "Dauert nur einen Moment. Teilen Sie Ziel und Budget, wir entwerfen den passenden Weg.",
+    "primaryBtn": "Nachricht senden",
+    "secondaryBtn": "Leistungen ansehen",
+    "feedback": {
+      "emailCopied": "E-Mail-Adresse wurde in die Zwischenablage kopiert.",
+      "emailCopyFailed": "Kopieren fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
   }
 }

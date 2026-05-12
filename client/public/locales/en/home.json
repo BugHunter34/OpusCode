@@ -50,5 +50,24 @@
       "moreTitle": "And more",
       "moreDesc": "Need something extra? Contact us and we will design the right solution for you."
     }
+  },
+  "finalCta": {
+    "tag": "Contact",
+    "title": "Let's talk about your project",
+    "text": "Send us a few lines about what you are planning. We will reply within 24 hours with a practical next-step proposal.",
+    "items": {
+      "email": "kontakt@opuscode.dev",
+      "phone": "+420 737 911 901",
+      "location": "Bakov nad Jizerou"
+    },
+    "cardTag": "Contact form",
+    "cardTitle": "First consultation is free",
+    "cardText": "It only takes a moment. Share your goal and budget, and we will design the right path.",
+    "primaryBtn": "Send message",
+    "secondaryBtn": "View services",
+    "feedback": {
+      "emailCopied": "Email address copied to clipboard.",
+      "emailCopyFailed": "Copy failed. Please try again."
+    }
   }
 }
