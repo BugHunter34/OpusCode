@@ -65,7 +65,7 @@ function ProductsBackground({ pagePath = '/weby', accentColor = '#8b5cf6' }) {
             scanOpacity={0.42}
             gridScale={0.1}
             lineStyle="solid"
-            lineJitter={0.1}
+            lineJitter={0.04}
             scanDirection="backward"
             noiseIntensity={0.006}
             scanGlow={0.62}

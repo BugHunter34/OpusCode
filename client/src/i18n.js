@@ -8,7 +8,10 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'cs', // deafult czech
+    fallbackLng: 'cs', // default czech
+    supportedLngs: ['cs', 'sk', 'en', 'de', 'pl'],
+    nonExplicitSupportedLngs: true,
+    load: 'languageOnly',
     ns: ['common', 'home', 'contact', 'plans', 'team'], // namespaces
     defaultNS: 'common',
     debug: true, // errors in console

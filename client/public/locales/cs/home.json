@@ -1,12 +1,13 @@
 {
   "hero": {
     "tag": "O nás",
-    "title": "Vytvoříme vám moderní web s vlastním designem a strukturou.",
-    "subtitle": "Vše vysvětlíme srozumitelně. Řekněte nám, co potřebujete, a my připravíme web nebo systém tak, aby byl jednoduchý pro vás i vaše zákazníky.",
+    "title": "Digitální řešení, které posouvají <accent>dál.</accent>",
+    "subtitle": "Weby, aplikace i automatizace. Navržené chytře, postavené pro růst.",
     "btnWeb": "Chci nový web",
     "btnApp": "Chci webovou aplikaci"
   },
   "basicInfo": {
+    "altTitle": "Rychlý přehled",
     "title": "Základní info",
     "item1": "Doba realizace: do 1 týdne",
     "item2": "Máme tým zkušených vývojářů a programátorů",
@@ -38,7 +39,16 @@
     }
   },
   "order": {
-    "title": "Co si můžete objednat",
-    "text": "Vyberte v menu nebo klikněte rovnou na:"
+    "title": "Nabídka služeb",
+    "text": "Kompletní nabídka na jednom místě:",
+    "services": {
+      "websites": "Weby a e-shopy na míru s důrazem na rychlost, UX a konverze.",
+      "hosting": "Spolehlivý hosting, domény, zabezpečení a dlouhodobá správa.",
+      "webApps": "Moderní webové aplikace, interní systémy a klientské portály.",
+      "courses": "Kurzy a konzultace, které pomohou vašemu týmu růst rychleji.",
+      "other": "Automatizace, integrace a další digitální řešení podle vašich cílů.",
+      "moreTitle": "A další",
+      "moreDesc": "Potřebujete něco navíc? Napište nám a navrhneme řešení přesně pro vás."
+    }
   }
 }

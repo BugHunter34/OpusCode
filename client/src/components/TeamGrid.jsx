@@ -2,17 +2,19 @@ function TeamGrid({ members }) {
   return (
     <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 lg:px-12">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {members.map((member) => (
+        {members.map((member, index) => (
           <article
             key={member.name}
-            className="flex h-full min-h-[430px] flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-[color:var(--accent)]"
+            className={`glass-panel reveal flex h-full min-h-[430px] flex-col rounded-2xl p-6 transition hover:-translate-y-1 hover:border-[color:var(--accent)] ${
+              index % 3 === 0 ? 'reveal-delay-1' : index % 3 === 1 ? 'reveal-delay-2' : 'reveal-delay-3'
+            }`}
           >
             
             {/* Info */}
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
               {member.tag}
             </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">{member.name}</h2>
+            <h2 className="font-display mt-3 text-2xl font-semibold text-white">{member.name}</h2>
             
             <p className="mt-1 text-xl font-bold text-accent-soft">{member.role}</p>
             <p>  </p>

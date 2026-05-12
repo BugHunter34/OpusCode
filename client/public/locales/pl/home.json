@@ -1,12 +1,13 @@
 {
   "hero": {
     "tag": "O nas",
-    "title": "Stworzymy dla Ciebie nowoczesną stronę z własnym designem i strukturą.",
-    "subtitle": "Wszystko wyjaśnimy zrozumiale. Powiedz nam, czego potrzebujesz, a my przygotujemy stronę lub system tak, aby był prosty dla Ciebie i Twoich klientów.",
+    "title": "Rozwiązania cyfrowe, które napędzają biznes.",
+    "subtitle": "Strony, aplikacje i automatyzacje. Mądrze zaprojektowane, stworzone do wzrostu.",
     "btnWeb": "Chcę nową stronę",
     "btnApp": "Chcę aplikację webową"
   },
   "basicInfo": {
+    "altTitle": "Szybki przegląd",
     "title": "Podstawowe informacje",
     "item1": "Czas realizacji: do 1 tygodnia",
     "item2": "Mamy zespół doświadczonych programistów i deweloperów",
@@ -39,6 +40,15 @@
   },
   "order": {
     "title": "Co możesz zamówić",
-    "text": "Wybierz w menu lub kliknij bezpośrednio w:"
+    "text": "Pełna oferta w jednym miejscu:",
+    "services": {
+      "websites": "Strony i e-commerce szyte na miarę z naciskiem na szybkość, UX i konwersję.",
+      "hosting": "Niezawodny hosting, domeny, bezpieczeństwo i stała opieka techniczna.",
+      "webApps": "Nowoczesne aplikacje webowe, systemy wewnętrzne i portale klienta.",
+      "courses": "Szkolenia i konsultacje, które pomagają zespołowi rosnąć szybciej.",
+      "other": "Automatyzacje, integracje i inne rozwiązania cyfrowe dopasowane do celów.",
+      "moreTitle": "I więcej",
+      "moreDesc": "Potrzebujesz czegoś więcej? Napisz do nas, a zaproponujemy najlepsze rozwiązanie."
+    }
   }
 }

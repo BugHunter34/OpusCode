@@ -1,12 +1,13 @@
 {
   "hero": {
     "tag": "About us",
-    "title": "We will create a modern website with a custom design and structure for you.",
-    "subtitle": "We explain everything clearly. Tell us what you need, and we will prepare a website or system so that it is simple for both you and your customers.",
+    "title": "Digital solutions that move business forward.",
+    "subtitle": "Websites, apps, and automation. Built smart, designed for growth.",
     "btnWeb": "I want a new website",
     "btnApp": "I want a web app"
   },
   "basicInfo": {
+    "altTitle": "Quick overview",
     "title": "Basic info",
     "item1": "Realization time: within 1 week",
     "item2": "We have a team of experienced developers and programmers",
@@ -39,6 +40,15 @@
   },
   "order": {
     "title": "What you can order",
-    "text": "Choose in the menu or click directly on:"
+    "text": "Everything we offer in one place:",
+    "services": {
+      "websites": "Custom websites and e-shops focused on speed, UX, and conversions.",
+      "hosting": "Reliable hosting, domains, security, and long-term maintenance.",
+      "webApps": "Modern web apps, internal systems, and client portals.",
+      "courses": "Courses and consulting to help your team level up faster.",
+      "other": "Automation, integrations, and other digital solutions tailored to your goals.",
+      "moreTitle": "And more",
+      "moreDesc": "Need something extra? Contact us and we will design the right solution for you."
+    }
   }
 }

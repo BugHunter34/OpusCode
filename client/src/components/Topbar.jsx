@@ -18,9 +18,9 @@ function Topbar() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/55 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        <Link to="/" className="text-sm font-bold uppercase tracking-[0.26em] text-accent">
+        <Link to="/" className="font-display text-sm font-bold uppercase tracking-[0.3em] text-accent transition hover:opacity-90">
           OpusCode.dev
         </Link>
 
@@ -35,8 +35,8 @@ function Topbar() {
                   : undefined
               }
               className={({ isActive }) =>
-                `rounded-full px-4 py-2 text-sm transition ${
-                  isActive ? '' : 'text-slate-200 hover:bg-white/10 hover:text-white'
+                `rounded-full px-4 py-2 text-sm font-medium transition ${
+                  isActive ? 'shadow-[0_0_20px_rgb(var(--accent-rgb)_/_0.35)]' : 'text-slate-200 hover:bg-white/10 hover:text-white'
                 }`
               }
             >
@@ -52,7 +52,7 @@ function Topbar() {
           <select
             value={i18n.language}
             onChange={(e) => i18n.changeLanguage(e.target.value)}
-            className="cursor-pointer rounded-md border border-white/20 bg-transparent px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-200 outline-none transition hover:bg-white/10 focus:border-accent focus:ring-1 focus:ring-accent"
+            className="cursor-pointer rounded-md border border-white/20 bg-slate-900/55 px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-200 outline-none transition hover:bg-white/10 focus:border-accent focus:ring-1 focus:ring-accent"
             aria-label="Select Language"
           >
             <option value="cs" className="bg-slate-900">Čeština</option>
@@ -67,7 +67,7 @@ function Topbar() {
           <button
             type="button"
             onClick={() => setIsOpen((open) => !open)}
-            className="rounded-md border border-white/20 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 transition hover:bg-white/10 md:hidden"
+            className="rounded-md border border-white/20 bg-slate-900/55 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 transition hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
           >
             {t('menu')}
@@ -77,7 +77,7 @@ function Topbar() {
 
 
       {isOpen && (
-        <nav className="border-t border-white/10 bg-slate-950 px-5 py-3 md:hidden">
+        <nav className="border-t border-white/10 bg-slate-950/95 px-5 py-3 backdrop-blur-xl md:hidden">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 sm:px-3">
             {navItems.map((item) => (
               <NavLink

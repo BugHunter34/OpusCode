@@ -1,12 +1,13 @@
 {
   "hero": {
     "tag": "Über uns",
-    "title": "Wir erstellen für Sie eine moderne Website mit eigenem Design und Struktur.",
-    "subtitle": "Wir erklären alles verständlich. Sagen Sie uns, was Sie brauchen, und wir bereiten eine Website oder ein System so vor, dass es für Sie und Ihre Kunden einfach ist.",
+    "title": "Digitale Lösungen, die Ihr Business voranbringen.",
+    "subtitle": "Websites, Apps und Automatisierung. Clever gebaut, auf Wachstum ausgerichtet.",
     "btnWeb": "Ich möchte eine neue Website",
     "btnApp": "Ich möchte eine Web-App"
   },
   "basicInfo": {
+    "altTitle": "Kurzuberblick",
     "title": "Basisinfos",
     "item1": "Realisierungszeit: bis zu 1 Woche",
     "item2": "Wir haben ein Team aus erfahrenen Entwicklern und Programmierern",
@@ -39,6 +40,15 @@
   },
   "order": {
     "title": "Was Sie bestellen können",
-    "text": "Wählen Sie im Menü oder klicken Sie direkt auf:"
+    "text": "Unser komplettes Angebot auf einen Blick:",
+    "services": {
+      "websites": "Individuelle Websites und Shops mit Fokus auf Geschwindigkeit, UX und Conversion.",
+      "hosting": "Zuverlässiges Hosting, Domains, Sicherheit und langfristige Betreuung.",
+      "webApps": "Moderne Web-Apps, interne Systeme und Kundenportale.",
+      "courses": "Kurse und Beratung, damit Ihr Team schneller wächst.",
+      "other": "Automatisierung, Integrationen und weitere digitale Lösungen nach Ihren Zielen.",
+      "moreTitle": "Und mehr",
+      "moreDesc": "Sie brauchen mehr? Kontaktieren Sie uns, wir entwerfen die passende Lösung für Sie."
+    }
   }
 }
