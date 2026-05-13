@@ -52,7 +52,7 @@
       "start": {
         "tag": "Basis",
         "name": "Hosting Start",
-        "price": "1.5 € / Monat",
+        "price": "3 € / Monat",
         "desc": "Klare Basis für kleinere Webseiten. Ohne Komplikationen.",
         "items": [
           "1 Webseite",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budget",
         "name": "Hosting Basic",
-        "price": "5.5 € / Monat",
+        "price": "11 € / Monat",
         "desc": "Wenn Sie etwas mehr wollen.",
         "items": [
           "1 Webseite",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Beliebt",
         "name": "Hosting Business",
-        "price": "15 € / Monat",
+        "price": "30 € / Monat",
         "desc": "Die beste Wahl für eine Standard-Unternehmenswebseite.",
         "items": [
           "1 Webseite + 1 Testversion",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Individuell",
         "name": "Hosting Premium",
-        "price": "ab 20 € / Monat",
+        "price": "ab 40 € / Monat",
         "desc": "Für größere Projekte und mehrere Webseiten.",
         "items": [
           "Bis zu 3 Webseiten",

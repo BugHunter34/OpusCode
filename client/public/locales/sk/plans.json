@@ -52,7 +52,7 @@
       "start": {
         "tag": "Základ",
         "name": "Hosting Start",
-        "price": "1,50 € / mesiac",
+        "price": "3 € / mesiac",
         "desc": "Jasný základ pre menší web. Bez zložitostí.",
         "items": [
           "1 web",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budget",
         "name": "Hosting Basic",
-        "price": "5,50 € / mesiac",
+        "price": "11 € / mesiac",
         "desc": "Keď chcete niečo viac.",
         "items": [
           "1 web",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Obľúbené",
         "name": "Hosting Business",
-        "price": "15 € / mesiac",
+        "price": "30 € / mesiac",
         "desc": "Najlepšia voľba pre bežný firemný web.",
         "items": [
           "1 web + 1 testovacia verzia",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Na mieru",
         "name": "Hosting Premium",
-        "price": "od 20 € / mesiac",
+        "price": "od 40 € / mesiac",
         "desc": "Pre väčšie projekty a viac webov.",
         "items": [
           "Až 3 weby",

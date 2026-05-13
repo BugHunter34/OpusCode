@@ -52,7 +52,7 @@
       "start": {
         "tag": "Base",
         "name": "Hosting Start",
-        "price": "$1.99 / mo",
+        "price": "$3.98 / mo",
         "desc": "Clear base for a smaller web. No complexities.",
         "items": [
           "1 website",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budget",
         "name": "Hosting Basic",
-        "price": "$5.99 / mo",
+        "price": "$11.98 / mo",
         "desc": "When you want something more.",
         "items": [
           "1 website",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Popular",
         "name": "Hosting Business",
-        "price": "$14.99 / mo",
+        "price": "$29.98 / mo",
         "desc": "The best choice for a standard corporate website.",
         "items": [
           "1 web + 1 test version",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Custom",
         "name": "Hosting Premium",
-        "price": "from $19.99 / mo",
+        "price": "from $39.98 / mo",
         "desc": "For larger projects and multiple websites.",
         "items": [
           "Up to 3 websites",
