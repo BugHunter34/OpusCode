@@ -10,6 +10,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import TestApi from './pages/TestApi';
 import ContactPage from './pages/ContactPage'
 import ToS from './pages/ToS'
+import PriceCalculatorPage from './pages/PriceCalculatorPage'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="kurzy" element={<KurzyPage />} />
           <Route path="jine" element={<JinePage />} />
           <Route path="kontakt" element={<ContactPage />} />
+          <Route path="kalkulacka-ceny-webu" element={<PriceCalculatorPage />} />
           <Route path="home" element={<Navigate to="/" replace />} />
           <Route path="test" element={<TestApi />} />
           <Route path="tos" element={<ToS />} />

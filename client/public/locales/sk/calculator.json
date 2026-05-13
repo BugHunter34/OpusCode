@@ -1,0 +1,97 @@
+{
+  "eyebrow": "Kalkulacka",
+  "title": "Kalkulacka ceny webu",
+  "subtitle": "Zistite orientacnu cenu noveho webu podla poziadaviek. Finalnu cenu doladime po kratkej konzultacii.",
+  "labels": {
+    "from": "od"
+  },
+  "steps": {
+    "solution": {
+      "title": "1) Aky typ riesenia preferujete?"
+    },
+    "pages": {
+      "title": "2) Kolko bude mat web stranok?",
+      "label": "Pocet stranok:",
+      "note": "1 stranka zdarma, dalsie +700 Kc"
+    },
+    "branding": {
+      "title": "3) Mate vizualnu identitu (logo, farby, fonty)?"
+    },
+    "extras": {
+      "title": "4) Co chcete pridat navyse?"
+    }
+  },
+  "solutions": {
+    "wordpressCustom": {
+      "title": "Chcem vytvorit web na WordPresse",
+      "desc": "Vratane navrhu struktury webu a dizajnu na mieru"
+    },
+    "figmaToWordpress": {
+      "title": "Chcem vytvorit web podla dizajnu vo Figme",
+      "desc": "Presnu cenu upresnime po kontrole navrhu"
+    },
+    "aiStarter": {
+      "title": "Low-cost varianta zo sablony alebo AI vyvoj",
+      "desc": "Rychle a lacne riesenie pre mensi projekt"
+    }
+  },
+  "branding": {
+    "options": {
+      "ready": {
+        "title": "Mame kompletnu vizualnu identitu",
+        "desc": "Logo, farby aj fonty uz mate pripravene"
+      },
+      "need": {
+        "title": "Potrebujeme navrh identity",
+        "desc": "Pomozeme s logom, farbami aj typografiou"
+      }
+    }
+  },
+  "extras": {
+    "options": {
+      "seo": {
+        "title": "Rozsirene SEO nastavenie"
+      },
+      "copywriting": {
+        "title": "Texty na kluc"
+      },
+      "multilang": {
+        "title": "Viacjazycna verzia"
+      },
+      "analytics": {
+        "title": "Google Analytics + Search Console"
+      }
+    }
+  },
+  "summary": {
+    "title": "Cenova kalkulacia",
+    "priceLabel": "Orientacna cena",
+    "base": "Zakladna cena",
+    "pages": "Dalsie podstranky",
+    "branding": "Vizualna identita",
+    "extras": "Doplnky",
+    "send": "Odoslat dopyt emailom",
+    "disclaimer": "Cena je orientacna. Finalna cena bude upresnena po konzultacii."
+  },
+  "included": {
+    "title": "Co balik obsahuje",
+    "items": {
+      "builder": "Tvorba webu na WordPresse",
+      "seoBasics": "Zakladne on-page SEO",
+      "security": "Zabezpecenie webu",
+      "responsive": "Responzivny dizajn",
+      "mailbox": "Firemny e-mail s domenou",
+      "ssl": "SSL certifikat",
+      "support": "30 dni podpory po spusteni"
+    }
+  },
+  "mail": {
+    "subject": "Dopyt - kalkulacka ceny webu",
+    "solution": "Typ riesenia",
+    "pages": "Pocet stranok",
+    "branding": "Vizualna identita",
+    "extras": "Doplnky",
+    "noExtras": "Bez doplnkov",
+    "estimatedPrice": "Orientacna cena"
+  }
+}

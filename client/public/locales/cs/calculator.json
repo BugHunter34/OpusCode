@@ -1,0 +1,147 @@
+{
+  "eyebrow": "Kalkulačka",
+  "title": "Kalkulačka ceny webu a webové aplikace",
+  "subtitle": "Zjistěte orientační cenu podle vybrané kategorie a plánu. Finální cenu doladíme po krátké konzultaci.",
+  "labels": {
+    "from": "od",
+    "largeWebFrom": "od 20 000 Kč+"
+  },
+  "steps": {
+    "category": {
+      "title": "1) Co chcete nacenit?"
+    },
+    "solution": {
+      "title": "2) Jaký plán preferujete?"
+    },
+    "pages": {
+      "title": "3) Kolik bude mít projekt stránek/sekcí?",
+      "label": "Počet stránek/sekcí:",
+      "note": "Příplatek se počítá podle vybraného plánu."
+    },
+    "addons": {
+      "title": "3) Doplňkové funkce",
+      "note": "(klepněte na ty které potřebujete)"
+    },
+    "hosting": {
+      "title": "4) Jak to bude s hostingem / správou?",
+      "label": "Jak to bude s hostingem / správou?"
+    },
+    "integrations": {
+      "title": "5) Integrace",
+      "label": "Integrace",
+      "note": "(vyberte vše, co potřebujete)"
+    }
+  },
+  "categories": {
+    "websites": "Weby",
+    "webApps": "Webové aplikace",
+    "websitesCta": "CHCI NOVY WEB",
+    "webAppsCta": "CHCI WEBOVOU APLIKACI"
+  },
+  "hosting": {
+    "own": "Mám vlastní hosting / správu"
+  },
+  "addons": {
+    "options": {
+      "onlineBooking": "Online rezervace",
+      "onlinePayments": "Online platby",
+      "photoGallery": "Galerie fotek",
+      "blogCms": "Blog (CMS)",
+      "copywriting": "Copywriting textů",
+      "multilang": "Vícejazyčná verze",
+      "emailMarketing": "Email marketing setup",
+      "crmForms": "Formuláře + CRM"
+    }
+  },
+  "integrations": {
+    "options": {
+      "accounting": "Účetnictví (Pohoda, Money, K2...)",
+      "warehouse": "Skladový systém",
+      "shipping": "Doprava (Balíkobot, Zásilkovna)",
+      "paymentGateway": "Platební brány",
+      "marketingTools": "Marketingové nástroje",
+      "erpCrm": "ERP / CRM",
+      "custom": "Jiné / na míru"
+    }
+  },
+  "solutions": {
+    "wordpressCustom": {
+      "title": "Chci vytvořit web na WordPressu",
+      "desc": "Včetně návrhu struktury webu a designu na míru"
+    },
+    "figmaToWordpress": {
+      "title": "Chci vytvořit web podle designu ve Figmě",
+      "desc": "Přesnou cenu upřesníme po kontrole návrhu"
+    },
+    "aiStarter": {
+      "title": "Low-cost varianta ze šablony nebo AI vývoj",
+      "desc": "Rychlé a levné řešení pro menší projekt"
+    }
+  },
+  "branding": {
+    "options": {
+      "ready": {
+        "title": "Máme kompletní vizuální identitu",
+        "desc": "Logo, barvy i fonty už máte připravené"
+      },
+      "need": {
+        "title": "Potřebujeme návrh identity",
+        "desc": "Pomůžeme s logem, barvami i typografií"
+      }
+    }
+  },
+  "extras": {
+    "options": {
+      "seo": {
+        "title": "Rozšířené SEO nastavení"
+      },
+      "copywriting": {
+        "title": "Texty na klíč"
+      },
+      "multilang": {
+        "title": "Vícejazyčná verze"
+      },
+      "analytics": {
+        "title": "Google Analytics + Search Console"
+      }
+    }
+  },
+  "summary": {
+    "title": "Cenová kalkulace",
+    "priceLabel": "Orientační cena",
+    "base": "Základní cena",
+    "pages": "Další podstránky",
+    "hosting": "Hosting / správa (měsíčně)",
+    "hostingHint": "Hosting je měsíční platba navíc k realizaci.",
+    "integrations": "Integrace",
+    "branding": "Vizuální identita",
+    "extras": "Doplňky",
+    "send": "Odeslat poptávku e-mailem",
+    "disclaimer": "Cena je orientační. Finální cena bude upřesněna po konzultaci."
+  },
+  "included": {
+    "title": "Co balíček obsahuje",
+    "items": {
+      "builder": "Tvorba webu na WordPressu",
+      "seoBasics": "Základní on-page SEO",
+      "security": "Zabezpečení webu",
+      "responsive": "Responzivní design",
+      "mailbox": "Firemni e-mail s domenou",
+      "ssl": "SSL certifikát",
+      "support": "30 dní podpory po spuštění"
+    }
+  },
+  "mail": {
+    "subject": "Poptávka - kalkulačka ceny webu",
+    "category": "Kategorie",
+    "solution": "Typ řešení",
+    "pages": "Počet stránek",
+    "addons": "Doplňky",
+    "integrations": "Integrace",
+    "hosting": "Hosting / správa",
+    "branding": "Vizuální identita",
+    "extras": "Doplňky",
+    "noExtras": "Bez doplňků",
+    "estimatedPrice": "Orientační cena"
+  }
+}

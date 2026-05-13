@@ -1,0 +1,97 @@
+{
+  "eyebrow": "Kalkulator",
+  "title": "Kalkulator ceny strony",
+  "subtitle": "Sprawdz orientacyjna cene nowej strony wedlug Twoich wymagan. Cene koncowa potwierdzimy po krotkiej konsultacji.",
+  "labels": {
+    "from": "od"
+  },
+  "steps": {
+    "solution": {
+      "title": "1) Jaki typ rozwiazania preferujesz?"
+    },
+    "pages": {
+      "title": "2) Ile podstron bedzie miala strona?",
+      "label": "Liczba podstron:",
+      "note": "1 podstrona gratis, kazda kolejna +700 CZK"
+    },
+    "branding": {
+      "title": "3) Masz juz identyfikacje wizualna (logo, kolory, fonty)?"
+    },
+    "extras": {
+      "title": "4) Jakie dodatki chcesz doliczyc?"
+    }
+  },
+  "solutions": {
+    "wordpressCustom": {
+      "title": "Chce strone na WordPressie",
+      "desc": "Wraz z projektem struktury i indywidualnym designem"
+    },
+    "figmaToWordpress": {
+      "title": "Chce strone wedlug projektu w Figmie",
+      "desc": "Dokladna cena po weryfikacji projektu"
+    },
+    "aiStarter": {
+      "title": "Wariant low-cost z szablonu lub AI",
+      "desc": "Szybkie i tanie rozwiazanie dla mniejszego projektu"
+    }
+  },
+  "branding": {
+    "options": {
+      "ready": {
+        "title": "Mamy kompletna identyfikacje wizualna",
+        "desc": "Logo, kolory i fonty sa gotowe"
+      },
+      "need": {
+        "title": "Potrzebujemy projektu identyfikacji",
+        "desc": "Pomozemy z logo, kolorystyka i typografia"
+      }
+    }
+  },
+  "extras": {
+    "options": {
+      "seo": {
+        "title": "Rozszerzona konfiguracja SEO"
+      },
+      "copywriting": {
+        "title": "Copywriting"
+      },
+      "multilang": {
+        "title": "Wersja wielojezyczna"
+      },
+      "analytics": {
+        "title": "Google Analytics + Search Console"
+      }
+    }
+  },
+  "summary": {
+    "title": "Kalkulacja ceny",
+    "priceLabel": "Cena orientacyjna",
+    "base": "Cena bazowa",
+    "pages": "Dodatkowe podstrony",
+    "branding": "Identyfikacja wizualna",
+    "extras": "Dodatki",
+    "send": "Wyslij zapytanie mailem",
+    "disclaimer": "Cena jest orientacyjna. Finalna cena zostanie doprecyzowana po konsultacji."
+  },
+  "included": {
+    "title": "Co zawiera pakiet",
+    "items": {
+      "builder": "Wdrozenie strony na WordPressie",
+      "seoBasics": "Podstawowe on-page SEO",
+      "security": "Konfiguracja bezpieczenstwa",
+      "responsive": "Responsywny design",
+      "mailbox": "Skrzynka e-mail z domena",
+      "ssl": "Certyfikat SSL",
+      "support": "30 dni wsparcia po uruchomieniu"
+    }
+  },
+  "mail": {
+    "subject": "Zapytanie - kalkulator ceny strony",
+    "solution": "Typ rozwiazania",
+    "pages": "Liczba podstron",
+    "branding": "Identyfikacja wizualna",
+    "extras": "Dodatki",
+    "noExtras": "Bez dodatkow",
+    "estimatedPrice": "Cena orientacyjna"
+  }
+}

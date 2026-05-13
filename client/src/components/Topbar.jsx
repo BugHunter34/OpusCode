@@ -13,6 +13,7 @@ function Topbar() {
     { to: '/web-aplikace', label: t('nav.webApps') },
     { to: '/kurzy', label: t('nav.courses') },
     { to: '/jine', label: t('nav.other') },
+    { to: '/kalkulacka-ceny-webu', label: t('nav.calculator') },
     { to: '/kontakt', label: t('nav.contact') },
     { to: '/test', label: t('nav.test') },
   ]

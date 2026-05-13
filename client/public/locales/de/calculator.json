@@ -1,0 +1,97 @@
+{
+  "eyebrow": "Rechner",
+  "title": "Website-Preisrechner",
+  "subtitle": "Erhalten Sie einen Richtpreis fur Ihre neue Website. Der finale Preis wird nach einer kurzen Beratung bestatigt.",
+  "labels": {
+    "from": "ab"
+  },
+  "steps": {
+    "solution": {
+      "title": "1) Welche Losung bevorzugen Sie?"
+    },
+    "pages": {
+      "title": "2) Wie viele Seiten soll die Website haben?",
+      "label": "Seitenanzahl:",
+      "note": "1 Seite kostenlos, jede weitere +700 CZK"
+    },
+    "branding": {
+      "title": "3) Haben Sie bereits eine visuelle Identitat (Logo, Farben, Schriften)?"
+    },
+    "extras": {
+      "title": "4) Welche Zusatzleistungen mochten Sie?"
+    }
+  },
+  "solutions": {
+    "wordpressCustom": {
+      "title": "Ich mochte eine individuelle WordPress-Website",
+      "desc": "Inklusive Strukturkonzept und individuellem Design"
+    },
+    "figmaToWordpress": {
+      "title": "Ich mochte eine Website nach Figma-Design",
+      "desc": "Der genaue Preis wird nach Designprufung bestatigt"
+    },
+    "aiStarter": {
+      "title": "Low-Cost-Variante mit Template oder KI",
+      "desc": "Schnelle und gunstige Losung fur kleinere Projekte"
+    }
+  },
+  "branding": {
+    "options": {
+      "ready": {
+        "title": "Wir haben eine komplette Markenidentitat",
+        "desc": "Logo, Farben und Schriften sind bereits vorhanden"
+      },
+      "need": {
+        "title": "Wir brauchen ein Branding-Design",
+        "desc": "Wir erstellen Logo, Farbpalette und Typografie"
+      }
+    }
+  },
+  "extras": {
+    "options": {
+      "seo": {
+        "title": "Erweitertes SEO-Setup"
+      },
+      "copywriting": {
+        "title": "Texterstellung"
+      },
+      "multilang": {
+        "title": "Mehrsprachige Version"
+      },
+      "analytics": {
+        "title": "Google Analytics + Search Console"
+      }
+    }
+  },
+  "summary": {
+    "title": "Preisberechnung",
+    "priceLabel": "Richtpreis",
+    "base": "Grundpreis",
+    "pages": "Zusatzseiten",
+    "branding": "Visuelle Identitat",
+    "extras": "Zusatzleistungen",
+    "send": "Anfrage per E-Mail senden",
+    "disclaimer": "Der Preis ist ein Richtwert. Der finale Preis wird nach Beratung festgelegt."
+  },
+  "included": {
+    "title": "Im Paket enthalten",
+    "items": {
+      "builder": "WordPress-Website Umsetzung",
+      "seoBasics": "Basis On-Page SEO",
+      "security": "Website-Sicherheitssetup",
+      "responsive": "Responsives Design",
+      "mailbox": "E-Mail-Postfach mit Domain",
+      "ssl": "SSL-Zertifikat",
+      "support": "30 Tage Support nach Launch"
+    }
+  },
+  "mail": {
+    "subject": "Anfrage - Website-Preisrechner",
+    "solution": "Losung",
+    "pages": "Seitenanzahl",
+    "branding": "Visuelle Identitat",
+    "extras": "Zusatzleistungen",
+    "noExtras": "Keine Zusatzleistungen",
+    "estimatedPrice": "Richtpreis"
+  }
+}

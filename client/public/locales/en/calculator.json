@@ -1,0 +1,97 @@
+{
+  "eyebrow": "Calculator",
+  "title": "Website Price Calculator",
+  "subtitle": "Get an estimated website price based on your requirements. Final pricing is confirmed after a short consultation.",
+  "labels": {
+    "from": "from"
+  },
+  "steps": {
+    "solution": {
+      "title": "1) Which solution do you prefer?"
+    },
+    "pages": {
+      "title": "2) How many pages will your website have?",
+      "label": "Page count:",
+      "note": "1 page free, each additional page +700 CZK"
+    },
+    "branding": {
+      "title": "3) Do you already have a visual identity (logo, colors, fonts)?"
+    },
+    "extras": {
+      "title": "4) Which extras do you want?"
+    }
+  },
+  "solutions": {
+    "wordpressCustom": {
+      "title": "I want a custom WordPress website",
+      "desc": "Including structure planning and tailored design"
+    },
+    "figmaToWordpress": {
+      "title": "I want a website from my Figma design",
+      "desc": "Exact pricing will be confirmed after design review"
+    },
+    "aiStarter": {
+      "title": "Low-cost template or AI-assisted website",
+      "desc": "Fast and affordable setup for a smaller project"
+    }
+  },
+  "branding": {
+    "options": {
+      "ready": {
+        "title": "We already have complete branding",
+        "desc": "Logo, color palette and fonts are ready"
+      },
+      "need": {
+        "title": "We need visual identity design",
+        "desc": "We can create logo, colors and typography"
+      }
+    }
+  },
+  "extras": {
+    "options": {
+      "seo": {
+        "title": "Extended SEO setup"
+      },
+      "copywriting": {
+        "title": "Copywriting"
+      },
+      "multilang": {
+        "title": "Multilingual version"
+      },
+      "analytics": {
+        "title": "Google Analytics + Search Console"
+      }
+    }
+  },
+  "summary": {
+    "title": "Price estimate",
+    "priceLabel": "Estimated total",
+    "base": "Base price",
+    "pages": "Additional pages",
+    "branding": "Visual identity",
+    "extras": "Extras",
+    "send": "Send inquiry by email",
+    "disclaimer": "This is only an estimate. Final price is confirmed after consultation."
+  },
+  "included": {
+    "title": "What is included",
+    "items": {
+      "builder": "WordPress website implementation",
+      "seoBasics": "Basic on-page SEO",
+      "security": "Website security setup",
+      "responsive": "Responsive design",
+      "mailbox": "Domain email mailbox",
+      "ssl": "SSL certificate",
+      "support": "30 days launch support"
+    }
+  },
+  "mail": {
+    "subject": "Inquiry - website price calculator",
+    "solution": "Solution type",
+    "pages": "Page count",
+    "branding": "Visual identity",
+    "extras": "Extras",
+    "noExtras": "No extras",
+    "estimatedPrice": "Estimated price"
+  }
+}

@@ -12,6 +12,7 @@ const routeTheme = [
   { match: (path) => path.startsWith('/kurzy'), accent: '#22c55e', accentRgb: '34 197 94' },
   { match: (path) => path.startsWith('/jine'), accent: '#f97316', accentRgb: '249 115 22' },
   { match: (path) => path.startsWith('/kontakt'), accent: '#3b82f6', accentRgb: '59 130 246' },
+  { match: (path) => path.startsWith('/kalkulacka-ceny-webu'), accent: '#eab308', accentRgb: '234 179 8' },
 ]
 
 function Layout() {
@@ -25,7 +26,7 @@ function Layout() {
 
   return (
     <div
-      className="relative min-h-[100dvh] overflow-hidden bg-[var(--bg)] text-[var(--text)]"
+      className="relative min-h-[100dvh] bg-[var(--bg)] text-[var(--text)]"
       style={{
         '--accent': activeTheme.accent,
         '--accent-rgb': activeTheme.accentRgb,
@@ -65,7 +66,7 @@ function Layout() {
           <div className="mx-auto flex w-full max-w-6xl flex-col justify-between gap-2 px-5 text-sm text-slate-300 sm:flex-row sm:px-8 lg:px-12">
             <p>Solutions 24/7</p>
             <p>{t('nav.websites')} | {t('nav.hosting')} | {t('nav.webApps')} | 
-            {t('nav.courses')} | {t('nav.other')} | {t('nav.contact')}</p>
+            {t('nav.courses')} | {t('nav.other')} | {t('nav.contact')} | {t('nav.calculator')}</p>
           </div>
         </footer>
       </div>

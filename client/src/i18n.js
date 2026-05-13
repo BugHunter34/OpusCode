@@ -12,7 +12,7 @@ i18n
     supportedLngs: ['cs', 'sk', 'en', 'de', 'pl'],
     nonExplicitSupportedLngs: true,
     load: 'languageOnly',
-    ns: ['common', 'home', 'contact', 'plans', 'team'], // namespaces
+    ns: ['common', 'home', 'contact', 'plans', 'team', 'calculator'], // namespaces
     defaultNS: 'common',
     debug: true, // errors in console
     interpolation: {
