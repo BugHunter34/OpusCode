@@ -52,7 +52,7 @@
       "start": {
         "tag": "Podstawa",
         "name": "Hosting Start",
-        "price": "6,50 zł / mies.",
+        "price": "13 zł / mies.",
         "desc": "Jasna podstawa dla mniejszych stron. Bez komplikacji.",
         "items": [
           "1 strona",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budżet",
         "name": "Hosting Basic",
-        "price": "24 zł / mies.",
+        "price": "48 zł / mies.",
         "desc": "Gdy potrzebujesz czegoś więcej.",
         "items": [
           "1 strona",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Popularne",
         "name": "Hosting Business",
-        "price": "65 zł / mies.",
+        "price": "130 zł / mies.",
         "desc": "Najlepszy wybór dla standardowej strony firmowej.",
         "items": [
           "1 strona + 1 wersja testowa",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Indywidualne",
         "name": "Hosting Premium",
-        "price": "od 85 zł / mies.",
+        "price": "od 170 zł / mies.",
         "desc": "Dla większych projektów i wielu stron.",
         "items": [
           "Do 3 stron",

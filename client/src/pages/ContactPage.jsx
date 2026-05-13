@@ -56,7 +56,7 @@ function ContactPage() {
               <li>{t('contact:details.email')}: kontakt@opuscode.dev</li>
               <li>{t('contact:details.lead')}: Adam Tomala</li>
               <li>{t('contact:details.ownerPhone')}: +420 737 911 901</li>
-              <li>{t('contact:details.supportPhone')}: +420 777 123 456</li>
+              <li>{t('contact:details.supportPhone')}: +420 608 518 282</li>
               <li>{t('contact:details.id')}: 21205108</li>
               <li>{t('contact:details.address')}: Spojovací 1172, 294 01 Bakov nad Jizerou</li>
               <li>{t('contact:details.website')}: www.opuscode.dev</li>

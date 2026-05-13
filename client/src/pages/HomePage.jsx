@@ -440,10 +440,15 @@ function HomePage() {
                   <Phone size={16} className="text-accent" />
                   <span>{t('finalCta.items.phone')}</span>
                 </a>
-                <div className="flex items-center gap-2 rounded-xl border border-white/12 bg-white/5 px-3 py-3 text-sm text-slate-200">
+                <a
+                  href="https://www.google.com/maps/place/OpusCode.dev/@50.47314,14.9402903,426m/data=!3m1!1e3!4m10!1m2!2m1!1sopuscode.dev!3m6!1s0x4709534d91ea742f:0x5bded1f087c29a78!8m2!3d50.473138!4d14.9418201!15sCgxvcHVzY29kZS5kZXaSARBzb2Z0d2FyZV9jb21wYW554AEA!16s%2Fg%2F11njpfx0sh?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 rounded-xl border border-white/12 bg-white/5 px-3 py-3 text-sm text-slate-200 transition hover:border-accent-soft hover:text-white"
+                >
                   <MapPin size={16} className="text-accent" />
                   <span>{t('finalCta.items.location')}</span>
-                </div>
+                </a>
               </div>
 
               {contactActionMessage.message && (

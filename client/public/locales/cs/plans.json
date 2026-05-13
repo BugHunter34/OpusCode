@@ -52,7 +52,7 @@
       "start": {
         "tag": "Základ",
         "name": "Hosting Start",
-        "price": "40 Kč / měsíc",
+        "price": "80 Kč / měsíc",
         "desc": "Jasný základ pro menší web. Bez složitostí.",
         "items": [
           "1 web",
@@ -64,7 +64,7 @@
       "basic": {
         "tag": "Budget",
         "name": "Hosting Basic",
-        "price": "140 Kč / měsíc",
+        "price": "280 Kč / měsíc",
         "desc": "Když chcete něco víc.",
         "items": [
           "1 web",
@@ -76,7 +76,7 @@
       "business": {
         "tag": "Oblíbené",
         "name": "Hosting Business",
-        "price": "370 Kč / měsíc",
+        "price": "740 Kč / měsíc",
         "desc": "Nejlepší volba pro běžný firemní web.",
         "items": [
           "1 web + 1 testovací verze",
@@ -88,7 +88,7 @@
       "premium": {
         "tag": "Na míru",
         "name": "Hosting Premium",
-        "price": "od 500 Kč / měsíc",
+        "price": "od 1 000 Kč / měsíc",
         "desc": "Pro větší projekty a více webů.",
         "items": [
           "Až 3 weby",
