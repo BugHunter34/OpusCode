@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Topbar from './Topbar'
 import ReactBitsBackground from './ReactBitsBackground'
 import ProductsBackground from './ProductsBackground'
+import LightRaysBackground from './LightRaysBackground'
 import { useTranslation } from 'react-i18next'
 
 const routeTheme = [
@@ -22,6 +23,14 @@ function Layout() {
   const isProductPage = ['/weby', '/hosting', '/web-aplikace', '/kurzy', '/jine'].some((path) =>
     location.pathname.startsWith(path),
   )
+  const isLightRaysPage = ['/kalkulacka-ceny-webu', '/kontakt', '/test'].some((path) =>
+    location.pathname.startsWith(path),
+  )
+  const lightRaysColor = location.pathname.startsWith('/kalkulacka-ceny-webu')
+    ? '#eab308'
+    : location.pathname.startsWith('/kontakt')
+      ? '#3b82f6'
+      : '#ffffff'
   const activeTheme = routeTheme.find((theme) => theme.match(location.pathname)) || routeTheme[0]
 
   return (
@@ -33,25 +42,33 @@ function Layout() {
       }}
     >
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute inset-0 bg-[var(--bg)]" />
-        <div className="ambient-grid absolute inset-0" />
-        <div className="ambient-blob ambient-blob--one" />
-        <div className="ambient-blob ambient-blob--two" />
-        <div className="ambient-blob ambient-blob--three" />
-
-        <div
-          className={`absolute inset-0 transition-opacity duration-150 ${
-            isHomePage ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <ReactBitsBackground />
-        </div>
-
-        {isProductPage ? (
+        {isLightRaysPage ? (
           <div className="absolute inset-0 transition-opacity duration-150 opacity-100">
-            <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
+            <LightRaysBackground raysColor={lightRaysColor} />
           </div>
-        ) : null}
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-[var(--bg)]" />
+            <div className="ambient-grid absolute inset-0" />
+            <div className="ambient-blob ambient-blob--one" />
+            <div className="ambient-blob ambient-blob--two" />
+            <div className="ambient-blob ambient-blob--three" />
+
+            <div
+              className={`absolute inset-0 transition-opacity duration-150 ${
+                isHomePage ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <ReactBitsBackground />
+            </div>
+
+            {isProductPage ? (
+              <div className="absolute inset-0 transition-opacity duration-150 opacity-100">
+                <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
+              </div>
+            ) : null}
+          </>
+        )}
       </div>
 
       <div className="relative z-10 flex min-h-[100dvh] flex-col">
