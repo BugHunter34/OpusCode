@@ -26,43 +26,41 @@ function Layout() {
 
   return (
     <div
-      className="relative min-h-[100dvh] bg-[var(--bg)] text-[var(--text)]"
+      className="relative flex min-h-[100dvh] flex-col bg-[var(--bg)] text-[var(--text)]"
       style={{
         '--accent': activeTheme.accent,
         '--accent-rgb': activeTheme.accentRgb,
       }}
     >
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[var(--bg)]" aria-hidden="true" />
-      <div className="ambient-grid pointer-events-none absolute inset-0 z-0" aria-hidden="true" />
-      <div className="ambient-blob ambient-blob--one pointer-events-none z-0" aria-hidden="true" />
-      <div className="ambient-blob ambient-blob--two pointer-events-none z-0" aria-hidden="true" />
-      <div className="ambient-blob ambient-blob--three pointer-events-none z-0" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute inset-0 bg-[var(--bg)]" />
+        <div className="ambient-grid absolute inset-0" />
+        <div className="ambient-blob ambient-blob--one" />
+        <div className="ambient-blob ambient-blob--two" />
+        <div className="ambient-blob ambient-blob--three" />
 
-      <div
-        className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-150 ${
-          isHomePage ? 'opacity-100' : 'opacity-0'
-        }`}
-        aria-hidden="true"
-      >
-        <ReactBitsBackground />
+        <div
+          className={`absolute inset-0 transition-opacity duration-150 ${
+            isHomePage ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <ReactBitsBackground />
+        </div>
+
+        {isProductPage ? (
+          <div className="absolute inset-0 transition-opacity duration-150 opacity-100">
+            <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
+          </div>
+        ) : null}
       </div>
 
-      <div
-        className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-150 ${
-          isProductPage ? 'opacity-100' : 'opacity-0'
-        }`}
-        aria-hidden="true"
-      >
-        <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
-      </div>
-
-      <div className="relative z-10">
+      <div className="relative z-10 flex min-h-[100dvh] flex-col">
         <Topbar />
-        <main key={location.pathname} className="page-reveal">
+        <main key={location.pathname} className="page-reveal flex-1">
           <Outlet />
         </main>
 
-        <footer className="border-t border-white/10 py-8">
+        <footer className="py-8">
           <div className="mx-auto flex w-full max-w-6xl flex-col justify-between gap-2 px-5 text-sm text-slate-300 sm:flex-row sm:px-8 lg:px-12">
             <p>Solutions 24/7</p>
             <p>{t('nav.websites')} | {t('nav.hosting')} | {t('nav.webApps')} | 

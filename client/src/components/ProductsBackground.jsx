@@ -53,7 +53,9 @@ function ProductsBackground({ pagePath = '/weby', accentColor = '#8b5cf6' }) {
         <div
           className="relative h-full w-full"
           style={{
-            background: `radial-gradient(circle at 50% 50%, ${tint}, transparent 48%), var(--bg)`,
+            backgroundColor: 'var(--bg)',
+            backgroundImage: `radial-gradient(circle at 50% 50%, ${tint}, transparent 48%)`,
+            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
           }}
         >

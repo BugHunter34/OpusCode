@@ -1,9 +1,14 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import TeamGrid from '../components/TeamGrid'
 
 function ContactPage() {
   const { t } = useTranslation(['contact', 'team'])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const teamMembers = [
     {
