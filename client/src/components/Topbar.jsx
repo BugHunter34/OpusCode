@@ -20,7 +20,7 @@ function Topbar() {
     { to: '/jine', label: t('nav.other') },
     { to: '/kalkulacka-ceny-webu', label: t('nav.calculator') },
     { to: '/kontakt', label: t('nav.contact') },
-    { to: '/test', label: t('nav.test') },
+  //  { to: '/test', label: t('nav.test') },
   ]
 
   return (
