@@ -5,7 +5,7 @@
   "subtitle": "Get an estimated price based on your selected category and plan. Final pricing will be fine-tuned after a short consultation.",
   "labels": {
     "from": "from",
-    "largeWebFrom": "from 20,000 CZK+"
+    "largeWebFrom": "from 950 USD+"
   },
   "steps": {
     "category": {

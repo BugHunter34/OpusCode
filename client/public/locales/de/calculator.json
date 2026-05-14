@@ -5,7 +5,7 @@
   "subtitle": "Ermitteln Sie einen Richtpreis basierend auf der gewählten Kategorie und dem Plan. Den endgültigen Preis legen wir nach einer kurzen Beratung fest.",
   "labels": {
     "from": "ab",
-    "largeWebFrom": "ab 20.000 CZK+"
+    "largeWebFrom": "ab 820 EUR+"
   },
   "steps": {
     "category": {
