@@ -1,97 +1,104 @@
 {
-  "eyebrow": "Kalkulacka",
-  "title": "Kalkulacka ceny webu",
-  "subtitle": "Zistite orientacnu cenu noveho webu podla poziadaviek. Finalnu cenu doladime po kratkej konzultacii.",
+  "eyebrow": "Kalkulačka",
+  "title": "Kalkulačka ceny webu a webovej aplikácie",
+  "titleHighlight": "Kalkulačka",
+  "subtitle": "Zistite orientačnú cenu podľa vybranej kategórie a plánu. Finálnu cenu doladíme po krátkej konzultácii.",
   "labels": {
-    "from": "od"
+    "from": "od",
+    "largeWebFrom": "od 20 000 Kč+"
   },
   "steps": {
+    "category": {
+      "title": "1) Čo chcete naceniť?"
+    },
     "solution": {
-      "title": "1) Aky typ riesenia preferujete?"
+      "title": "1) Vyberte typ projektu a plán"
     },
     "pages": {
-      "title": "2) Kolko bude mat web stranok?",
-      "label": "Pocet stranok:",
-      "note": "1 stranka zdarma, dalsie +700 Kc"
+      "title": "2) Koľko bude mať projekt stránok/sekcií?",
+      "label": "Počet stránok/sekcií:",
+      "note": "Príplatok sa počíta podľa vybraného plánu."
     },
-    "branding": {
-      "title": "3) Mate vizualnu identitu (logo, farby, fonty)?"
+    "addons": {
+      "title": "3) Doplnkové funkcie",
+      "note": "(kliknite na tie, ktoré potrebujete)"
     },
-    "extras": {
-      "title": "4) Co chcete pridat navyse?"
+    "hosting": {
+      "title": "4) Ako to bude s hostingom / správou?",
+      "label": "Ako to bude s hostingom / správou?"
+    },
+    "integrations": {
+      "title": "5) Integrácie",
+      "label": "Integrácie",
+      "note": "(vyberte všetko, čo potrebujete)"
     }
   },
-  "solutions": {
-    "wordpressCustom": {
-      "title": "Chcem vytvorit web na WordPresse",
-      "desc": "Vratane navrhu struktury webu a dizajnu na mieru"
-    },
-    "figmaToWordpress": {
-      "title": "Chcem vytvorit web podla dizajnu vo Figme",
-      "desc": "Presnu cenu upresnime po kontrole navrhu"
-    },
-    "aiStarter": {
-      "title": "Low-cost varianta zo sablony alebo AI vyvoj",
-      "desc": "Rychle a lacne riesenie pre mensi projekt"
-    }
+  "categories": {
+    "websites": "Weby",
+    "webApps": "Webové aplikácie",
+    "websitesCta": "CHTCEM NOVÝ WEB",
+    "webAppsCta": "CHTCEM WEBOVÚ APLIKÁCIU"
   },
-  "branding": {
+  "hosting": {
+    "own": "Mám vlastný hosting / správu"
+  },
+  "addons": {
     "options": {
-      "ready": {
-        "title": "Mame kompletnu vizualnu identitu",
-        "desc": "Logo, farby aj fonty uz mate pripravene"
-      },
-      "need": {
-        "title": "Potrebujeme navrh identity",
-        "desc": "Pomozeme s logom, farbami aj typografiou"
-      }
+      "onlineBooking": "Online rezervácie",
+      "onlinePayments": "Online platby",
+      "photoGallery": "Galéria fotiek",
+      "blogCms": "Blog (CMS)",
+      "copywriting": "Copywriting textov",
+      "multilang": "Viacjazyčná verzia",
+      "emailMarketing": "Email marketing setup",
+      "crmForms": "Formuláre + CRM"
     }
   },
-  "extras": {
+  "integrations": {
     "options": {
-      "seo": {
-        "title": "Rozsirene SEO nastavenie"
-      },
-      "copywriting": {
-        "title": "Texty na kluc"
-      },
-      "multilang": {
-        "title": "Viacjazycna verzia"
-      },
-      "analytics": {
-        "title": "Google Analytics + Search Console"
-      }
+      "accounting": "Účtovníctvo (Pohoda, Money, K2...)",
+      "warehouse": "Skladový systém",
+      "shipping": "Doprava (Balíkobot, Zásielkovna)",
+      "paymentGateway": "Platobné brány",
+      "marketingTools": "Marketingové nástroje",
+      "erpCrm": "ERP / CRM",
+      "custom": "Iné / na mieru"
     }
   },
   "summary": {
-    "title": "Cenova kalkulacia",
-    "priceLabel": "Orientacna cena",
-    "base": "Zakladna cena",
-    "pages": "Dalsie podstranky",
-    "branding": "Vizualna identita",
+    "title": "Cenová kalkulácia",
+    "priceLabel": "Orientačná cena",
+    "base": "Základná cena",
+    "pages": "Ďalšie podstránky",
+    "hosting": "Hosting / správa (mesačne)",
+    "hostingHint": "Hosting je mesačná platba navyše k realizácii.",
+    "integrations": "Integrácie",
     "extras": "Doplnky",
-    "send": "Odoslat dopyt emailom",
-    "disclaimer": "Cena je orientacna. Finalna cena bude upresnena po konzultacii."
+    "send": "Odoslať dopyt e-mailom",
+    "disclaimer": "Cena je orientačná. Finálna cena bude upresnená po konzultácii.",
+    "monthly": "mesiac"
   },
   "included": {
-    "title": "Co balik obsahuje",
+    "title": "Čo balíček obsahuje",
     "items": {
       "builder": "Tvorba webu na WordPresse",
-      "seoBasics": "Zakladne on-page SEO",
-      "security": "Zabezpecenie webu",
-      "responsive": "Responzivny dizajn",
-      "mailbox": "Firemny e-mail s domenou",
-      "ssl": "SSL certifikat",
-      "support": "30 dni podpory po spusteni"
+      "seoBasics": "Základné on-page SEO",
+      "security": "Zabezpečenie webu",
+      "responsive": "Responzívny dizajn",
+      "mailbox": "Firemný e-mail s doménou",
+      "ssl": "SSL certifikát",
+      "support": "30 dní podpory po spustení"
     }
   },
   "mail": {
-    "subject": "Dopyt - kalkulacka ceny webu",
-    "solution": "Typ riesenia",
-    "pages": "Pocet stranok",
-    "branding": "Vizualna identita",
-    "extras": "Doplnky",
+    "subject": "Dopyt - kalkulačka ceny webu",
+    "category": "Kategória",
+    "solution": "Typ riešenia",
+    "pages": "Počet stránok",
+    "addons": "Doplnky",
+    "integrations": "Integrácie",
+    "hosting": "Hosting / správa",
     "noExtras": "Bez doplnkov",
-    "estimatedPrice": "Orientacna cena"
+    "estimatedPrice": "Orientačná cena"
   }
 }

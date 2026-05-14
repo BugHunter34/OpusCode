@@ -1,66 +1,68 @@
 {
   "eyebrow": "Rechner",
-  "title": "Website-Preisrechner",
-  "subtitle": "Erhalten Sie einen Richtpreis fur Ihre neue Website. Der finale Preis wird nach einer kurzen Beratung bestatigt.",
+  "title": "Preisrechner für Websites & Web-Apps",
+  "titleHighlight": "Rechner",
+  "subtitle": "Ermitteln Sie einen Richtpreis basierend auf der gewählten Kategorie und dem Plan. Den endgültigen Preis legen wir nach einer kurzen Beratung fest.",
   "labels": {
-    "from": "ab"
+    "from": "ab",
+    "largeWebFrom": "ab 20.000 CZK+"
   },
   "steps": {
+    "category": {
+      "title": "1) Was möchten Sie kalkulieren?"
+    },
     "solution": {
-      "title": "1) Welche Losung bevorzugen Sie?"
+      "title": "1) Projekttyp und Plan auswählen"
     },
     "pages": {
-      "title": "2) Wie viele Seiten soll die Website haben?",
-      "label": "Seitenanzahl:",
-      "note": "1 Seite kostenlos, jede weitere +700 CZK"
+      "title": "2) Wie viele Seiten/Bereiche wird das Projekt haben?",
+      "label": "Anzahl der Seiten/Bereiche:",
+      "note": "Der Aufpreis wird basierend auf dem gewählten Plan berechnet."
     },
-    "branding": {
-      "title": "3) Haben Sie bereits eine visuelle Identitat (Logo, Farben, Schriften)?"
+    "addons": {
+      "title": "3) Zusatzfunktionen",
+      "note": "(klicken Sie auf die gewünschten Funktionen)"
     },
-    "extras": {
-      "title": "4) Welche Zusatzleistungen mochten Sie?"
+    "hosting": {
+      "title": "4) Wie sieht es mit Hosting / Verwaltung aus?",
+      "label": "Wie sieht es mit Hosting / Verwaltung aus?"
+    },
+    "integrations": {
+      "title": "5) Integrationen",
+      "label": "Integrationen",
+      "note": "(wählen Sie alles aus, was Sie benötigen)"
     }
   },
-  "solutions": {
-    "wordpressCustom": {
-      "title": "Ich mochte eine individuelle WordPress-Website",
-      "desc": "Inklusive Strukturkonzept und individuellem Design"
-    },
-    "figmaToWordpress": {
-      "title": "Ich mochte eine Website nach Figma-Design",
-      "desc": "Der genaue Preis wird nach Designprufung bestatigt"
-    },
-    "aiStarter": {
-      "title": "Low-Cost-Variante mit Template oder KI",
-      "desc": "Schnelle und gunstige Losung fur kleinere Projekte"
-    }
+  "categories": {
+    "websites": "Websites",
+    "webApps": "Web-Apps",
+    "websitesCta": "ICH WILL EINE NEUE WEBSITE",
+    "webAppsCta": "ICH WILL EINE WEB-APP"
   },
-  "branding": {
+  "hosting": {
+    "own": "Ich habe mein eigenes Hosting / Verwaltung"
+  },
+  "addons": {
     "options": {
-      "ready": {
-        "title": "Wir haben eine komplette Markenidentitat",
-        "desc": "Logo, Farben und Schriften sind bereits vorhanden"
-      },
-      "need": {
-        "title": "Wir brauchen ein Branding-Design",
-        "desc": "Wir erstellen Logo, Farbpalette und Typografie"
-      }
+      "onlineBooking": "Online-Reservierung",
+      "onlinePayments": "Online-Zahlungen",
+      "photoGallery": "Fotogalerie",
+      "blogCms": "Blog (CMS)",
+      "copywriting": "Copywriting / Texte",
+      "multilang": "Mehrsprachige Version",
+      "emailMarketing": "E-Mail-Marketing Setup",
+      "crmForms": "Formulare + CRM"
     }
   },
-  "extras": {
+  "integrations": {
     "options": {
-      "seo": {
-        "title": "Erweitertes SEO-Setup"
-      },
-      "copywriting": {
-        "title": "Texterstellung"
-      },
-      "multilang": {
-        "title": "Mehrsprachige Version"
-      },
-      "analytics": {
-        "title": "Google Analytics + Search Console"
-      }
+      "accounting": "Buchhaltung (Pohoda, Money, K2...)",
+      "warehouse": "Lagersystem",
+      "shipping": "Versand (Balíkobot, Zásilkovna)",
+      "paymentGateway": "Zahlungsgateways",
+      "marketingTools": "Marketing-Tools",
+      "erpCrm": "ERP / CRM",
+      "custom": "Andere / Individuell"
     }
   },
   "summary": {
@@ -68,30 +70,35 @@
     "priceLabel": "Richtpreis",
     "base": "Grundpreis",
     "pages": "Zusatzseiten",
-    "branding": "Visuelle Identitat",
-    "extras": "Zusatzleistungen",
+    "hosting": "Hosting / Verwaltung (monatlich)",
+    "hostingHint": "Hosting ist eine zusätzliche monatliche Zahlung zur Projektrealisierung.",
+    "integrations": "Integrationen",
+    "extras": "Zusatzfunktionen",
     "send": "Anfrage per E-Mail senden",
-    "disclaimer": "Der Preis ist ein Richtwert. Der finale Preis wird nach Beratung festgelegt."
+    "disclaimer": "Der Preis ist ein Richtwert. Der finale Preis wird nach Beratung bestätigt.",
+    "monthly": "Monat"
   },
   "included": {
-    "title": "Im Paket enthalten",
+    "title": "Was das Paket enthält",
     "items": {
-      "builder": "WordPress-Website Umsetzung",
+      "builder": "Erstellung der Website auf WordPress",
       "seoBasics": "Basis On-Page SEO",
-      "security": "Website-Sicherheitssetup",
+      "security": "Website-Sicherheit",
       "responsive": "Responsives Design",
-      "mailbox": "E-Mail-Postfach mit Domain",
+      "mailbox": "Firmen-E-Mail mit Domain",
       "ssl": "SSL-Zertifikat",
-      "support": "30 Tage Support nach Launch"
+      "support": "30 Tage Support nach dem Launch"
     }
   },
   "mail": {
     "subject": "Anfrage - Website-Preisrechner",
-    "solution": "Losung",
+    "category": "Kategorie",
+    "solution": "Lösungstyp",
     "pages": "Seitenanzahl",
-    "branding": "Visuelle Identitat",
-    "extras": "Zusatzleistungen",
-    "noExtras": "Keine Zusatzleistungen",
+    "addons": "Zusatzfunktionen",
+    "integrations": "Integrationen",
+    "hosting": "Hosting / Verwaltung",
+    "noExtras": "Ohne Zusatzfunktionen",
     "estimatedPrice": "Richtpreis"
   }
 }

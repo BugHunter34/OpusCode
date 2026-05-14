@@ -1,66 +1,68 @@
 {
   "eyebrow": "Kalkulator",
-  "title": "Kalkulator ceny strony",
-  "subtitle": "Sprawdz orientacyjna cene nowej strony wedlug Twoich wymagan. Cene koncowa potwierdzimy po krotkiej konsultacji.",
+  "title": "Kalkulator ceny stron i aplikacji webowych",
+  "titleHighlight": "Kalkulator",
+  "subtitle": "Sprawdź orientacyjną cenę na podstawie wybranej kategorii i planu. Finalną cenę doprecyzujemy po krótkiej konsultacji.",
   "labels": {
-    "from": "od"
+    "from": "od",
+    "largeWebFrom": "od 20 000 CZK+"
   },
   "steps": {
+    "category": {
+      "title": "1) Co chcesz wycenić?"
+    },
     "solution": {
-      "title": "1) Jaki typ rozwiazania preferujesz?"
+      "title": "1) Wybierz typ projektu i plan"
     },
     "pages": {
-      "title": "2) Ile podstron bedzie miala strona?",
-      "label": "Liczba podstron:",
-      "note": "1 podstrona gratis, kazda kolejna +700 CZK"
+      "title": "2) Ile podstron/sekcji będzie miał projekt?",
+      "label": "Liczba podstron/sekcji:",
+      "note": "Dopłata jest naliczana zgodnie z wybranym planem."
     },
-    "branding": {
-      "title": "3) Masz juz identyfikacje wizualna (logo, kolory, fonty)?"
+    "addons": {
+      "title": "3) Funkcje dodatkowe",
+      "note": "(kliknij te, których potrzebujesz)"
     },
-    "extras": {
-      "title": "4) Jakie dodatki chcesz doliczyc?"
+    "hosting": {
+      "title": "4) Jak rozwiążemy kwestię hostingu / administracji?",
+      "label": "Jak rozwiążemy kwestię hostingu / administracji?"
+    },
+    "integrations": {
+      "title": "5) Integracje",
+      "label": "Integracje",
+      "note": "(wybierz wszystko, czego potrzebujesz)"
     }
   },
-  "solutions": {
-    "wordpressCustom": {
-      "title": "Chce strone na WordPressie",
-      "desc": "Wraz z projektem struktury i indywidualnym designem"
-    },
-    "figmaToWordpress": {
-      "title": "Chce strone wedlug projektu w Figmie",
-      "desc": "Dokladna cena po weryfikacji projektu"
-    },
-    "aiStarter": {
-      "title": "Wariant low-cost z szablonu lub AI",
-      "desc": "Szybkie i tanie rozwiazanie dla mniejszego projektu"
-    }
+  "categories": {
+    "websites": "Strony WWW",
+    "webApps": "Aplikacje webowe",
+    "websitesCta": "CHCĘ NOWĄ STRONĘ",
+    "webAppsCta": "CHCĘ APLIKACJĘ WEBOWĄ"
   },
-  "branding": {
+  "hosting": {
+    "own": "Mam własny hosting / administrację"
+  },
+  "addons": {
     "options": {
-      "ready": {
-        "title": "Mamy kompletna identyfikacje wizualna",
-        "desc": "Logo, kolory i fonty sa gotowe"
-      },
-      "need": {
-        "title": "Potrzebujemy projektu identyfikacji",
-        "desc": "Pomozemy z logo, kolorystyka i typografia"
-      }
+      "onlineBooking": "Rezerwacje online",
+      "onlinePayments": "Płatności online",
+      "photoGallery": "Galeria zdjęć",
+      "blogCms": "Blog (CMS)",
+      "copywriting": "Copywriting / Teksty",
+      "multilang": "Wersja wielojęzyczna",
+      "emailMarketing": "Konfiguracja email marketingu",
+      "crmForms": "Formularze + CRM"
     }
   },
-  "extras": {
+  "integrations": {
     "options": {
-      "seo": {
-        "title": "Rozszerzona konfiguracja SEO"
-      },
-      "copywriting": {
-        "title": "Copywriting"
-      },
-      "multilang": {
-        "title": "Wersja wielojezyczna"
-      },
-      "analytics": {
-        "title": "Google Analytics + Search Console"
-      }
+      "accounting": "Księgowość (Pohoda, Money, K2...)",
+      "warehouse": "System magazynowy",
+      "shipping": "Wysyłka (Balíkobot, Zásilkovna)",
+      "paymentGateway": "Bramki płatnicze",
+      "marketingTools": "Narzędzia marketingowe",
+      "erpCrm": "ERP / CRM",
+      "custom": "Inne / na wymiar"
     }
   },
   "summary": {
@@ -68,30 +70,35 @@
     "priceLabel": "Cena orientacyjna",
     "base": "Cena bazowa",
     "pages": "Dodatkowe podstrony",
-    "branding": "Identyfikacja wizualna",
+    "hosting": "Hosting / administracja (miesięcznie)",
+    "hostingHint": "Hosting to dodatkowa opłata miesięczna niezależna od kosztu wdrożenia.",
+    "integrations": "Integracje",
     "extras": "Dodatki",
-    "send": "Wyslij zapytanie mailem",
-    "disclaimer": "Cena jest orientacyjna. Finalna cena zostanie doprecyzowana po konsultacji."
+    "send": "Wyślij zapytanie e-mailem",
+    "disclaimer": "Cena jest orientacyjna. Finalna cena zostanie potwierdzona po konsultacji.",
+    "monthly": "miesiąc"
   },
   "included": {
     "title": "Co zawiera pakiet",
     "items": {
-      "builder": "Wdrozenie strony na WordPressie",
+      "builder": "Stworzenie strony na WordPressie",
       "seoBasics": "Podstawowe on-page SEO",
-      "security": "Konfiguracja bezpieczenstwa",
+      "security": "Zabezpieczenie strony",
       "responsive": "Responsywny design",
-      "mailbox": "Skrzynka e-mail z domena",
+      "mailbox": "Firmowa poczta we własnej domenie",
       "ssl": "Certyfikat SSL",
-      "support": "30 dni wsparcia po uruchomieniu"
+      "support": "30 dni wsparcia po wdrożeniu"
     }
   },
   "mail": {
     "subject": "Zapytanie - kalkulator ceny strony",
-    "solution": "Typ rozwiazania",
+    "category": "Kategoria",
+    "solution": "Typ rozwiązania",
     "pages": "Liczba podstron",
-    "branding": "Identyfikacja wizualna",
-    "extras": "Dodatki",
-    "noExtras": "Bez dodatkow",
+    "addons": "Dodatki",
+    "integrations": "Integracje",
+    "hosting": "Hosting / administracja",
+    "noExtras": "Bez dodatków",
     "estimatedPrice": "Cena orientacyjna"
   }
 }

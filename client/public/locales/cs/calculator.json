@@ -8,14 +8,11 @@
     "largeWebFrom": "od 20 000 Kč+"
   },
   "steps": {
-    "category": {
-      "title": "1) Co chcete nacenit?"
-    },
     "solution": {
-      "title": "2) Jaký plán preferujete?"
+      "title": "1) Vyberte typ projektu a plán"
     },
     "pages": {
-      "title": "3) Kolik bude mít projekt stránek/sekcí?",
+      "title": "2) Kolik bude mít projekt stránek/sekcí?",
       "label": "Počet stránek/sekcí:",
       "note": "Příplatek se počítá podle vybraného plánu."
     },
@@ -23,20 +20,20 @@
       "title": "3) Doplňkové funkce",
       "note": "(klepněte na ty které potřebujete)"
     },
-    "hosting": {
-      "title": "4) Jak to bude s hostingem / správou?",
-      "label": "Jak to bude s hostingem / správou?"
-    },
     "integrations": {
-      "title": "5) Integrace",
+      "title": "4) Integrace",
       "label": "Integrace",
       "note": "(vyberte vše, co potřebujete)"
+    },
+    "hosting": {
+      "title": "5) Jak to bude s hostingem / správou?",
+      "label": "Jak to bude s hostingem / správou?"
     }
   },
   "categories": {
     "websites": "Weby",
     "webApps": "Webové aplikace",
-    "websitesCta": "CHCI NOVY WEB",
+    "websitesCta": "CHCI NOVÝ WEB",
     "webAppsCta": "CHCI WEBOVOU APLIKACI"
   },
   "hosting": {
@@ -65,48 +62,6 @@
       "custom": "Jiné / na míru"
     }
   },
-  "solutions": {
-    "wordpressCustom": {
-      "title": "Chci vytvořit web na WordPressu",
-      "desc": "Včetně návrhu struktury webu a designu na míru"
-    },
-    "figmaToWordpress": {
-      "title": "Chci vytvořit web podle designu ve Figmě",
-      "desc": "Přesnou cenu upřesníme po kontrole návrhu"
-    },
-    "aiStarter": {
-      "title": "Low-cost varianta ze šablony nebo AI vývoj",
-      "desc": "Rychlé a levné řešení pro menší projekt"
-    }
-  },
-  "branding": {
-    "options": {
-      "ready": {
-        "title": "Máme kompletní vizuální identitu",
-        "desc": "Logo, barvy i fonty už máte připravené"
-      },
-      "need": {
-        "title": "Potřebujeme návrh identity",
-        "desc": "Pomůžeme s logem, barvami i typografií"
-      }
-    }
-  },
-  "extras": {
-    "options": {
-      "seo": {
-        "title": "Rozšířené SEO nastavení"
-      },
-      "copywriting": {
-        "title": "Texty na klíč"
-      },
-      "multilang": {
-        "title": "Vícejazyčná verze"
-      },
-      "analytics": {
-        "title": "Google Analytics + Search Console"
-      }
-    }
-  },
   "summary": {
     "title": "Cenová kalkulace",
     "priceLabel": "Orientační cena",
@@ -115,10 +70,9 @@
     "hosting": "Hosting / správa (měsíčně)",
     "hostingHint": "Hosting je měsíční platba navíc k realizaci.",
     "integrations": "Integrace",
-    "branding": "Vizuální identita",
-    "extras": "Doplňky",
+    "addons": "Doplňky",
     "send": "Odeslat poptávku e-mailem",
-    "disclaimer": "Cena je orientační. Finální cena bude upřesněna po konzultaci."
+    "disclaimer": "Cena je orientační. Finální cena bude upresněna po konzultaci."
   },
   "included": {
     "title": "Co balíček obsahuje",
@@ -127,7 +81,7 @@
       "seoBasics": "Základní on-page SEO",
       "security": "Zabezpečení webu",
       "responsive": "Responzivní design",
-      "mailbox": "Firemni e-mail s domenou",
+      "mailbox": "Firemní e-mail s doménou",
       "ssl": "SSL certifikát",
       "support": "30 dní podpory po spuštění"
     }
@@ -140,9 +94,7 @@
     "addons": "Doplňky",
     "integrations": "Integrace",
     "hosting": "Hosting / správa",
-    "branding": "Vizuální identita",
-    "extras": "Doplňky",
     "noExtras": "Bez doplňků",
-    "estimatedPrice": "Orientační cena"
+    "estimatedPrice": "Orientačná cena"
   }
 }

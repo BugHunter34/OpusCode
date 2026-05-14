@@ -1,66 +1,68 @@
 {
   "eyebrow": "Calculator",
-  "title": "Website Price Calculator",
-  "subtitle": "Get an estimated website price based on your requirements. Final pricing is confirmed after a short consultation.",
+  "title": "Website & Web App Price Calculator",
+  "titleHighlight": "Calculator",
+  "subtitle": "Get an estimated price based on your selected category and plan. Final pricing will be fine-tuned after a short consultation.",
   "labels": {
-    "from": "from"
+    "from": "from",
+    "largeWebFrom": "from 20,000 CZK+"
   },
   "steps": {
+    "category": {
+      "title": "1) What do you want to price?"
+    },
     "solution": {
-      "title": "1) Which solution do you prefer?"
+      "title": "1) Select project type and plan"
     },
     "pages": {
-      "title": "2) How many pages will your website have?",
-      "label": "Page count:",
-      "note": "1 page free, each additional page +700 CZK"
+      "title": "2) How many pages/sections will the project have?",
+      "label": "Number of pages/sections:",
+      "note": "The surcharge is calculated according to the selected plan."
     },
-    "branding": {
-      "title": "3) Do you already have a visual identity (logo, colors, fonts)?"
+    "addons": {
+      "title": "3) Additional features",
+      "note": "(click the ones you need)"
     },
-    "extras": {
-      "title": "4) Which extras do you want?"
+    "hosting": {
+      "title": "4) What about hosting / management?",
+      "label": "What about hosting / management?"
+    },
+    "integrations": {
+      "title": "5) Integrations",
+      "label": "Integrations",
+      "note": "(select everything you need)"
     }
   },
-  "solutions": {
-    "wordpressCustom": {
-      "title": "I want a custom WordPress website",
-      "desc": "Including structure planning and tailored design"
-    },
-    "figmaToWordpress": {
-      "title": "I want a website from my Figma design",
-      "desc": "Exact pricing will be confirmed after design review"
-    },
-    "aiStarter": {
-      "title": "Low-cost template or AI-assisted website",
-      "desc": "Fast and affordable setup for a smaller project"
-    }
+  "categories": {
+    "websites": "Websites",
+    "webApps": "Web Apps",
+    "websitesCta": "I WANT A NEW WEBSITE",
+    "webAppsCta": "I WANT A WEB APP"
   },
-  "branding": {
+  "hosting": {
+    "own": "I have my own hosting / management"
+  },
+  "addons": {
     "options": {
-      "ready": {
-        "title": "We already have complete branding",
-        "desc": "Logo, color palette and fonts are ready"
-      },
-      "need": {
-        "title": "We need visual identity design",
-        "desc": "We can create logo, colors and typography"
-      }
+      "onlineBooking": "Online booking",
+      "onlinePayments": "Online payments",
+      "photoGallery": "Photo gallery",
+      "blogCms": "Blog (CMS)",
+      "copywriting": "Copywriting",
+      "multilang": "Multilingual version",
+      "emailMarketing": "Email marketing setup",
+      "crmForms": "Forms + CRM"
     }
   },
-  "extras": {
+  "integrations": {
     "options": {
-      "seo": {
-        "title": "Extended SEO setup"
-      },
-      "copywriting": {
-        "title": "Copywriting"
-      },
-      "multilang": {
-        "title": "Multilingual version"
-      },
-      "analytics": {
-        "title": "Google Analytics + Search Console"
-      }
+      "accounting": "Accounting (Pohoda, Money, K2...)",
+      "warehouse": "Warehouse system",
+      "shipping": "Shipping (Balíkobot, Zásilkovna)",
+      "paymentGateway": "Payment gateways",
+      "marketingTools": "Marketing tools",
+      "erpCrm": "ERP / CRM",
+      "custom": "Other / custom"
     }
   },
   "summary": {
@@ -68,30 +70,35 @@
     "priceLabel": "Estimated total",
     "base": "Base price",
     "pages": "Additional pages",
-    "branding": "Visual identity",
-    "extras": "Extras",
-    "send": "Send inquiry by email",
-    "disclaimer": "This is only an estimate. Final price is confirmed after consultation."
+    "hosting": "Hosting / management (monthly)",
+    "hostingHint": "Hosting is an additional monthly payment on top of the project implementation.",
+    "integrations": "Integrations",
+    "extras": "Add-ons",
+    "send": "Send inquiry via email",
+    "disclaimer": "The price is an estimate. The final price will be confirmed after consultation.",
+    "monthly": "month"
   },
   "included": {
-    "title": "What is included",
+    "title": "What the package includes",
     "items": {
-      "builder": "WordPress website implementation",
+      "builder": "WordPress website creation",
       "seoBasics": "Basic on-page SEO",
-      "security": "Website security setup",
+      "security": "Website security",
       "responsive": "Responsive design",
-      "mailbox": "Domain email mailbox",
+      "mailbox": "Business email with domain",
       "ssl": "SSL certificate",
-      "support": "30 days launch support"
+      "support": "30 days of post-launch support"
     }
   },
   "mail": {
-    "subject": "Inquiry - website price calculator",
+    "subject": "Inquiry - Website price calculator",
+    "category": "Category",
     "solution": "Solution type",
     "pages": "Page count",
-    "branding": "Visual identity",
-    "extras": "Extras",
-    "noExtras": "No extras",
+    "addons": "Add-ons",
+    "integrations": "Integrations",
+    "hosting": "Hosting / management",
+    "noExtras": "No add-ons",
     "estimatedPrice": "Estimated price"
   }
 }

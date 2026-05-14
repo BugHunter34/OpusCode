@@ -1,6 +1,10 @@
 import { Calculator, Clock3, Mail, PlusCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useMemo, useState, useEffect } from 'react'
+import { useTranslation, Trans } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { createPortal } from 'react-dom'
+
+const API_BASE_URL = "https://api.opuscode.dev"
 
 const CATEGORY_PLAN_KEYS = {
   websites: ['simple', 'corporate', 'large'],
@@ -42,8 +46,42 @@ const parseFirstNumber = (value) => {
   return Number(match.join(''))
 }
 
-const formatPrice = (value, locale) =>
-  `${new Intl.NumberFormat(locale || 'cs-CZ').format(value)} Kč`
+const formatPrice = (value, locale) => {
+  const lang = locale?.split('-')[0] || 'cs';
+  
+  let currencyCode = 'CZK';
+  let formattingLocale = 'cs-CZ';
+
+  switch (lang) {
+    case 'en': 
+      currencyCode = 'EUR'; 
+      formattingLocale = 'en-IE'; 
+      break;
+    case 'pl': 
+      currencyCode = 'PLN';
+      formattingLocale = 'pl-PL';
+      break;
+    case 'de': 
+      currencyCode = 'EUR';
+      formattingLocale = 'de-DE';
+      break;
+    case 'sk': 
+      currencyCode = 'EUR';
+      formattingLocale = 'sk-SK';
+      break;
+    case 'cs':
+    default: 
+      currencyCode = 'CZK';
+      formattingLocale = 'cs-CZ';
+      break;
+  }
+
+  return new Intl.NumberFormat(formattingLocale, {
+    style: 'currency',
+    currency: currencyCode,
+    maximumFractionDigits: 0,
+  }).format(value);
+}
 
 const formatAddonValue = (addon, locale) => {
   if (addon.type === 'percent') {
@@ -77,14 +115,60 @@ const renderTitleWithHighlight = (title, highlight) => {
   )
 }
 
+const getInitialForm = () => ({
+  fullName: '',
+  email: '',
+  phone: '',
+  company: '',
+  note: '',
+  gdprConsent: false,
+})
+
 function PriceCalculatorPage() {
-  const { t, i18n } = useTranslation(['calculator', 'plans'])
+  const { t, i18n } = useTranslation(['calculator', 'plans', 'common'])
+  const lang = i18n.language?.split('-')[0] || 'cs'
+
   const [category, setCategory] = useState('websites')
   const [solution, setSolution] = useState('simple')
   const [hosting, setHosting] = useState('own')
   const [pagesCount, setPagesCount] = useState(1)
   const [selectedAddons, setSelectedAddons] = useState({})
   const [selectedIntegrations, setSelectedIntegrations] = useState({})
+
+  // Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [formData, setFormData] = useState(getInitialForm)
+  const [status, setStatus] = useState({ type: 'idle', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const canSubmit = useMemo(() => {
+    return formData.fullName.trim() && formData.email.trim() && formData.gdprConsent
+  }, [formData])
+
+  const closeForm = () => {
+    setIsModalOpen(false)
+    setFormData(getInitialForm())
+    setStatus({ type: 'idle', message: '' })
+    setIsSubmitting(false)
+  }
+
+  useEffect(() => {
+    if (!isModalOpen) return
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') closeForm()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isModalOpen])
+
+  const handleFieldChange = (event) => {
+    const { name, value, type, checked } = event.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
+  }
 
   const plans = useMemo(() => {
     const keys = CATEGORY_PLAN_KEYS[category]
@@ -114,64 +198,96 @@ function PriceCalculatorPage() {
     .map((integration) => t(`integrations.options.${integration.id}`, { defaultValue: integration.fallback }))
 
   const selectedPlanPriceLabel = useMemo(() => {
-    if (!selectedPlan) {
-      return ''
-    }
-
+    if (!selectedPlan) return ''
     if (category === 'websites' && selectedPlan.id === 'large') {
       return t('labels.largeWebFrom', { defaultValue: 'od 20 000 Kč' })
     }
-
     return selectedPlan.price
   }, [category, selectedPlan, t])
 
   const isLargeWebsitePlan = category === 'websites' && selectedPlan?.id === 'large'
-
-  const basePrice = category === 'websites' && selectedPlan?.id === 'large'
-    ? 20000
-    : parseFirstNumber(selectedPlan?.price)
+  const basePrice = category === 'websites' && selectedPlan?.id === 'large' ? 20000 : parseFirstNumber(selectedPlan?.price)
   const pagePrice = parseFirstNumber(selectedPlanItems.find((item) => String(item).includes('/')))
   const includedPages = parseFirstNumber(selectedPlanItems.find((item) => /do\s*\d+/i.test(String(item))))
   const extraPages = Number.isFinite(includedPages) ? Math.max(0, pagesCount - includedPages) : 0
   const pagesPrice = pagePrice ? extraPages * pagePrice : 0
-  const fixedAddonsPrice = availableAddons.reduce(
-    (sum, addon) => (selectedAddons[addon.id] && addon.type === 'fixed' ? sum + addon.value : sum),
-    0,
-  )
+  
+  const fixedAddonsPrice = availableAddons.reduce((sum, addon) => (selectedAddons[addon.id] && addon.type === 'fixed' ? sum + addon.value : sum), 0)
   const subtotalBeforePercentAddons = (basePrice || 0) + pagesPrice + fixedAddonsPrice
-  const percentAddonsPrice = availableAddons.reduce(
-    (sum, addon) => (selectedAddons[addon.id] && addon.type === 'percent' ? sum + Math.round((subtotalBeforePercentAddons * addon.value) / 100) : sum),
-    0,
-  )
+  const percentAddonsPrice = availableAddons.reduce((sum, addon) => (selectedAddons[addon.id] && addon.type === 'percent' ? sum + Math.round((subtotalBeforePercentAddons * addon.value) / 100) : sum), 0)
   const addonsPrice = fixedAddonsPrice + percentAddonsPrice
-  const integrationsPrice = INTEGRATION_OPTIONS.reduce(
-    (sum, integration) => (selectedIntegrations[integration.id] ? sum + integration.value : sum),
-    0,
-  )
+  
+  const integrationsPrice = INTEGRATION_OPTIONS.reduce((sum, integration) => (selectedIntegrations[integration.id] ? sum + integration.value : sum), 0)
+  
   const totalPrice = basePrice === null ? null : basePrice + pagesPrice + addonsPrice + integrationsPrice
+  const formattedTotalPrice = totalPrice === null ? selectedPlan?.price : `${formatPrice(totalPrice, i18n.language)}${isLargeWebsitePlan ? '+' : ''}`
   const hostingMonthlyPrice = selectedHostingPlan ? parseFirstNumber(selectedHostingPlan.price) || 0 : 0
+  
   const selectedAddonLabels = availableAddons
     .filter((addon) => selectedAddons[addon.id])
     .map((addon) => t(`addons.options.${addon.id}`, { defaultValue: addon.fallback }))
+
   const hostingStepTitle = `${category === 'webApps' ? '5' : '4'}) ${t('steps.hosting.label', { defaultValue: 'Jak to bude s hostingem / správou?' })}`
   const integrationsStepTitle = `4) ${t('steps.integrations.label', { defaultValue: 'Integrace' })}`
   const pageTitle = t('title')
   const pageTitleHighlight = t('titleHighlight', { defaultValue: 'Kalkulačka' })
 
-  const mailBody = encodeURIComponent(
-    [
-      `${t('mail.category', { defaultValue: 'Kategorie' })}: ${category === 'websites' ? t('categories.websites', { defaultValue: 'Weby' }) : t('categories.webApps', { defaultValue: 'Webové aplikace' })}`,
-      `${t('mail.solution')}: ${selectedPlan?.name || ''}`,
-      `${t('mail.pages')}: ${pagesCount}`,
-      `${t('mail.addons', { defaultValue: 'Doplňky' })}: ${selectedAddonLabels.length ? selectedAddonLabels.join(', ') : t('mail.noExtras', { defaultValue: 'Bez doplňků' })}`,
-      `${t('mail.integrations', { defaultValue: 'Integrace' })}: ${selectedIntegrationLabels.length ? selectedIntegrationLabels.join(', ') : t('mail.noExtras', { defaultValue: 'Bez doplňků' })}`,
-      `${t('mail.hosting', { defaultValue: 'Hosting' })}: ${selectedHostingPlan ? selectedHostingPlan.name : t('hosting.own', { defaultValue: 'Vlastní hosting' })}`,
-      `${t('mail.estimatedPrice')}: ${totalPrice === null ? selectedPlan?.price : formatPrice(totalPrice, i18n.language)}`,
-    ].join('\n'),
-  )
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    if (!canSubmit) {
+      setStatus({ type: 'error', message: t('common:errors.formIncomplete', { defaultValue: 'Vyplňte prosím všechna povinná pole.' }) })
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus({ type: 'idle', message: '' })
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/calculator-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          lang: i18n.language,
+          category: category === 'websites' ? t('categories.websites', { defaultValue: 'Weby' }) : t('categories.webApps', { defaultValue: 'Webové aplikace' }),
+          solution: selectedPlan?.name,
+          pagesCount,
+          addons: selectedAddonLabels,
+          integrations: selectedIntegrationLabels,
+          hosting: selectedHostingPlan ? selectedHostingPlan.name : t('hosting.own', { defaultValue: 'Vlastní hosting' }),
+          estimatedPrice: formattedTotalPrice,
+          ...formData,
+        }),
+      })
+
+      const responseData = await response.json()
+
+      if (!response.ok) {
+        throw new Error(responseData.detail || t('common:errors.apiFallback', { defaultValue: 'Něco se pokazilo, zkuste to prosím znovu.' }))
+      }
+
+      setStatus({
+        type: 'success',
+        message: responseData.message || t('common:messages.success', { defaultValue: 'Poptávka byla úspěšně odeslána.' }),
+      })
+      
+      setFormData(getInitialForm())
+      setTimeout(() => closeForm(), 3000) // Auto close after success
+      
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error.message || t('common:errors.general', { defaultValue: 'Chyba serveru. Zkuste to prosím později.' }),
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-5 pb-16 pt-12 sm:px-8 lg:px-12">
+    <section className="mx-auto w-full max-w-6xl px-5 pb-16 pt-12 sm:px-8 lg:px-12 relative">
       <div className="text-center">
         <p className="reveal inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-accent">
           <Calculator size={14} />
@@ -354,7 +470,7 @@ function PriceCalculatorPage() {
                 }`}
               >
                 <p className="text-base font-semibold text-white">{t('hosting.own', { defaultValue: 'Mám vlastní hosting' })}</p>
-                <p className="mt-1 text-sm text-slate-300">0 Kč / měsíc</p>
+                <p className="mt-1 text-sm text-slate-300">0 {lang === 'cs' ? 'Kč' : (lang === 'pl' ? 'PLN' : '€')} / {t('summary.monthly', { defaultValue: 'měsíc' })}</p>
               </button>
 
               {hostingPlans.map((plan) => (
@@ -382,9 +498,7 @@ function PriceCalculatorPage() {
               <Clock3 size={18} /> {t('summary.title')}
             </p>
             <p className="mt-5 text-center text-4xl font-bold text-accent">
-              {totalPrice === null
-                ? selectedPlan?.price
-                : `${formatPrice(totalPrice, i18n.language)}${isLargeWebsitePlan ? '+' : ''}`}
+              {formattedTotalPrice}
             </p>
             <p className="mt-1 text-center text-sm text-slate-300">{t('summary.priceLabel')}</p>
 
@@ -398,7 +512,7 @@ function PriceCalculatorPage() {
                 <span>{formatPrice(pagesPrice, i18n.language)}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>{t('summary.extras', { defaultValue: 'Doplňky' })}</span>
+                <span>{t('summary.addons', { defaultValue: 'Doplňky' })}</span>
                 <span>{formatPrice(addonsPrice, i18n.language)}</span>
               </div>
               {category === 'webApps' ? (
@@ -409,7 +523,7 @@ function PriceCalculatorPage() {
               ) : null}
               <div className="flex items-center justify-between">
                 <span>{t('summary.hosting', { defaultValue: 'Hosting (měsíčně)' })}</span>
-                <span>{selectedHostingPlan ? selectedHostingPlan.price : '0 Kč / měsíc'}</span>
+                <span>{selectedHostingPlan ? selectedHostingPlan.price : `0 ${lang === 'cs' ? 'Kč' : (lang === 'pl' ? 'PLN' : '€')} / ${t('summary.monthly', { defaultValue: 'měsíc' })}`}</span>
               </div>
             </div>
 
@@ -419,13 +533,14 @@ function PriceCalculatorPage() {
               </p>
             ) : null}
 
-            <a
-              href={`mailto:kontakt@opuscode.dev?subject=${encodeURIComponent(t('mail.subject'))}&body=${mailBody}`}
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
               className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-95"
             >
               <Mail size={16} />
               {t('summary.send')}
-            </a>
+            </button>
 
             <p className="mt-4 text-xs text-slate-400">{t('summary.disclaimer')}</p>
           </article>
@@ -445,6 +560,136 @@ function PriceCalculatorPage() {
           </article>
         </div>
       </div>
+
+      {/* Modal / Popup for Lead Form */}
+      {isModalOpen && typeof document !== 'undefined' && createPortal(
+        <div
+          className="fixed inset-0 z-50 overflow-hidden bg-slate-950/80 backdrop-blur-sm"
+          onClick={closeForm}
+        >
+          <div className="glass-panel fixed left-1/2 top-2 z-10 flex max-h-[calc(100dvh-1rem)] w-[calc(100%-1rem)] max-w-2xl -translate-x-1/2 flex-col overflow-hidden rounded-2xl p-5 shadow-2xl sm:top-4 sm:max-h-[calc(100dvh-2rem)] sm:w-[calc(100%-3rem)] sm:p-6" onClick={(event) => event.stopPropagation()}>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('common:form.title', { defaultValue: 'Kontaktní údaje' })}</p>
+                  <h3 className="mt-2 text-2xl font-semibold text-white">{t('summary.title')}</h3>
+                  <p className="mt-1 text-sm text-slate-300">
+                    {t('mail.solution')}: {selectedPlan?.name} | {t('summary.priceLabel')}: {formattedTotalPrice}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={closeForm}
+                  className="rounded-lg border border-white/20 px-3 py-2 text-sm text-slate-200 hover:bg-white/10"
+                >
+                  {t('common:buttons.close', { defaultValue: 'Zavřít' })}
+                </button>
+              </div>
+
+              <form className="mt-5 min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain pr-1" onSubmit={handleSubmit}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm text-slate-200">
+                  {t('common:form.name', { defaultValue: 'Jméno' })} *
+                  <input
+                    required
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleFieldChange}
+                    className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2 text-sm text-slate-200">
+                  {t('common:form.email', { defaultValue: 'Email' })} *
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleFieldChange}
+                    className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
+                  />
+                </label>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm text-slate-200">
+                  {t('common:form.phone', { defaultValue: 'Telefon' })}
+                  <input
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleFieldChange}
+                    className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2 text-sm text-slate-200">
+                  {t('common:form.company', { defaultValue: 'Společnost' })}
+                  <input
+                    name="company"
+                    value={formData.company}
+                    onChange={handleFieldChange}
+                    className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
+                  />
+                </label>
+              </div>
+
+              <label className="flex flex-col gap-2 text-sm text-slate-200">
+                {t('common:form.note', { defaultValue: 'Zpráva k projektu' })}
+                <textarea
+                  name="note"
+                  rows={4}
+                  value={formData.note}
+                  onChange={handleFieldChange}
+                  className="rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-slate-100 outline-none focus:border-[color:var(--accent)]"
+                  placeholder={t('common:form.notePlaceholder', { defaultValue: 'Nějaké další detaily...' })}
+                />
+              </label>
+
+              <label className="flex items-start gap-3 text-sm text-slate-200">
+                <input
+                  name="gdprConsent"
+                  type="checkbox"
+                  checked={formData.gdprConsent}
+                  onChange={handleFieldChange}
+                  className="mt-1 shrink-0" 
+                />
+                <span className="leading-relaxed">
+                  <Trans 
+                    i18nKey="common:form.gdpr" 
+                    t={t}
+                    defaults="Souhlasím se <1>zpracováním osobních údajů</1>"
+                    components={{
+                      1: (
+                        <Link 
+                          to="/tos" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-semibold text-accent-soft underline underline-offset-4 transition hover:text-accent"
+                        />
+                      )
+                    }}
+                  />
+                </span>
+              </label>
+
+              {status.message && (
+                <p className={`text-sm ${status.type === 'success' ? 'text-lime-300' : 'text-rose-300'}`}>
+                  {status.message}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting || !canSubmit}
+                className="inquiry-submit-btn disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <span className="text">{isSubmitting ? t('common:buttons.submitting', { defaultValue: 'Odesílám...' }) : t('summary.send')}</span>
+              </button>
+              </form>
+          </div>
+        </div>,
+        document.body,
+      )}
     </section>
   )
 }
