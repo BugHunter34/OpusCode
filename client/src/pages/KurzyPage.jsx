@@ -16,6 +16,7 @@ function KurzyPage() {
       <PageHeader
         eyebrow={t('courses.eyebrow')}
         title={t('courses.title')}
+        titleHighlight={t('courses.titleHighlight', { defaultValue: 'Kurzy' })}
         text={t('courses.text')}
       />
       <PlanGrid plans={plans} category={t('courses.category')} />

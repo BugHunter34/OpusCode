@@ -16,6 +16,7 @@ function JinePage() {
       <PageHeader
         eyebrow={t('other.eyebrow')}
         title={t('other.title')}
+        titleHighlight={t('other.titleHighlight', { defaultValue: 'služby' })}
         text={t('other.text')}
       />
       <PlanGrid plans={plans} category={t('other.category')} />

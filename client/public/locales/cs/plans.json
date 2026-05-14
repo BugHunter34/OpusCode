@@ -2,6 +2,7 @@
   "websites": {
     "eyebrow": "Web Solutions 24/7",
     "title": "Kolik stojí web",
+    "titleHighlight": "web",
     "text": "Vyberte si plán podle toho, jak velký web potřebujete. Kdykoli vám poradíme, co je pro vás nejlepší.",
     "category": "Weby",
     "plans": {
@@ -46,6 +47,7 @@
   "hosting": {
     "eyebrow": "Hosting Solutions 24/7",
     "title": "Hosting, který se vám vyplatí",
+    "titleHighlight": "Hosting",
     "text": "správa a údržba webu zdarma v ceně.",
     "category": "Hosting",
     "plans": {
@@ -102,6 +104,7 @@
   "courses": {
     "eyebrow": "Kurzy Solutions 24/7",
     "title": "Kurzy a školení",
+    "titleHighlight": "Kurzy",
     "text": "Naučíme vás i váš tým pracovat s webem rychle, srozumitelně a bez zbytečné teorie.",
     "category": "Kurzy",
     "plans": {
@@ -143,6 +146,7 @@
   "other": {
     "eyebrow": "Jiné",
     "title": "Další služby",
+    "titleHighlight": "služby",
     "text": "Pokud potřebujete něco navíc, připravíme jednoduchý plán na míru i s jasnou cenou.",
     "category": "Jiné",
     "plans": {
@@ -184,6 +188,7 @@
   "webApps": {
     "eyebrow": "Webové aplikace Solutions 24/7",
     "title": "Když potřebujete víc než klasický web",
+    "titleHighlight": "víc",
     "text": "Vytvoříme jednoduchý online systém, který ušetří čas vám i lidem v týmu.",
     "category": "Webové aplikace",
     "plans": {

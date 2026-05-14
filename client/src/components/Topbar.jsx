@@ -30,8 +30,8 @@ function Topbar() {
           to="/"
           className="topbar-brand font-display shrink-0 text-[10px] font-bold uppercase tracking-[0.16em] text-accent transition hover:opacity-90 sm:text-xs sm:tracking-[0.2em] lg:text-sm lg:tracking-[0.3em]"
         >
-          <span className="sm:hidden">OPUS</span>
-          <span className="hidden sm:inline">OpusCode.dev</span>
+          <span className="topbar-brand__glitch" data-text="OpusCode">OpusCode</span>
+          <span className="topbar-brand__domain hidden sm:inline">.dev</span>
         </Link>
 
         <nav className="hidden items-center gap-1 xl:gap-2 lg:flex">

@@ -16,6 +16,7 @@ function WebyPage() {
       <PageHeader
         eyebrow={t('websites.eyebrow')}
         title={t('websites.title')}
+        titleHighlight={t('websites.titleHighlight', { defaultValue: 'web' })}
         text={t('websites.text')}
       />
       <PlanGrid 

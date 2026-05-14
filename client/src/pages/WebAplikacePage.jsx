@@ -16,6 +16,7 @@ function WebAplikacePage() {
       <PageHeader
         eyebrow={t('webApps.eyebrow')}
         title={t('webApps.title')}
+        titleHighlight={t('webApps.titleHighlight', { defaultValue: 'víc' })}
         text={t('webApps.text')}
       />
       <PlanGrid 

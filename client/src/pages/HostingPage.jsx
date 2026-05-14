@@ -17,6 +17,7 @@ function HostingPage() {
       <PageHeader
         eyebrow={t('hosting.eyebrow')}
         title={t('hosting.title')}
+        titleHighlight={t('hosting.titleHighlight', { defaultValue: 'Hosting' })}
         text={t('hosting.text')}
       />
       <PlanGrid 

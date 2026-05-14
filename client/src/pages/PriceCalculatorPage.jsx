@@ -53,6 +53,30 @@ const formatAddonValue = (addon, locale) => {
   return `+ ${formatPrice(addon.value, locale)}`
 }
 
+const renderTitleWithHighlight = (title, highlight) => {
+  if (!title || !highlight) {
+    return title
+  }
+
+  const lowerTitle = title.toLocaleLowerCase()
+  const lowerHighlight = highlight.toLocaleLowerCase()
+  const startIndex = lowerTitle.indexOf(lowerHighlight)
+
+  if (startIndex === -1) {
+    return title
+  }
+
+  const endIndex = startIndex + highlight.length
+
+  return (
+    <>
+      {title.slice(0, startIndex)}
+      <span className="title-liquid-text">{title.slice(startIndex, endIndex)}</span>
+      {title.slice(endIndex)}
+    </>
+  )
+}
+
 function PriceCalculatorPage() {
   const { t, i18n } = useTranslation(['calculator', 'plans'])
   const [category, setCategory] = useState('websites')
@@ -131,6 +155,8 @@ function PriceCalculatorPage() {
     .map((addon) => t(`addons.options.${addon.id}`, { defaultValue: addon.fallback }))
   const hostingStepTitle = `${category === 'webApps' ? '5' : '4'}) ${t('steps.hosting.label', { defaultValue: 'Jak to bude s hostingem / správou?' })}`
   const integrationsStepTitle = `4) ${t('steps.integrations.label', { defaultValue: 'Integrace' })}`
+  const pageTitle = t('title')
+  const pageTitleHighlight = t('titleHighlight', { defaultValue: 'Kalkulačka' })
 
   const mailBody = encodeURIComponent(
     [
@@ -152,7 +178,7 @@ function PriceCalculatorPage() {
           {t('eyebrow')}
         </p>
         <h1 className="font-display reveal reveal-delay-1 mt-4 text-4xl font-semibold text-white sm:text-5xl">
-          {t('title')}
+          {renderTitleWithHighlight(pageTitle, pageTitleHighlight)}
         </h1>
         <p className="reveal reveal-delay-2 mx-auto mt-4 max-w-3xl text-slate-300">{t('subtitle')}</p>
       </div>
