@@ -100,5 +100,26 @@
     "hosting": "Hosting / Verwaltung",
     "noExtras": "Ohne Zusatzfunktionen",
     "estimatedPrice": "Richtpreis"
+  },
+  "pricing": {
+    "addons": {
+      "onlineBooking": 40,
+      "onlinePayments": 120,
+      "photoGallery": 20,
+      "blogCms": 80,
+      "multilang": 30,
+      "emailMarketing": 80,
+      "crmForms": 100,
+      "copywriting": 120
+    },
+    "integrations": {
+      "accounting": 155,
+      "warehouse": 195,
+      "shipping": 115,
+      "paymentGateway": 140,
+      "marketingTools": 120,
+      "erpCrm": 235,
+      "custom": 180
+    }
   }
 }

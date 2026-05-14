@@ -13,24 +13,24 @@ const CATEGORY_PLAN_KEYS = {
 
 const HOSTING_PLAN_KEYS = ['start', 'basic', 'business', 'premium']
 const ADDON_OPTIONS = [
-  { id: 'onlineBooking', type: 'fixed', value: 990, categories: ['websites', 'webApps'], fallback: 'Online rezervace' },
-  { id: 'onlinePayments', type: 'fixed', value: 2990, categories: ['websites', 'webApps'], fallback: 'Online platby' },
-  { id: 'photoGallery', type: 'fixed', value: 500, categories: ['websites', 'webApps'], fallback: 'Galerie fotek' },
-  { id: 'blogCms', type: 'fixed', value: 1990, categories: ['websites', 'webApps'], fallback: 'Blog (CMS)' },
-  { id: 'multilang', type: 'percent', value: 30, categories: ['websites', 'webApps'], fallback: 'Vícejazyčná verze' },
-  { id: 'emailMarketing', type: 'fixed', value: 1990, categories: ['websites', 'webApps'], fallback: 'Email marketing setup' },
-  { id: 'crmForms', type: 'fixed', value: 2490, categories: ['websites', 'webApps'], fallback: 'Formuláře + CRM' },
-  { id: 'copywriting', type: 'fixed', value: 2990, categories: ['websites', 'webApps'], fallback: 'Copywriting textů' },
+  { id: 'onlineBooking', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'onlinePayments', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'photoGallery', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'blogCms', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'multilang', type: 'percent', categories: ['websites', 'webApps'] },
+  { id: 'emailMarketing', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'crmForms', type: 'fixed', categories: ['websites', 'webApps'] },
+  { id: 'copywriting', type: 'fixed', categories: ['websites', 'webApps'] },
 ]
 
 const INTEGRATION_OPTIONS = [
-  { id: 'accounting', value: 3900, fallback: 'Účetnictví (Pohoda, Money, K2...)' },
-  { id: 'warehouse', value: 4900, fallback: 'Skladový systém' },
-  { id: 'shipping', value: 2900, fallback: 'Doprava (Balíkobot, Zásilkovna)' },
-  { id: 'paymentGateway', value: 3490, fallback: 'Platební brány' },
-  { id: 'marketingTools', value: 2990, fallback: 'Marketingové nástroje' },
-  { id: 'erpCrm', value: 5900, fallback: 'ERP / CRM' },
-  { id: 'custom', value: 4500, fallback: 'Jiné / na míru' },
+  { id: 'accounting' },
+  { id: 'warehouse' },
+  { id: 'shipping' },
+  { id: 'paymentGateway' },
+  { id: 'marketingTools' },
+  { id: 'erpCrm' },
+  { id: 'custom' },
 ]
 
 const parseFirstNumber = (value) => {
@@ -54,8 +54,8 @@ const formatPrice = (value, locale) => {
 
   switch (lang) {
     case 'en': 
-      currencyCode = 'EUR'; 
-      formattingLocale = 'en-IE'; 
+      currencyCode = 'USD'; 
+      formattingLocale = 'en-US'; 
       break;
     case 'pl': 
       currencyCode = 'PLN';
@@ -211,13 +211,36 @@ function PriceCalculatorPage() {
   const includedPages = parseFirstNumber(selectedPlanItems.find((item) => /do\s*\d+/i.test(String(item))))
   const extraPages = Number.isFinite(includedPages) ? Math.max(0, pagesCount - includedPages) : 0
   const pagesPrice = pagePrice ? extraPages * pagePrice : 0
+
+  const getAddonPrice = (id) => Number(t(`pricing.addons.${id}`, { defaultValue: 0 }))
+  const getIntegrationPrice = (id) => Number(t(`pricing.integrations.${id}`, { defaultValue: 0 }))
+
+  const renderAddonValueLabel = (addon) => {
+    const val = getAddonPrice(addon.id)
+    if (addon.type === 'percent') return `+${val} %`
+    return `+ ${formatPrice(val, i18n.language)}`
+  }
   
-  const fixedAddonsPrice = availableAddons.reduce((sum, addon) => (selectedAddons[addon.id] && addon.type === 'fixed' ? sum + addon.value : sum), 0)
+  const fixedAddonsPrice = availableAddons.reduce((sum, addon) => {
+    return (selectedAddons[addon.id] && addon.type === 'fixed') 
+      ? sum + getAddonPrice(addon.id) 
+      : sum
+  }, 0)
+
   const subtotalBeforePercentAddons = (basePrice || 0) + pagesPrice + fixedAddonsPrice
-  const percentAddonsPrice = availableAddons.reduce((sum, addon) => (selectedAddons[addon.id] && addon.type === 'percent' ? sum + Math.round((subtotalBeforePercentAddons * addon.value) / 100) : sum), 0)
+
+  const percentAddonsPrice = availableAddons.reduce((sum, addon) => {
+    return (selectedAddons[addon.id] && addon.type === 'percent') 
+      ? sum + Math.round((subtotalBeforePercentAddons * getAddonPrice(addon.id)) / 100) 
+      : sum
+  }, 0)
   const addonsPrice = fixedAddonsPrice + percentAddonsPrice
   
-  const integrationsPrice = INTEGRATION_OPTIONS.reduce((sum, integration) => (selectedIntegrations[integration.id] ? sum + integration.value : sum), 0)
+  const integrationsPrice = INTEGRATION_OPTIONS.reduce((sum, integration) => {
+    return selectedIntegrations[integration.id] 
+      ? sum + getIntegrationPrice(integration.id) 
+      : sum
+  }, 0)
   
   const totalPrice = basePrice === null ? null : basePrice + pagesPrice + addonsPrice + integrationsPrice
   const formattedTotalPrice = totalPrice === null ? selectedPlan?.price : `${formatPrice(totalPrice, i18n.language)}${isLargeWebsitePlan ? '+' : ''}`
@@ -412,7 +435,7 @@ function PriceCalculatorPage() {
                     <span className="text-sm font-semibold text-white">
                       {t(`addons.options.${addon.id}`, { defaultValue: addon.fallback })}
                     </span>
-                    <span className="block text-xs text-slate-300">{formatAddonValue(addon, i18n.language)}</span>
+                    <span className="block text-xs text-slate-300">{renderAddonValueLabel(addon)}</span>
                   </span>
                 </label>
               ))}
@@ -447,7 +470,7 @@ function PriceCalculatorPage() {
                           {t(`integrations.options.${integration.id}`, { defaultValue: integration.fallback })}
                         </p>
                         <span className="whitespace-nowrap text-xs font-semibold text-slate-300">
-                          + {formatPrice(integration.value, i18n.language)}
+                          + {formatPrice(getIntegrationPrice(integration.id), i18n.language)}
                         </span>
                       </div>
                     </button>
@@ -470,7 +493,7 @@ function PriceCalculatorPage() {
                 }`}
               >
                 <p className="text-base font-semibold text-white">{t('hosting.own', { defaultValue: 'Mám vlastní hosting' })}</p>
-                <p className="mt-1 text-sm text-slate-300">0 {lang === 'cs' ? 'Kč' : (lang === 'pl' ? 'PLN' : '€')} / {t('summary.monthly', { defaultValue: 'měsíc' })}</p>
+                <p className="mt-1 text-sm text-slate-300">0 {lang === 'cs' ? 'Kč' : lang === 'pl' ? 'PLN' : lang === 'en' ? '$' : '€'} / {t('summary.monthly', { defaultValue: 'měsíc' })}</p>
               </button>
 
               {hostingPlans.map((plan) => (
@@ -522,8 +545,8 @@ function PriceCalculatorPage() {
                 </div>
               ) : null}
               <div className="flex items-center justify-between">
-                <span>{t('summary.hosting', { defaultValue: 'Hosting (měsíčně)' })}</span>
-                <span>{selectedHostingPlan ? selectedHostingPlan.price : `0 ${lang === 'cs' ? 'Kč' : (lang === 'pl' ? 'PLN' : '€')} / ${t('summary.monthly', { defaultValue: 'měsíc' })}`}</span>
+              <span>{t('summary.hosting', { defaultValue: 'Hosting (měsíčně)' })}</span>
+              <span>{selectedHostingPlan ? selectedHostingPlan.price : `0 ${lang === 'cs' ? 'Kč' : lang === 'pl' ? 'PLN' : lang === 'en' ? '$' : '€'} / ${t('summary.monthly', { defaultValue: 'měsíc' })}`}</span>
               </div>
             </div>
 

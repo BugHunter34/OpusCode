@@ -96,5 +96,26 @@
     "hosting": "Hosting / správa",
     "noExtras": "Bez doplňků",
     "estimatedPrice": "Orientačná cena"
+  },
+  "pricing": {
+    "addons": {
+      "onlineBooking": 990,
+      "onlinePayments": 2990,
+      "photoGallery": 500,
+      "blogCms": 1990,
+      "multilang": 30,
+      "emailMarketing": 1990,
+      "crmForms": 2490,
+      "copywriting": 2990
+    },
+    "integrations": {
+      "accounting": 3900,
+      "warehouse": 4900,
+      "shipping": 2900,
+      "paymentGateway": 3490,
+      "marketingTools": 2990,
+      "erpCrm": 5900,
+      "custom": 4500
+    }
   }
 }
