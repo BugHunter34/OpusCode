@@ -29,7 +29,9 @@
     "eyebrow": "Kde nás najdete",
     "title": "Přijeďte za námi",
     "text": "Na mapě vidíte naše sídlo ve Spojovací 1172, Bakov nad Jizerou.",
-    "open": "Otevřít v Google Maps"
+    "open": "Otevřít v Google Maps",
+    "loading": "Načítám mapu...",
+    "fallback": "Mapu se nepodařilo načíst v tomto prohlížeči."
   },
   "teamCategory": "Opus Code Team"
 }

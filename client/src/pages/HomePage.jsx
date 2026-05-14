@@ -13,7 +13,7 @@ const getInitialLandingForm = () => ({
   gdprConsent: false,
 })
 
-function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) {
+function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children, style, ...rest }) {
   const elementRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -59,7 +59,8 @@ function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) 
     <Tag
       ref={elementRef}
       className={`reveal-on-scroll ${isVisible ? 'is-visible' : ''} ${className}`.trim()}
-      style={{ '--reveal-delay': `${delay}ms` }}
+      style={{ '--reveal-delay': `${delay}ms`, ...style }}
+      {...rest}
     >
       {children}
     </Tag>
@@ -270,6 +271,27 @@ function HomePage() {
     }
   }, [])
 
+  const handleServiceCardTiltMove = (event) => {
+    const card = event.currentTarget
+    const rect = card.getBoundingClientRect()
+    const relativeX = (event.clientX - rect.left) / rect.width
+    const relativeY = (event.clientY - rect.top) / rect.height
+
+    const rotateX = (0.5 - relativeY) * 9
+    const rotateY = (relativeX - 0.5) * 12
+
+    card.style.setProperty('--tilt-rotate-x', `${rotateX.toFixed(2)}deg`)
+    card.style.setProperty('--tilt-rotate-y', `${rotateY.toFixed(2)}deg`)
+    card.classList.add('is-tilting')
+  }
+
+  const resetServiceCardTilt = (event) => {
+    const card = event.currentTarget
+    card.style.setProperty('--tilt-rotate-x', '0deg')
+    card.style.setProperty('--tilt-rotate-y', '0deg')
+    card.classList.remove('is-tilting')
+  }
+
   return (
     <>
       <section className="mx-auto w-full max-w-[92rem] px-5 pb-14 pt-16 sm:px-8 lg:px-14">
@@ -302,7 +324,7 @@ function HomePage() {
               t={t}
               components={{
                 accent: (
-                  <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_22px_rgb(var(--accent-rgb)_/_0.5)]" />
+                  <span className="hero-liquid-text" />
                 ),
               }}
             />
@@ -313,12 +335,11 @@ function HomePage() {
           <div className="relative mt-8 flex flex-wrap gap-3">
             <Link
               to="/weby"
-              className="rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 shadow-[0_0_30px_rgb(var(--accent-rgb)_/_0.4)] transition hover:-translate-y-0.5"
-              style={{ backgroundColor: 'var(--accent)' }}
+              className="hero-web-cta rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:-translate-y-0.5"
             >
               {t('hero.btnWeb')}
             </Link>
-            <Link to="/web-aplikace" className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+            <Link to="/web-aplikace" className="hero-app-cta rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:-translate-y-0.5 hover:bg-white/10">
               {t('hero.btnApp')}
             </Link>
           </div>
@@ -344,7 +365,9 @@ function HomePage() {
                   as="article"
                   key={service.to}
                   delay={70 + index * 70}
-                  className="rounded-2xl border border-white/12 bg-[rgb(9_18_34_/_0.72)] p-5 transition hover:-translate-y-0.5 hover:border-accent-soft"
+                  className="service-tilt-card rounded-2xl border border-white/12 bg-[rgb(9_18_34_/_0.72)] p-5 transition hover:border-accent-soft"
+                  onMouseMove={handleServiceCardTiltMove}
+                  onMouseLeave={resetServiceCardTilt}
                 >
                   <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-accent">
                     <service.icon size={22} strokeWidth={2.2} />

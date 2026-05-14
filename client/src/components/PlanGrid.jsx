@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Trans } from 'react-i18next'
+import { createPortal } from 'react-dom'
 
 const API_BASE_URL = "https://api.opuscode.dev"
 
@@ -34,9 +35,11 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
 
   useEffect(() => {
     if (!selectedPlan) {
-      document.body.classList.remove('modal-open')
       return
     }
+
+    // Keep the viewport anchored when opening on long mobile pages.
+    window.scrollTo(0, 0)
 
     const onKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -47,11 +50,9 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
       }
     }
 
-    document.body.classList.add('modal-open')
     window.addEventListener('keydown', onKeyDown)
 
     return () => {
-      document.body.classList.remove('modal-open')
       window.removeEventListener('keydown', onKeyDown)
     }
   }, [selectedPlan])
@@ -126,7 +127,7 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
         {plans.map((plan, index) => (
           <article
             key={plan.name}
-            className={`glass-panel reveal flex h-full min-h-[430px] flex-col rounded-2xl p-6 transition hover:-translate-y-1 hover:border-[color:var(--accent)] ${
+            className={`plan-card glass-panel reveal flex h-full min-h-[430px] flex-col rounded-2xl p-6 transition hover:-translate-y-1 ${
               index % 3 === 0 ? 'reveal-delay-1' : index % 3 === 1 ? 'reveal-delay-2' : 'reveal-delay-3'
             }`}
           >
@@ -146,8 +147,7 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
             <button
               type="button"
               onClick={() => setSelectedPlan(plan)}
-              className="mt-5 w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 shadow-[0_0_24px_rgb(var(--accent-rgb)_/_0.28)] transition hover:-translate-y-0.5 hover:brightness-110"
-              style={{ backgroundColor: 'var(--accent)' }}
+              className="order-material-btn mt-5 w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider transition hover:-translate-y-0.5"
             >
               {t('buttons.orderCard')}
             </button>
@@ -155,33 +155,30 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
         ))}
       </div>
 
-      {selectedPlan && (
+      {selectedPlan && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 px-4 py-6 backdrop-blur-sm"
+          className="fixed inset-0 z-50 overflow-hidden bg-slate-950/80 backdrop-blur-sm"
           onClick={closeForm}
         >
-          <div
-            className="glass-panel mx-auto w-full max-w-2xl rounded-2xl p-5 shadow-2xl sm:p-6"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('form.title')}</p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">{selectedPlan.name}</h3>
-                <p className="mt-1 text-sm text-slate-300">
-                  {t('form.categoryLabel')}: {category} | {t('form.priceLabel')}: {selectedPlan.price}
-                </p>
+          <div className="glass-panel fixed left-1/2 top-2 z-10 flex max-h-[calc(100dvh-1rem)] w-[calc(100%-1rem)] max-w-2xl -translate-x-1/2 flex-col overflow-hidden rounded-2xl p-5 shadow-2xl sm:top-4 sm:max-h-[calc(100dvh-2rem)] sm:w-[calc(100%-3rem)] sm:p-6" onClick={(event) => event.stopPropagation()}>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('form.title')}</p>
+                  <h3 className="mt-2 text-2xl font-semibold text-white">{selectedPlan.name}</h3>
+                  <p className="mt-1 text-sm text-slate-300">
+                    {t('form.categoryLabel')}: {category} | {t('form.priceLabel')}: {selectedPlan.price}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={closeForm}
+                  className="rounded-lg border border-white/20 px-3 py-2 text-sm text-slate-200 hover:bg-white/10"
+                >
+                  {t('buttons.close')}
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={closeForm}
-                className="rounded-lg border border-white/20 px-3 py-2 text-sm text-slate-200 hover:bg-white/10"
-              >
-                {t('buttons.close')}
-              </button>
-            </div>
 
-            <form className="mt-5 max-h-[75vh] space-y-4 overflow-y-auto pr-1 sm:max-h-[80vh]" onSubmit={handleSubmit}>
+              <form className="mt-5 min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain pr-1" onSubmit={handleSubmit}>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm text-slate-200">
                   {t('form.name')} *
@@ -281,9 +278,10 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
               >
                 {isSubmitting ? t('buttons.submitting') : t('buttons.submit')}
               </button>
-            </form>
+              </form>
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </section>
   )
