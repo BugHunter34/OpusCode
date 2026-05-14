@@ -25,5 +25,11 @@
     "strong": "Poproś o wycenę",
     "text2": " obok wybranego planu. Otworzy się formularz, a po jego przesłaniu otrzymasz potwierdzenie na e-mail."
   },
+  "map": {
+    "eyebrow": "Gdzie nas znaleźć",
+    "title": "Odwiedź nasze biuro",
+    "text": "Mapa pokazuje naszą siedzibę: Spojovaci 1172, Bakov nad Jizerou.",
+    "open": "Otwórz w Google Maps"
+  },
   "teamCategory": "Zespół Opus Code"
 }

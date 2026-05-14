@@ -25,5 +25,11 @@
     "strong": "Angebot anfordern",
     "text2": " neben dem ausgewählten Plan. Ein Formular wird geöffnet und nach dem Absenden erhalten Sie eine Bestätigung per E-Mail."
   },
+  "map": {
+    "eyebrow": "Wo Sie uns finden",
+    "title": "Besuchen Sie unser Büro",
+    "text": "Die Karte zeigt unseren Standort in der Spojovaci 1172, Bakov nad Jizerou.",
+    "open": "In Google Maps öffnen"
+  },
   "teamCategory": "Opus Code Team"
 }

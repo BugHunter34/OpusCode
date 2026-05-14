@@ -25,5 +25,11 @@
     "strong": "Request a Quote",
     "text2": " button next to the selected plan. A form will open, and a confirmation will be sent to your email after submission."
   },
+  "map": {
+    "eyebrow": "Where to find us",
+    "title": "Visit our office",
+    "text": "The map points to our office at Spojovaci 1172, Bakov nad Jizerou.",
+    "open": "Open in Google Maps"
+  },
   "teamCategory": "Opus Code Team"
 }

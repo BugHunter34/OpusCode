@@ -2,9 +2,11 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import TeamGrid from '../components/TeamGrid'
+import useLowEndDevice from '../hooks/useLowEndDevice'
 
 function ContactPage() {
   const { t } = useTranslation(['contact', 'team'])
+  const isLowEndDevice = useLowEndDevice()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -92,6 +94,42 @@ function ContactPage() {
             {t('contact:quick.text1')} <strong>{t('contact:quick.strong')}</strong>{t('contact:quick.text2')}
           </p>
         </div>
+
+        <article
+          className={`glass-panel reveal reveal-delay-4 mt-6 rounded-2xl p-4 sm:p-6 ${!isLowEndDevice ? 'map-card' : ''}`}
+        >
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                {t('contact:map.eyebrow')}
+              </p>
+              <h2 className="font-display mt-2 text-2xl font-semibold text-white">
+                {t('contact:map.title')}
+              </h2>
+              <p className="mt-2 text-slate-300">{t('contact:map.text')}</p>
+            </div>
+
+            <a
+              href="https://maps.google.com/?q=Spojovaci+1172%2C+Bakov+nad+Jizerou"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-accent-soft px-4 py-2 text-sm font-medium text-slate-100 transition hover:bg-accent-soft"
+            >
+              {t('contact:map.open')}
+            </a>
+          </div>
+
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/50">
+            <iframe
+              title="OpusCode location map"
+              src="https://www.google.com/maps?q=Spojovaci+1172%2C+Bakov+nad+Jizerou&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              className="h-[320px] w-full border-0 sm:h-[380px]"
+            />
+          </div>
+        </article>
       </section>
 
       <TeamGrid members={teamMembers} category={t('contact:teamCategory')} />

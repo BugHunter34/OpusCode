@@ -4,6 +4,8 @@ import ReactBitsBackground from './ReactBitsBackground'
 import ProductsBackground from './ProductsBackground'
 import LightRaysBackground from './LightRaysBackground'
 import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
+import useLowEndDevice from '../hooks/useLowEndDevice'
 
 const routeTheme = [
   { match: (path) => path === '/', accent: '#3b82f6', accentRgb: '59 130 246' },
@@ -19,6 +21,7 @@ const routeTheme = [
 function Layout() {
   const { t } = useTranslation('common')
   const location = useLocation()
+  const isLowEndDevice = useLowEndDevice()
   const isHomePage = location.pathname === '/'
   const isProductPage = ['/weby', '/hosting', '/web-aplikace', '/kurzy', '/jine'].some((path) =>
     location.pathname.startsWith(path),
@@ -33,6 +36,15 @@ function Layout() {
       : '#ffffff'
   const activeTheme = routeTheme.find((theme) => theme.match(location.pathname)) || routeTheme[0]
 
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return
+    }
+
+    document.documentElement.classList.toggle('performance-low', isLowEndDevice)
+    document.documentElement.classList.toggle('performance-high', !isLowEndDevice)
+  }, [isLowEndDevice])
+
   return (
     <div
       className="relative flex min-h-[100dvh] flex-col bg-[var(--bg)] text-[var(--text)]"
@@ -42,7 +54,7 @@ function Layout() {
       }}
     >
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        {isLightRaysPage ? (
+        {isLightRaysPage && !isLowEndDevice ? (
           <div className="absolute inset-0 transition-opacity duration-150 opacity-100">
             <LightRaysBackground raysColor={lightRaysColor} />
           </div>
@@ -50,19 +62,23 @@ function Layout() {
           <>
             <div className="absolute inset-0 bg-[var(--bg)]" />
             <div className="ambient-grid absolute inset-0" />
-            <div className="ambient-blob ambient-blob--one" />
-            <div className="ambient-blob ambient-blob--two" />
-            <div className="ambient-blob ambient-blob--three" />
+            {!isLowEndDevice ? (
+              <>
+                <div className="ambient-blob ambient-blob--one" />
+                <div className="ambient-blob ambient-blob--two" />
+                <div className="ambient-blob ambient-blob--three" />
+              </>
+            ) : null}
 
             <div
               className={`absolute inset-0 transition-opacity duration-150 ${
                 isHomePage ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <ReactBitsBackground />
+              {!isLowEndDevice ? <ReactBitsBackground /> : null}
             </div>
 
-            {isProductPage ? (
+            {isProductPage && !isLowEndDevice ? (
               <div className="absolute inset-0 transition-opacity duration-150 opacity-100">
                 <ProductsBackground pagePath={location.pathname} accentColor={activeTheme.accent} />
               </div>

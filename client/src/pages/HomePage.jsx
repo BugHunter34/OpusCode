@@ -23,9 +23,19 @@ function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) 
       return undefined
     }
 
+    if (typeof window === 'undefined' || typeof window.IntersectionObserver !== 'function') {
+      setIsVisible(true)
+      return undefined
+    }
+
+    const isSmallViewport = window.matchMedia('(max-width: 768px)').matches
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) {
+        const revealByIntersection = entry.isIntersecting && entry.intersectionRatio > 0
+        const revealByPosition = entry.boundingClientRect.top <= window.innerHeight * 0.92
+
+        if (!revealByIntersection && !revealByPosition) {
           return
         }
 
@@ -33,8 +43,8 @@ function ScrollReveal({ as: Tag = 'div', className = '', delay = 0, children }) 
         observer.unobserve(entry.target)
       },
       {
-        threshold: 0.2,
-        rootMargin: '0px 0px -12% 0px',
+        threshold: isSmallViewport ? 0.01 : 0.12,
+        rootMargin: isSmallViewport ? '0px 0px -6% 0px' : '0px 0px -10% 0px',
       },
     )
 

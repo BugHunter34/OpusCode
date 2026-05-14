@@ -25,5 +25,11 @@
     "strong": "Nezáväzne objednať",
     "text2": " pri vybranom pláne. Otvorí sa formulár a po odoslaní vám príde potvrdenie do e-mailu."
   },
+  "map": {
+    "eyebrow": "Kde nás nájdete",
+    "title": "Príďte za nami",
+    "text": "Na mape vidíte naše sídlo na adrese Spojovacia 1172, Bakov nad Jizerou.",
+    "open": "Otvoriť v Google Maps"
+  },
   "teamCategory": "Opus Code Team"
 }
