@@ -8,14 +8,94 @@ import { useEffect } from 'react'
 import useLowEndDevice from '../hooks/useLowEndDevice'
 
 const routeTheme = [
-  { match: (path) => path === '/', accent: '#3b82f6', accentRgb: '59 130 246', tertiary: '#3b82f6', tertiaryRgb: '59 130 246' },
-  { match: (path) => path.startsWith('/weby'), accent: '#8b5cf6', accentRgb: '139 92 246', tertiary: '#3b82f6', tertiaryRgb: '59 130 246' },
-  { match: (path) => path.startsWith('/hosting'), accent: '#ef4444', accentRgb: '239 68 68', tertiary: '#f97316', tertiaryRgb: '249 115 22' },
-  { match: (path) => path.startsWith('/web-aplikace'), accent: '#ec4899', accentRgb: '236 72 153', tertiary: '#8b5cf6', tertiaryRgb: '139 92 246' },
-  { match: (path) => path.startsWith('/kurzy'), accent: '#22c55e', accentRgb: '34 197 94', tertiary: '#166534', tertiaryRgb: '22 101 52' },
-  { match: (path) => path.startsWith('/jine'), accent: '#f97316', accentRgb: '249 115 22', tertiary: '#ef4444', tertiaryRgb: '239 68 68' },
-  { match: (path) => path.startsWith('/kontakt'), accent: '#3b82f6', accentRgb: '59 130 246', tertiary: '#14b8a6', tertiaryRgb: '20 184 166' },
-  { match: (path) => path.startsWith('/kalkulacka-ceny-webu'), accent: '#eab308', accentRgb: '234 179 8', tertiary: '#14b8a6', tertiaryRgb: '20 184 166' },
+  {
+    match: (path) => path === '/',
+    accent: '#3b82f6',
+    accentRgb: '59 130 246',
+    tertiary: '#3b82f6',
+    tertiaryRgb: '59 130 246',
+    inquiryBlob1: '#60a5fa',
+    inquiryBlob2: '#3b82f6',
+    inquiryBlob3: '#1d4ed8',
+    inquiryBlob4: '#1e40af',
+  },
+  {
+    match: (path) => path.startsWith('/weby'),
+    accent: '#8b5cf6',
+    accentRgb: '139 92 246',
+    tertiary: '#3b82f6',
+    tertiaryRgb: '59 130 246',
+    inquiryBlob1: '#c4b5fd',
+    inquiryBlob2: '#a78bfa',
+    inquiryBlob3: '#8b5cf6',
+    inquiryBlob4: '#6d28d9',
+  },
+  {
+    match: (path) => path.startsWith('/hosting'),
+    accent: '#ef4444',
+    accentRgb: '239 68 68',
+    tertiary: '#f97316',
+    tertiaryRgb: '249 115 22',
+    inquiryBlob1: '#fca5a5',
+    inquiryBlob2: '#f87171',
+    inquiryBlob3: '#ef4444',
+    inquiryBlob4: '#b91c1c',
+  },
+  {
+    match: (path) => path.startsWith('/web-aplikace'),
+    accent: '#ec4899',
+    accentRgb: '236 72 153',
+    tertiary: '#8b5cf6',
+    tertiaryRgb: '139 92 246',
+    inquiryBlob1: '#f9a8d4',
+    inquiryBlob2: '#f472b6',
+    inquiryBlob3: '#ec4899',
+    inquiryBlob4: '#be185d',
+  },
+  {
+    match: (path) => path.startsWith('/kurzy'),
+    accent: '#22c55e',
+    accentRgb: '34 197 94',
+    tertiary: '#166534',
+    tertiaryRgb: '22 101 52',
+    inquiryBlob1: '#86efac',
+    inquiryBlob2: '#4ade80',
+    inquiryBlob3: '#22c55e',
+    inquiryBlob4: '#166534',
+  },
+  {
+    match: (path) => path.startsWith('/jine'),
+    accent: '#f97316',
+    accentRgb: '249 115 22',
+    tertiary: '#ef4444',
+    tertiaryRgb: '239 68 68',
+    inquiryBlob1: '#fdba74',
+    inquiryBlob2: '#fb923c',
+    inquiryBlob3: '#f97316',
+    inquiryBlob4: '#c2410c',
+  },
+  {
+    match: (path) => path.startsWith('/kontakt'),
+    accent: '#3b82f6',
+    accentRgb: '59 130 246',
+    tertiary: '#14b8a6',
+    tertiaryRgb: '20 184 166',
+    inquiryBlob1: '#93c5fd',
+    inquiryBlob2: '#60a5fa',
+    inquiryBlob3: '#3b82f6',
+    inquiryBlob4: '#1d4ed8',
+  },
+  {
+    match: (path) => path.startsWith('/kalkulacka-ceny-webu'),
+    accent: '#eab308',
+    accentRgb: '234 179 8',
+    tertiary: '#14b8a6',
+    tertiaryRgb: '20 184 166',
+    inquiryBlob1: '#fde047',
+    inquiryBlob2: '#facc15',
+    inquiryBlob3: '#eab308',
+    inquiryBlob4: '#a16207',
+  },
 ]
 
 function Layout() {
@@ -54,6 +134,22 @@ function Layout() {
     document.documentElement.classList.toggle('performance-high', !isLowEndDevice)
   }, [isLowEndDevice])
 
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return
+    }
+
+    const rootStyle = document.documentElement.style
+    rootStyle.setProperty('--accent', activeTheme.accent)
+    rootStyle.setProperty('--accent-rgb', activeTheme.accentRgb)
+    rootStyle.setProperty('--accent-tertiary', activeTheme.tertiary)
+    rootStyle.setProperty('--accent-tertiary-rgb', activeTheme.tertiaryRgb)
+    rootStyle.setProperty('--inquiry-blob-1', activeTheme.inquiryBlob1)
+    rootStyle.setProperty('--inquiry-blob-2', activeTheme.inquiryBlob2)
+    rootStyle.setProperty('--inquiry-blob-3', activeTheme.inquiryBlob3)
+    rootStyle.setProperty('--inquiry-blob-4', activeTheme.inquiryBlob4)
+  }, [activeTheme])
+
   return (
     <div
       className="relative flex min-h-[100dvh] flex-col bg-[var(--bg)] text-[var(--text)]"
@@ -62,6 +158,10 @@ function Layout() {
         '--accent-rgb': activeTheme.accentRgb,
         '--accent-tertiary': activeTheme.tertiary,
         '--accent-tertiary-rgb': activeTheme.tertiaryRgb,
+        '--inquiry-blob-1': activeTheme.inquiryBlob1,
+        '--inquiry-blob-2': activeTheme.inquiryBlob2,
+        '--inquiry-blob-3': activeTheme.inquiryBlob3,
+        '--inquiry-blob-4': activeTheme.inquiryBlob4,
       }}
     >
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">

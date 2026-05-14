@@ -273,10 +273,13 @@ function PlanGrid({ plans, category = 'Uncategorized', desktopColumns = 3, conta
               <button
                 type="submit"
                 disabled={isSubmitting || !canSubmit}
-                className="w-full rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-900 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
-                style={{ backgroundColor: 'var(--accent)' }}
+                className="inquiry-submit-btn disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {isSubmitting ? t('buttons.submitting') : t('buttons.submit')}
+                <span className="text">{isSubmitting ? t('buttons.submitting') : t('buttons.submit')}</span>
+                <span className="blob" aria-hidden="true" />
+                <span className="blob" aria-hidden="true" />
+                <span className="blob" aria-hidden="true" />
+                <span className="blob" aria-hidden="true" />
               </button>
               </form>
           </div>
