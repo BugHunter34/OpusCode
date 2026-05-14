@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -43,6 +43,27 @@ button {
 
 .font-mono {
   font-family: 'Space Mono', monospace;
+}
+
+.font-code {
+  font-family: 'IBM Plex Mono', 'Space Mono', monospace;
+  font-variant-ligatures: none;
+}
+
+.scramble-hero-text {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  text-shadow:
+    0 0 8px rgb(var(--accent-rgb) / 0.16),
+    0 0 18px rgb(var(--accent-rgb) / 0.08);
+}
+
+.performance-high .scramble-hero-text {
+  animation: scramblePulse 3.8s ease-in-out infinite;
 }
 
 .font-display {
@@ -957,6 +978,21 @@ button {
 
   50% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes scramblePulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 8px rgb(var(--accent-rgb) / 0.14),
+      0 0 18px rgb(var(--accent-rgb) / 0.07);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px rgb(var(--accent-rgb) / 0.22),
+      0 0 24px rgb(var(--accent-rgb) / 0.12);
   }
 }
 

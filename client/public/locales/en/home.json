@@ -3,6 +3,14 @@
     "tag": "About us",
     "title": "Digital solutions that move business forward.",
     "subtitle": "Websites, apps, and automation. Built smart, designed for growth.",
+    "scramblePhrases": [
+      "Websites that convert.",
+      "Apps for daily operations.",
+      "Hosting without headaches.",
+      "Courses that make sense.",
+      "Automation that saves time.",
+      "Pricing in one quick calculator."
+    ],
     "btnWeb": "I want a new website",
     "btnApp": "I want a web app"
   },

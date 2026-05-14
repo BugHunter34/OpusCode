@@ -3,6 +3,14 @@
     "tag": "O nas",
     "title": "Rozwiązania cyfrowe, które napędzają biznes.",
     "subtitle": "Strony, aplikacje i automatyzacje. Mądrze zaprojektowane, stworzone do wzrostu.",
+    "scramblePhrases": [
+      "Strony, które sprzedają.",
+      "Aplikacje do codziennej pracy.",
+      "Hosting bez problemów.",
+      "Kursy, które mają sens.",
+      "Automatyzacje oszczędzają czas.",
+      "Szybka kalkulacja ceny."
+    ],
     "btnWeb": "Chcę nową stronę",
     "btnApp": "Chcę aplikację webową"
   },

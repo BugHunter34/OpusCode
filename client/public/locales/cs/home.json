@@ -3,6 +3,14 @@
     "tag": "O nás",
     "title": "Digitální řešení, které posouvají <accent>dál.</accent>",
     "subtitle": "Weby, aplikace i automatizace. Navržené chytře, postavené pro růst.",
+    "scramblePhrases": [
+      "Weby, které prodávají.",
+      "Aplikace pro denní provoz.",
+      "Hosting bez starostí.",
+      "Kurzy, co dávají smysl.",
+      "Automatizace, co šetří čas.",
+      "Kalkulačka ceny během minuty."
+    ],
     "btnWeb": "Chci nový web",
     "btnApp": "Chci webovou aplikaci"
   },
@@ -12,7 +20,8 @@
     "item1": "Doba realizace: do 1 týdne",
     "item2": "Máme tým zkušených vývojářů a programátorů",
     "item3": "Za vše ručíme",
-    "item4": "Po spuštění: o web se staráme a můžeme ho dál vylepšovat"
+    "item4": "Po spuštění: o web se staráme a můžeme ho dál vylepšovat",
+    "item4Scramble": "o web se staráme a můžeme ho dál vylepšovat"
   },
   "collaboration": {
     "title": "Jak funguje navázání spolupráce",

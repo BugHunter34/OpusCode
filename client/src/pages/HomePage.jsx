@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Trans, useTranslation } from 'react-i18next'
 import { Code2, Gauge, GraduationCap, LayoutTemplate, Mail, MapPin, Phone, Rocket, ScrollText, Search, ServerCog } from 'lucide-react'
 
 const API_BASE_URL = 'https://api.opuscode.dev'
+const SCRAMBLE_CHARS = '!<>-_\\/[]{}=+*^?#'
 
 const getInitialLandingForm = () => ({
   fullName: '',
@@ -73,7 +74,25 @@ function HomePage() {
   const [landingStatus, setLandingStatus] = useState({ type: 'idle', message: '' })
   const [isLandingSubmitting, setIsLandingSubmitting] = useState(false)
   const [contactActionMessage, setContactActionMessage] = useState({ type: 'idle', message: '' })
+  const [heroSubtitleDisplay, setHeroSubtitleDisplay] = useState(() => t('hero.subtitle'))
   const contactMessageTimeoutRef = useRef(null)
+  const heroScrambleTimerRef = useRef(null)
+  const heroScrambleIndexRef = useRef(0)
+  const heroSubtitleText = t('hero.subtitle')
+  const quickOverviewPhrases = useMemo(
+    () => [
+      t('basicInfo.item1'),
+      t('basicInfo.item2'),
+      t('basicInfo.item3'),
+      t('basicInfo.item4Scramble', { defaultValue: t('basicInfo.item4') }),
+    ],
+    [t],
+  )
+  const heroScramblePhrases = useMemo(() => {
+    const candidates = t('hero.scramblePhrases', { returnObjects: true })
+    const phrasePool = Array.isArray(candidates) && candidates.length ? candidates : [heroSubtitleText]
+    return [...new Set([...phrasePool, ...quickOverviewPhrases])]
+  }, [heroSubtitleText, quickOverviewPhrases, t])
 
   const portfolio = [
     {
@@ -268,8 +287,67 @@ function HomePage() {
       if (contactMessageTimeoutRef.current) {
         window.clearTimeout(contactMessageTimeoutRef.current)
       }
+
+      if (heroScrambleTimerRef.current) {
+        window.clearInterval(heroScrambleTimerRef.current)
+      }
     }
   }, [])
+
+  useEffect(() => {
+    heroScrambleIndexRef.current = 0
+    setHeroSubtitleDisplay(heroScramblePhrases[0] || heroSubtitleText)
+  }, [heroSubtitleText, heroScramblePhrases])
+
+  const triggerHeroSubtitleScramble = useCallback(() => {
+    if (heroScrambleTimerRef.current) {
+      window.clearInterval(heroScrambleTimerRef.current)
+    }
+
+    const nextPhraseIndex = (heroScrambleIndexRef.current + 1) % heroScramblePhrases.length
+    heroScrambleIndexRef.current = nextPhraseIndex
+
+    const target = heroScramblePhrases[nextPhraseIndex] || heroSubtitleText
+    const maxLen = target.length
+    let iteration = 0
+
+    heroScrambleTimerRef.current = window.setInterval(() => {
+      const scrambled = target
+        .split('')
+        .map((char, index) => {
+          if (char === ' ') {
+            return ' '
+          }
+
+          if (index < iteration) {
+            return target[index]
+          }
+
+          return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+        })
+        .join('')
+
+      setHeroSubtitleDisplay(scrambled)
+
+      if (iteration >= maxLen + 4) {
+        window.clearInterval(heroScrambleTimerRef.current)
+        heroScrambleTimerRef.current = null
+        setHeroSubtitleDisplay(target)
+      }
+
+      iteration += 0.6
+    }, 38)
+  }, [heroScramblePhrases, heroSubtitleText])
+
+  useEffect(() => {
+    const autoRotateTimer = window.setInterval(() => {
+      triggerHeroSubtitleScramble()
+    }, 5000)
+
+    return () => {
+      window.clearInterval(autoRotateTimer)
+    }
+  }, [triggerHeroSubtitleScramble])
 
   const handleServiceCardTiltMove = (event) => {
     const card = event.currentTarget
@@ -329,8 +407,11 @@ function HomePage() {
               }}
             />
           </h1>
-          <p className="relative mt-6 max-w-3xl text-base text-slate-300 sm:text-xl">
-            {t('hero.subtitle')}
+          <p
+            className="scramble-hero-text font-code relative mt-6 min-h-[3rem] max-w-4xl cursor-pointer text-[clamp(1.35rem,3.8vw,2.1rem)] leading-[1.24] text-slate-200 sm:min-h-[3.6rem]"
+            onMouseEnter={triggerHeroSubtitleScramble}
+          >
+            {heroSubtitleDisplay}
           </p>
           <div className="relative mt-8 flex flex-wrap gap-3">
             <Link
@@ -348,15 +429,7 @@ function HomePage() {
 
       <section className="mx-auto w-full max-w-[92rem] px-5 pb-14 sm:px-8 lg:px-14">
         <ScrollReveal delay={80} className="py-3">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('basicInfo.altTitle')}</p>
-          <div className="mt-4 grid gap-2 md:grid-cols-2">
-            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item1')}</div>
-            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item2')}</div>
-            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item3')}</div>
-            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item4')}</div>
-          </div>
-
-          <div className="mt-8 border-t border-white/10 pt-6">
+          <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('order.title')}</p>
             <p className="mt-3 text-slate-200">{t('order.text')}</p>
             <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -383,6 +456,18 @@ function HomePage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      <section className="mx-auto w-full max-w-[92rem] px-5 pb-8 sm:px-8 lg:px-14">
+        <ScrollReveal delay={70} className="border-t border-white/10 pt-8">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{t('basicInfo.altTitle')}</p>
+          <div className="mt-4 grid gap-2 md:grid-cols-2">
+            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item1')}</div>
+            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item2')}</div>
+            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item3')}</div>
+            <div className="border-b border-white/12 px-1 pb-3 pt-1 text-slate-200">{t('basicInfo.item4')}</div>
           </div>
         </ScrollReveal>
       </section>

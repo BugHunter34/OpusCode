@@ -3,6 +3,14 @@
     "tag": "O nás",
     "title": "Digitálne riešenia, ktoré posúvajú biznis.",
     "subtitle": "Weby, aplikácie aj automatizácia. Navrhnuté rozumne, postavené pre rast.",
+    "scramblePhrases": [
+      "Weby, ktoré predávajú.",
+      "Aplikácie pre dennú prevádzku.",
+      "Hosting bez starostí.",
+      "Kurzy, ktoré dávajú zmysel.",
+      "Automatizácie šetria čas.",
+      "Rýchla kalkulácia ceny."
+    ],
     "btnWeb": "Chcem nový web",
     "btnApp": "Chcem webovú aplikáciu"
   },
