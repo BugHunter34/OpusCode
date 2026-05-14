@@ -14,12 +14,22 @@
   "footer": {
     "rights": "Solutions 24/7"
   },
+  "cookies": {
+    "title": "Vaše súkromie, naše pravidlá",
+    "desc": "Tento web používa cookies na zabezpečenie najlepšieho zážitku z prehliadania. Pokračovaním súhlasíte s našimi ",
+    "tos": "Podmienkami spracovania (TOS)",
+    "setting": "nastavenie cookies"
+  },
   "buttons": {
-    "orderCard": "Nezáväzne objednať",
+    "accept": "PRIJAŤ VŠETKO",
+    "reject": "ODMIETNUŤ",
     "close": "Zavrieť",
+    "submitCookie": "Odoslať",
+    "submittingCookie": "Odosielam...",
+    "orderCard": "Zaslať dopyt",
     "submit": "Odoslať objednávku",
     "submitting": "Odosielam...",
-    "backHome": "Späť na hlavnú"
+    "backHome": "Späť na hlavnú stránku"
   },
   "form": {
     "title": "Objednávkový formulár",

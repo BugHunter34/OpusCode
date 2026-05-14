@@ -6,6 +6,7 @@ import LightRaysBackground from './LightRaysBackground'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import useLowEndDevice from '../hooks/useLowEndDevice'
+import Cookies from './Cookies'
 
 const routeTheme = [
   {
@@ -220,6 +221,7 @@ function Layout() {
           </div>
         </footer>
       </div>
+      <Cookies />
     </div>
   )
 }

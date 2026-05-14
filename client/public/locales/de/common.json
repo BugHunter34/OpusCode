@@ -14,13 +14,24 @@
   "footer": {
     "rights": "Solutions 24/7"
   },
+  "cookies": {
+    "title": "Ihre Privatsphäre, unsere Regeln",
+    "desc": "Diese Website verwendet Cookies, um das beste Surferlebnis zu gewährleisten. Wenn Sie fortfahren, stimmen Sie unseren ",
+    "tos": "Nutzungsbedingungen (TOS) zu",
+    "setting": "Cookie-Einstellungen"
+  }, 
   "buttons": {
-    "orderCard": "Unverbindlich anfragen",
+    "accept": "ALLE AKZEPTIEREN",
+    "reject": "ABLEHNEN",
     "close": "Schließen",
+    "submitCookie": "Senden",
+    "submittingCookie": "Wird gesendet...",
+    "orderCard": "Angebot anfordern",
     "submit": "Bestellung senden",
-    "submitting": "Senden...",
+    "submitting": "Wird gesendet...",
     "backHome": "Zurück zur Startseite"
   },
+ 
   "form": {
     "title": "Bestellformular",
     "categoryLabel": "Kategorie",

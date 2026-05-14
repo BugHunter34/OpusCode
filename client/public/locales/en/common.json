@@ -14,9 +14,19 @@
   "footer": {
     "rights": "Solutions 24/7"
   },
-  "buttons": {
-    "orderCard": "Request Quote",
+  "cookies": {
+    "title": "Your privacy, our rules",
+    "desc": "This website uses cookies to ensure you get the best browsing experience. By continuing, you agree to our ",
+    "tos": "Terms of Service (TOS)",
+    "setting": "cookie settings"
+  },
+"buttons": {
+    "accept": "ACCEPT ALL",
+    "reject": "REJECT",
     "close": "Close",
+    "submitCookie": "Submit",
+    "submittingCookie": "Submitting...",
+    "orderCard": "Request Quote",
     "submit": "Send Order",
     "submitting": "Sending...",
     "backHome": "Back to Home"

@@ -14,9 +14,19 @@
   "footer": {
     "rights": "Solutions 24/7"
   },
+  "cookies": {
+    "title": "Twoja prywatność, nasze zasady",
+    "desc": "Ta strona używa plików cookie, aby zapewnić najlepsze wrażenia z przeglądania. Kontynuując, zgadzasz się na nasze ",
+    "tos": "Warunki świadczenia usług (TOS)",
+    "setting": "ustawienia plików cookie"
+  },
   "buttons": {
-    "orderCard": "Zamów niezobowiązująco",
+    "accept": "AKCEPTUJ WSZYSTKO",
+    "reject": "ODRZUĆ",
     "close": "Zamknij",
+    "submitCookie": "Wyślij",
+    "submittingCookie": "Wysyłanie...",
+    "orderCard": "Poproś o wycenę",
     "submit": "Wyślij zamówienie",
     "submitting": "Wysyłanie...",
     "backHome": "Wróć do strony głównej"
