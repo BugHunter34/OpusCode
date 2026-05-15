@@ -2,10 +2,11 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader'
 import TeamGrid from '../components/TeamGrid'
+import Gmaps from '../components/Gmaps'
 
 function ContactPage() {
   const { t } = useTranslation(['contact', 'team'])
-
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -96,7 +97,7 @@ function ContactPage() {
       </section>
 
       <TeamGrid members={teamMembers} category={t('contact:teamCategory')} />
-      <iframe></iframe>
+      <Gmaps />
     </>
   )
 }
